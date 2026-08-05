@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Citson Golf KGI/KPI管理ダッシュボード</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    background: #f7f7f5;
+    color: #1a1a1a;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 24px; }
+  header { margin-bottom: 24px; }
+  header h1 { font-size: 22px; margin: 0 0 4px; }
+  header p { margin: 0; color: #666; font-size: 13px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .card { background: #fff; border: 1px solid #e5e5e2; border-radius: 10px; padding: 16px; }
+  .card .label { font-size: 12px; color: #888; margin-bottom: 6px; }
+  .card .value { font-size: 24px; font-weight: 600; }
+  .card .sub { font-size: 12px; color: #999; margin-top: 4px; }
+  section { background: #fff; border: 1px solid #e5e5e2; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+  section h2 { font-size: 15px; margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
+  section .desc { font-size: 12px; color: #888; margin: 0 0 16px; }
+  .badge { font-size: 10px; padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+  .badge.live { background: #e6f4ea; color: #1e7e34; }
+  .badge.snapshot { background: #fdf1e0; color: #b26a00; }
+  .chart-box { position: relative; height: 260px; }
+  table.gridjs-table { font-size: 13px; }
+  .footer-note { font-size: 11px; color: #aaa; text-align: center; margin-top: 8px; }
+  .funnel { display: flex; gap: 8px; align-items: stretch; flex-wrap: wrap; }
+  .funnel-step { flex: 1; min-width: 120px; background: #f2f6fb; border: 1px solid #dbe6f2; border-radius: 8px; padding: 12px; text-align: center; }
+  .funnel-step .n { font-size: 20px; font-weight: 700; color: #2b6cb0; }
+  .funnel-step .l { font-size: 11px; color: #666; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Citson Golf KGI/KPI管理ダッシュボード</h1>
+    <p id="updated-at">読み込み中…</p>
+  </header>
+
+  <div class="cards" id="kpi-cards"></div>
+
+  <section>
+    <h2>EC購入ファネル（GA4・直近7日） <span class="badge live" id="funnel-badge">Live</span></h2>
+    <p class="desc">閲覧 → 商品詳細 → カート追加 → 会計開始 → 購入。マスターシート「KPIスナップ」と同じ定義。</p>
+    <div class="funnel" id="funnel"></div>
+  </section>
+
+  <section>
+    <h2>流入チャネル別セッション（GA4・直近7日） <span class="badge live">Live</span></h2>
+    <div id="channelTable"></div>
+  </section>
+
+  <section>
+    <h2>EC売上推移（Shopify・直近30日） <span class="badge snapshot" id="shopify-badge">スナップショット</span></h2>
+    <p class="desc" id="shopify-desc"></p>
+    <div class="chart-box"><canvas id="salesChart"></canvas></div>
+  </section>
+
+  <section>
+    <h2>売れ筋商品トップ5（Shopify・直近30日）</h2>
+    <div id="productTable"></div>
+  </section>
+
+  <section>
+    <h2>Instagram（citsongolf.official）</h2>
+    <div class="cards" id="ig-cards"></div>
+    <div id="igTable"></div>
+  </section>
+
+  <section>
+    <h2>LINE公式アカウント（友だち数） <span class="badge snapshot">スナップショット</span></h2>
+    <p class="desc" id="line-desc"></p>
+    <div class="cards" id="line-cards"></div>
+    <div class="chart-box"><canvas id="lineChart"></canvas></div>
+  </section>
+
+  <p class="footer-note">Supermetricsには依存していません。GA4/Shopify/Instagramの公式APIから取得したデータを元に構築しています。</p>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/theme/mermaid.min.css" integrity="sha384-jZvDSsmGB9oGGT/4l9bHXGoAv1OxvG/cFmSo0dZaSqmBgvQTKDBFAMftlXTmMbNW" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/gridjs.umd.js" integrity="sha384-/XXDzxe4FsGiAe50i/u9pY/Vy/uX654MHB1xoc1BJNnH1WXHhqHga9g3q5tF4gj7" crossorigin="anonymous"></script>
+<script>
+function fmtYen(n) { return "¥" + Math.round(n).toLocaleString("ja-JP"); }
+
+async function load() {
+  const res = await fetch("./data.json", { cache: "no-store" });
+  const data = await res.json();
+
+  document.getElementById("updated-at").textContent =
+    "データ取得: " + new Date(data.generated_at).toLocaleString("ja-JP") + "（" + data.period_label + "）";
+
+  // KPI cards
+  const cards = document.getElementById("kpi-cards");
+  const kpis = [
+    ["直近7日 UU（ユーザー数）", data.ga4.activeUsers.toLocaleString("ja-JP")],
+    ["直近7日 表示回数", data.ga4.screenPageViews.toLocaleString("ja-JP")],
+    ["直近7日 セッション数", data.ga4.sessions.toLocaleString("ja-JP")],
+    ["EC CVR（購入率）", data.ga4.cvr_pct.toFixed(2) + "%"],
+    ["直近30日 EC総売上", fmtYen(data.shopify.gross_sales)],
+    ["直近30日 注文数", data.shopify.orders.toLocaleString("ja-JP")],
+    ["LINE有効友だち数", data.line.active_friends.toLocaleString("ja-JP")]
+  ];
+  cards.innerHTML = kpis.map(([label, value]) =>
+    `<div class="card"><div class="label">${label}</div><div class="value">${value}</div></div>`
+  ).join("");
+
+  // Funnel
+  const f = data.ga4.events;
+  const steps = [
+    ["表示回数", data.ga4.screenPageViews],
+    ["商品詳細閲覧 (view_item)", f.view_item],
+    ["カート追加 (add_to_cart)", f.add_to_cart],
+    ["会計開始 (begin_checkout)", f.begin_checkout],
+    ["購入 (purchase)", f.purchase]
+  ];
+  document.getElementById("funnel").innerHTML = steps.map(([label, n]) =>
+    `<div class="funnel-step"><div class="n">${n.toLocaleString("ja-JP")}</div><div class="l">${label}</div></div>`
+  ).join("");
+
+  // Channel table
+  const channelRows = Object.entries(data.ga4.channels).sort((a, b) => b[1] - a[1]);
+  new gridjs.Grid({
+    columns: ["流入チャネル", "セッション数"],
+    data: channelRows,
+    sort: true,
+    style: { table: { width: "100%" } }
+  }).render(document.getElementById("channelTable"));
+
+  // Shopify sales chart
+  document.getElementById("shopify-desc").textContent = data.shopify.note || "";
+  new Chart(document.getElementById("salesChart"), {
+    type: "line",
+    data: {
+      labels: data.shopify.daily_sales.map(r => r.date.slice(5)),
+      datasets: [{
+        label: "総売上",
+        data: data.shopify.daily_sales.map(r => r.gross_sales),
+        borderColor: "#2b6cb0",
+        backgroundColor: "rgba(43,108,176,0.1)",
+        fill: true,
+        tension: 0.25,
+        pointRadius: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { ticks: { callback: v => "¥" + v.toLocaleString("ja-JP") } } }
+    }
+  });
+
+  // Product table
+  new gridjs.Grid({
+    columns: ["商品名", "売上", "注文数"],
+    data: data.shopify.top_products.map(p => [p.title, fmtYen(p.gross_sales), p.orders]),
+    sort: true,
+    style: { table: { width: "100%" } }
+  }).render(document.getElementById("productTable"));
+
+  // Instagram cards
+  const avgLikes = data.instagram.recent_media.length
+    ? data.instagram.recent_media.reduce((s, m) => s + m.likes, 0) / data.instagram.recent_media.length : 0;
+  const avgComments = data.instagram.recent_media.length
+    ? data.instagram.recent_media.reduce((s, m) => s + m.comments, 0) / data.instagram.recent_media.length : 0;
+  document.getElementById("ig-cards").innerHTML = [
+    ["フォロワー数", data.instagram.followers_count.toLocaleString("ja-JP")],
+    ["投稿数", data.instagram.media_count.toLocaleString("ja-JP")],
+    ["直近投稿 平均いいね", avgLikes.toFixed(1)],
+    ["直近投稿 平均コメント", avgComments.toFixed(1)]
+  ].map(([label, value]) =>
+    `<div class="card"><div class="label">${label}</div><div class="value">${value}</div></div>`
+  ).join("");
+
+  new gridjs.Grid({
+    columns: ["投稿日", "種別", "いいね", "コメント", "本文（先頭）"],
+    data: data.instagram.recent_media.map(m => [m.date, m.type, m.likes, m.comments, m.caption]),
+    sort: true,
+    style: { table: { width: "100%" } }
+  }).render(document.getElementById("igTable"));
+
+  // LINE
+  document.getElementById("line-desc").textContent =
+    `${data.line.source}（${data.line.as_of}時点）。 ${data.line.note}`;
+  document.getElementById("line-cards").innerHTML = [
+    ["有効友だち数", data.line.active_friends.toLocaleString("ja-JP")],
+    ["友だち追加総数", data.line.total_added.toLocaleString("ja-JP")]
+  ].map(([label, value]) =>
+    `<div class="card"><div class="label">${label}</div><div class="value">${value}</div></div>`
+  ).join("");
+  new Chart(document.getElementById("lineChart"), {
+    type: "line",
+    data: {
+      labels: data.line.daily.map(r => r.date.slice(5)),
+      datasets: [{
+        label: "有効友だち数（累計）",
+        data: data.line.daily.map(r => r.active_total),
+        borderColor: "#2ba876",
+        backgroundColor: "rgba(43,168,118,0.1)",
+        fill: true,
+        tension: 0.25,
+        pointRadius: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } }
+    }
+  });
+}
+
+load().catch(err => {
+  document.getElementById("updated-at").textContent = "データ取得エラー: " + err.message;
+});
+</script>
+</body>
+</html>
