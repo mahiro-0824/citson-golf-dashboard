@@ -211,7 +211,7 @@
         "orders": 1
       }
     ],
-    "note": "MCP経由で取得したスナップショット（ShopifyQL）。Shopify Admin APIトークン発行後、自動更新に切り替え予定。"
+    "note": "Shopify Admin APIトークン発行済み（2026-08-05）。ただしトークンのヘッダー方式はネットワーク制約で使用不可のため、Shopify staffセッションCookie経由のブラウザnavigate方式でデータ取得する運用に切替済み。"
   },
   "instagram": {
     "username": "citsongolf.official",
