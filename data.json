@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-08-04T09:00:00+09:00",
+  "generated_at": "2026-08-05T11:36:30+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 直近30日間（Shopify）",
   "ga4": {
-    "activeUsers": 196,
-    "screenPageViews": 1116,
-    "sessions": 258,
+    "activeUsers": 198,
+    "screenPageViews": 1136,
+    "sessions": 263,
     "events": {
-      "view_item": 324,
+      "view_item": 332,
       "form_start": 104,
       "add_to_cart": 6,
       "begin_checkout": 3,
       "purchase": 1
     },
-    "cvr_pct": 0.39,
+    "cvr_pct": 0.38,
     "channels": {
-      "Organic Social": 109,
-      "Direct": 90,
+      "Organic Social": 114,
+      "Direct": 91,
       "Organic Search": 46,
-      "Unassigned": 25,
-      "Cross-network": 2,
+      "Unassigned": 17,
+      "Cross-network": 1,
       "Organic Shopping": 1
     }
   },
@@ -26,59 +26,233 @@
     "period_days": 30,
     "gross_sales": 106000,
     "orders": 4,
-    "aov": 26500,
+    "aov": 26000,
     "daily_sales": [
-      {"date": "2026-07-06", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-07", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-08", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-09", "orders": 1, "gross_sales": 13000},
-      {"date": "2026-07-10", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-11", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-12", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-13", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-14", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-15", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-16", "orders": 1, "gross_sales": 21000},
-      {"date": "2026-07-17", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-18", "orders": 1, "gross_sales": 52000},
-      {"date": "2026-07-19", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-20", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-21", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-22", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-23", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-24", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-25", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-26", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-27", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-28", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-29", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-30", "orders": 0, "gross_sales": 0},
-      {"date": "2026-07-31", "orders": 0, "gross_sales": 0},
-      {"date": "2026-08-01", "orders": 0, "gross_sales": 0},
-      {"date": "2026-08-02", "orders": 1, "gross_sales": 20000},
-      {"date": "2026-08-03", "orders": 0, "gross_sales": 0},
-      {"date": "2026-08-04", "orders": 0, "gross_sales": 0},
-      {"date": "2026-08-05", "orders": 0, "gross_sales": 0}
+      {
+        "date": "2026-07-06",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-07",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-08",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-09",
+        "orders": 1,
+        "gross_sales": 13000
+      },
+      {
+        "date": "2026-07-10",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-11",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-12",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-13",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-14",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-15",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-16",
+        "orders": 1,
+        "gross_sales": 21000
+      },
+      {
+        "date": "2026-07-17",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-18",
+        "orders": 1,
+        "gross_sales": 52000
+      },
+      {
+        "date": "2026-07-19",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-20",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-21",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-22",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-23",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-24",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-25",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-26",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-27",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-28",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-29",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-30",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-07-31",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-08-01",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-08-02",
+        "orders": 1,
+        "gross_sales": 20000
+      },
+      {
+        "date": "2026-08-03",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-08-04",
+        "orders": 0,
+        "gross_sales": 0
+      },
+      {
+        "date": "2026-08-05",
+        "orders": 0,
+        "gross_sales": 0
+      }
     ],
     "top_products": [
-      {"title": "レディースノースリ", "gross_sales": 40000, "orders": 2},
-      {"title": "ワイドハーフパンツ", "gross_sales": 24000, "orders": 1},
-      {"title": "シンプルモック", "gross_sales": 21000, "orders": 1},
-      {"title": "カートバッグ", "gross_sales": 13000, "orders": 1},
-      {"title": "バイザー", "gross_sales": 8000, "orders": 1}
+      {
+        "title": "レディースノースリ",
+        "gross_sales": 40000,
+        "orders": 2
+      },
+      {
+        "title": "ワイドハーフパンツ",
+        "gross_sales": 24000,
+        "orders": 1
+      },
+      {
+        "title": "シンプルモック",
+        "gross_sales": 21000,
+        "orders": 1
+      },
+      {
+        "title": "カートバッグ",
+        "gross_sales": 13000,
+        "orders": 1
+      },
+      {
+        "title": "バイザー",
+        "gross_sales": 8000,
+        "orders": 1
+      }
     ],
-    "note": "MCP経由で取得したスナップショット。Shopify Admin APIトークン発行後、自動更新に切り替え予定。"
+    "note": "MCP経由で取得したスナップショット（ShopifyQL）。Shopify Admin APIトークン発行後、自動更新に切り替え予定。"
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2103,
+    "followers_count": 2108,
     "media_count": 76,
     "recent_media": [
-      {"date": "2026-08-02", "type": "IMAGE", "likes": 5, "comments": 0, "caption": "The Essential Frame."},
-      {"date": "2026-07-30", "type": "IMAGE", "likes": 6, "comments": 0, "caption": "Seamless Mind."},
-      {"date": "2026-07-29", "type": "IMAGE", "likes": 9, "comments": 1, "caption": "Quiet Focus."},
-      {"date": "2026-07-26", "type": "CAROUSEL_ALBUM", "likes": 10, "comments": 0, "caption": "Pure White Monolith."},
-      {"date": "2026-07-25", "type": "VIDEO", "likes": 5, "comments": 0, "caption": "Finding Your Standard."}
+      {
+        "date": "2026-08-02",
+        "type": "IMAGE",
+        "likes": 5,
+        "comments": 0,
+        "caption": "The Essential Frame. ー 洗練を決定づけ"
+      },
+      {
+        "date": "2026-07-30",
+        "type": "IMAGE",
+        "likes": 6,
+        "comments": 0,
+        "caption": "Seamless Mind. ー 境界線を越える、洗練の形"
+      },
+      {
+        "date": "2026-07-29",
+        "type": "IMAGE",
+        "likes": 9,
+        "comments": 1,
+        "caption": "Quiet Focus. ー 静寂と躍動のコントラスト"
+      },
+      {
+        "date": "2026-07-26",
+        "type": "CAROUSEL_ALBUM",
+        "likes": 10,
+        "comments": 0,
+        "caption": "Pure White Monolith. ー 無垢な白が描く"
+      },
+      {
+        "date": "2026-07-25",
+        "type": "VIDEO",
+        "likes": 5,
+        "comments": 0,
+        "caption": "Finding Your Standard. ー あなたの基"
+      }
     ]
   },
   "line": {
@@ -87,13 +261,55 @@
     "active_friends": 195,
     "total_added": 214,
     "daily": [
-      {"date": "2026-07-30", "added": 4, "blocked": 0, "net": 4, "active_total": 173},
-      {"date": "2026-07-31", "added": 5, "blocked": 3, "net": 2, "active_total": 175},
-      {"date": "2026-08-01", "added": 6, "blocked": 2, "net": 4, "active_total": 179},
-      {"date": "2026-08-02", "added": 6, "blocked": 0, "net": 6, "active_total": 185},
-      {"date": "2026-08-03", "added": 9, "blocked": 3, "net": 6, "active_total": 191},
-      {"date": "2026-08-04", "added": 3, "blocked": 1, "net": 2, "active_total": 193},
-      {"date": "2026-08-05", "added": 2, "blocked": 0, "net": 2, "active_total": 195}
+      {
+        "date": "2026-07-30",
+        "added": 4,
+        "blocked": 0,
+        "net": 4,
+        "active_total": 173
+      },
+      {
+        "date": "2026-07-31",
+        "added": 5,
+        "blocked": 3,
+        "net": 2,
+        "active_total": 175
+      },
+      {
+        "date": "2026-08-01",
+        "added": 6,
+        "blocked": 2,
+        "net": 4,
+        "active_total": 179
+      },
+      {
+        "date": "2026-08-02",
+        "added": 6,
+        "blocked": 0,
+        "net": 6,
+        "active_total": 185
+      },
+      {
+        "date": "2026-08-03",
+        "added": 9,
+        "blocked": 3,
+        "net": 6,
+        "active_total": 191
+      },
+      {
+        "date": "2026-08-04",
+        "added": 3,
+        "blocked": 1,
+        "net": 2,
+        "active_total": 193
+      },
+      {
+        "date": "2026-08-05",
+        "added": 2,
+        "blocked": 0,
+        "net": 2,
+        "active_total": 195
+      }
     ],
     "note": "L Message管理画面（step.lme.jp）のスナップショット。APIが無いため、定期リフレッシュ時にブラウザ経由で値を再取得して更新する。"
   }
