@@ -1,43 +1,33 @@
 {
-  "generated_at": "2026-08-05T11:36:30+09:00",
+  "generated_at": "2026-08-06T12:35:38+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 直近30日間（Shopify）",
   "ga4": {
-    "activeUsers": 198,
-    "screenPageViews": 1136,
-    "sessions": 263,
+    "activeUsers": 195,
+    "screenPageViews": 1012,
+    "sessions": 251,
     "events": {
-      "view_item": 332,
-      "form_start": 104,
+      "view_item": 286,
+      "form_start": 85,
       "add_to_cart": 6,
       "begin_checkout": 3,
       "purchase": 1
     },
-    "cvr_pct": 0.38,
+    "cvr_pct": 0.4,
     "channels": {
-      "Organic Social": 114,
-      "Direct": 91,
-      "Organic Search": 46,
-      "Unassigned": 17,
-      "Cross-network": 1,
-      "Organic Shopping": 1
+      "Organic Social": 111,
+      "Direct": 88,
+      "Organic Search": 40,
+      "Unassigned": 11,
+      "Organic Shopping": 2,
+      "Cross-network": 1
     }
   },
   "shopify": {
     "period_days": 30,
-    "gross_sales": 106000,
+    "gross_sales": 116600,
     "orders": 4,
-    "aov": 26000,
+    "aov": 29150,
     "daily_sales": [
-      {
-        "date": "2026-07-06",
-        "orders": 0,
-        "gross_sales": 0
-      },
-      {
-        "date": "2026-07-07",
-        "orders": 0,
-        "gross_sales": 0
-      },
       {
         "date": "2026-07-08",
         "orders": 0,
@@ -46,7 +36,7 @@
       {
         "date": "2026-07-09",
         "orders": 1,
-        "gross_sales": 13000
+        "gross_sales": 14300
       },
       {
         "date": "2026-07-10",
@@ -81,7 +71,7 @@
       {
         "date": "2026-07-16",
         "orders": 1,
-        "gross_sales": 21000
+        "gross_sales": 23100
       },
       {
         "date": "2026-07-17",
@@ -91,7 +81,7 @@
       {
         "date": "2026-07-18",
         "orders": 1,
-        "gross_sales": 52000
+        "gross_sales": 57200
       },
       {
         "date": "2026-07-19",
@@ -166,7 +156,7 @@
       {
         "date": "2026-08-02",
         "orders": 1,
-        "gross_sales": 20000
+        "gross_sales": 22000
       },
       {
         "date": "2026-08-03",
@@ -182,40 +172,45 @@
         "date": "2026-08-05",
         "orders": 0,
         "gross_sales": 0
+      },
+      {
+        "date": "2026-08-06",
+        "orders": 0,
+        "gross_sales": 0
       }
     ],
     "top_products": [
       {
-        "title": "レディースノースリ",
-        "gross_sales": 40000,
+        "title": "CitsonGolf/レディースノースリ",
+        "gross_sales": 44000,
         "orders": 2
       },
       {
-        "title": "ワイドハーフパンツ",
-        "gross_sales": 24000,
+        "title": "CitsonGolf/ワイドハーフパンツ",
+        "gross_sales": 26400,
         "orders": 1
       },
       {
-        "title": "シンプルモック",
-        "gross_sales": 21000,
+        "title": "CitsonGolf/シンプルモック",
+        "gross_sales": 23100,
         "orders": 1
       },
       {
-        "title": "カートバッグ",
-        "gross_sales": 13000,
+        "title": "Citson Golf/カートバッグ",
+        "gross_sales": 14300,
         "orders": 1
       },
       {
-        "title": "バイザー",
-        "gross_sales": 8000,
+        "title": "CitsonGolf/バイザー",
+        "gross_sales": 8800,
         "orders": 1
       }
     ],
-    "note": "Shopify Admin APIトークン発行済み（2026-08-05）。ただしトークンのヘッダー方式はネットワーク制約で使用不可のため、Shopify staffセッションCookie経由のブラウザnavigate方式でデータ取得する運用に切替済み。"
+    "note": "gross_salesは商品単価×数量の合計（割引・送料・税抜き）。取得元: Shopify Admin API orders.json（直近30日、ブラウザセッションCookie経由）"
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2108,
+    "followers_count": 2109,
     "media_count": 76,
     "recent_media": [
       {
@@ -257,9 +252,9 @@
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-08-05",
-    "active_friends": 195,
-    "total_added": 214,
+    "as_of": "2026-08-06",
+    "active_friends": 198,
+    "total_added": 217,
     "daily": [
       {
         "date": "2026-07-30",
@@ -309,6 +304,13 @@
         "blocked": 0,
         "net": 2,
         "active_total": 195
+      },
+      {
+        "date": "2026-08-06",
+        "added": 0,
+        "blocked": 0,
+        "net": 0,
+        "active_total": 198
       }
     ],
     "note": "L Message管理画面（step.lme.jp）のスナップショット。APIが無いため、定期リフレッシュ時にブラウザ経由で値を再取得して更新する。"
