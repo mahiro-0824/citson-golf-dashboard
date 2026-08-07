@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-08-06T12:35:38+09:00",
+  "generated_at": "2026-08-07T07:00:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 直近30日間（Shopify）",
   "ga4": {
-    "activeUsers": 195,
-    "screenPageViews": 1012,
-    "sessions": 251,
+    "activeUsers": 182,
+    "screenPageViews": 854,
+    "sessions": 234,
     "events": {
-      "view_item": 286,
-      "form_start": 85,
+      "view_item": 245,
+      "form_start": 77,
       "add_to_cart": 6,
       "begin_checkout": 3,
       "purchase": 1
     },
-    "cvr_pct": 0.4,
+    "cvr_pct": 0.43,
     "channels": {
-      "Organic Social": 111,
-      "Direct": 88,
-      "Organic Search": 40,
-      "Unassigned": 11,
-      "Organic Shopping": 2,
-      "Cross-network": 1
+      "Organic Social": 98,
+      "Direct": 76,
+      "Organic Search": 39,
+      "Unassigned": 22,
+      "Cross-network": 6,
+      "Organic Shopping": 2
     }
   },
   "shopify": {
@@ -206,13 +206,20 @@
         "orders": 1
       }
     ],
-    "note": "gross_salesは商品単価×数量の合計（割引・送料・税抜き）。取得元: Shopify Admin API orders.json（直近30日、ブラウザセッションCookie経由）"
+    "note": "admin.shopify.com Admin API (staff session) 経由で取得"
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2109,
-    "media_count": 76,
+    "followers_count": 2110,
+    "media_count": 77,
     "recent_media": [
+      {
+        "date": "2026-08-06",
+        "type": "CAROUSEL_ALBUM",
+        "likes": 4,
+        "comments": 0,
+        "caption": "Refined Details. ー 洗練を決定づける、静か"
+      },
       {
         "date": "2026-08-02",
         "type": "IMAGE",
@@ -223,7 +230,7 @@
       {
         "date": "2026-07-30",
         "type": "IMAGE",
-        "likes": 6,
+        "likes": 7,
         "comments": 0,
         "caption": "Seamless Mind. ー 境界線を越える、洗練の形"
       },
@@ -240,21 +247,14 @@
         "likes": 10,
         "comments": 0,
         "caption": "Pure White Monolith. ー 無垢な白が描く"
-      },
-      {
-        "date": "2026-07-25",
-        "type": "VIDEO",
-        "likes": 5,
-        "comments": 0,
-        "caption": "Finding Your Standard. ー あなたの基"
       }
     ]
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-08-06",
-    "active_friends": 198,
-    "total_added": 217,
+    "as_of": "2026-08-07",
+    "active_friends": 201,
+    "total_added": 220,
     "daily": [
       {
         "date": "2026-07-30",
@@ -311,8 +311,14 @@
         "blocked": 0,
         "net": 0,
         "active_total": 198
+      },
+      {
+        "date": "2026-08-07",
+        "added": 2,
+        "blocked": 0,
+        "net": 2,
+        "active_total": 201
       }
-    ],
-    "note": "L Message管理画面（step.lme.jp）のスナップショット。APIが無いため、定期リフレッシュ時にブラウザ経由で値を再取得して更新する。"
+    ]
   }
 }
