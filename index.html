@@ -35,6 +35,18 @@
   .funnel-step { flex: 1; min-width: 120px; background: #f2f6fb; border: 1px solid #dbe6f2; border-radius: 8px; padding: 12px; text-align: center; }
   .funnel-step .n { font-size: 20px; font-weight: 700; color: #2b6cb0; }
   .funnel-step .l { font-size: 11px; color: #666; margin-top: 4px; }
+.progress-track { height: 10px; border-radius: 5px; background: #eaeae5; overflow: hidden; }
+.progress-fill { height: 100%; background: #2b6cb0; border-radius: 5px; transition: width .4s; }
+.kgi-badge { font-size: 10px; padding: 2px 8px; border-radius: 999px; font-weight: 600; margin-left: 6px; }
+.kgi-badge.onpace { background: #e6f4ea; color: #1e7e34; }
+.kgi-badge.behind { background: #fdeaea; color: #a83232; }
+.bar-cols { display: flex; gap: 10px; height: 130px; align-items: flex-end; }
+.bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; justify-content: flex-end; }
+.bar-wrap { width: 100%; display: flex; gap: 3px; align-items: flex-end; height: 100px; }
+.bar { flex: 1; border-radius: 4px 4px 0 0; min-height: 2px; }
+.bar-label { font-size: 11px; color: #999; }
+.legend-row { display: flex; gap: 14px; margin-top: 10px; }
+.legend-dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 4px; }
 </style>
 </head>
 <body>
@@ -52,6 +64,31 @@
     <div class="cards" id="sales-summary-cards"></div>
     <div class="chart-box" style="height:260px;"><canvas id="salesSummaryChart"></canvas></div>
     <div id="salesSummaryTable" style="margin-top:12px;"></div>
+  </section>
+
+  <section>
+    <h2>四半期KGI進捗（店舗＋EC＋イベント合算） <span class="badge snapshot" id="kgi-badge-live">計画ベース</span></h2>
+    <p class="desc" id="kgi-desc"></p>
+    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+      <span style="font-size:13px; color:#888;" id="kgi-label"></span>
+      <span style="font-size:13px; font-weight:600; color:#2b6cb0;" id="kgi-pct">–</span><span class="kgi-badge" id="kgi-pace-badge"></span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="kgi-bar" style="width:0%"></div></div>
+    <p class="desc" id="kgi-sub" style="margin:8px 0 0;"></p>
+    <p class="desc" style="margin:18px 0 6px;">月次売上：計画 vs 実績（店舗＋EC＋イベント）</p>
+    <div class="bar-cols" id="kgi-plan-bars"></div>
+    <div class="legend-row">
+      <span style="font-size:11px; color:#888;"><span class="legend-dot" style="background:#d8d8d3;"></span>計画</span>
+      <span style="font-size:11px; color:#888;"><span class="legend-dot" style="background:#2b6cb0;"></span>実績</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>エフエー立替金（残高・月次発生額） <span class="badge snapshot">計画ベース</span></h2>
+    <p class="desc" id="advance-desc"></p>
+    <div class="cards" id="advance-cards"></div>
+    <p class="desc" style="margin:18px 0 6px;">月次発生額の推移（計画ベース）</p>
+    <div class="bar-cols" id="advance-bars"></div>
   </section>
 
   <section>
@@ -173,6 +210,105 @@ async function load() {
     sort: false,
     style: { table: { width: "100%" } }
   }).render(document.getElementById("salesSummaryTable"));
+
+  // 四半期KGI進捗 + 立替金（エフエー）
+  (function renderKgiAndAdvance() {
+    const now = new Date();
+    const month = now.getMonth() + 1;
+    const prevMonth = month === 1 ? 12 : month - 1;
+    const inQ3 = month >= 7 && month <= 9;
+    const inQ4 = month >= 10 && month <= 12;
+    const quarterLabel = inQ3 ? "Q3（7-9月）" : (inQ4 ? "Q4（10-12月）" : "対象期間外（下半期の計画のみ表示）");
+    const target = inQ3 ? data.kgi.q_targets.q3 : (inQ4 ? data.kgi.q_targets.q4 : 0);
+    const qMonths = inQ3 ? [7, 8, 9] : (inQ4 ? [10, 11, 12] : []);
+
+    const salesThisTotal = st.grand_total_current_month;
+    const salesPrevTotal = st.grand_total_previous_month;
+    let actualSoFar = 0;
+    if (qMonths.includes(month)) actualSoFar += (salesThisTotal || 0);
+    if (qMonths.includes(prevMonth) && month !== prevMonth) actualSoFar += (salesPrevTotal || 0);
+
+    const kgiRatio = target ? Math.min(1, actualSoFar / target) : 0;
+    document.getElementById("kgi-desc").textContent = data.kgi.note;
+    document.getElementById("kgi-label").textContent = quarterLabel + " 目標 " + fmtYen(target) + " に対する進捗";
+    document.getElementById("kgi-pct").textContent = target ? (kgiRatio * 100).toFixed(0) + "%" : "–";
+    document.getElementById("kgi-bar").style.width = (kgiRatio * 100) + "%";
+
+    const paceBadge = document.getElementById("kgi-pace-badge");
+    if (target && qMonths.length) {
+      const qStartMonth = qMonths[0];
+      const qEndMonth = qMonths[qMonths.length - 1];
+      const qStart = new Date(now.getFullYear(), qStartMonth - 1, 1);
+      const qEnd = new Date(now.getFullYear(), qEndMonth, 0);
+      const totalDays = Math.round((qEnd - qStart) / 86400000) + 1;
+      const elapsedDays = Math.min(totalDays, Math.max(1, Math.round((now - qStart) / 86400000) + 1));
+      const paceRatio = elapsedDays / totalDays;
+      const onPace = (actualSoFar / target) >= paceRatio * 0.9;
+      paceBadge.textContent = onPace ? "オンペース" : "ビハインド";
+      paceBadge.className = "kgi-badge " + (onPace ? "onpace" : "behind");
+      document.getElementById("kgi-sub").textContent =
+        "現時点の実績合計: " + fmtYen(actualSoFar) + "（当月・前月分のみ反映） ／ 四半期の経過日数 " + elapsedDays + "/" + totalDays + "日";
+    } else {
+      paceBadge.textContent = "";
+      document.getElementById("kgi-sub").textContent = "";
+    }
+
+    const months6 = [7, 8, 9, 10, 11, 12];
+    const planVals = months6.map(m => data.kgi.monthly_plan[String(m)]);
+    const actualVals = months6.map(m => {
+      if (m === month) return salesThisTotal;
+      if (m === prevMonth) return salesPrevTotal;
+      return null;
+    });
+    const maxVal = Math.max(...planVals, ...actualVals.map(v => v || 0), 1);
+    const barsContainer = document.getElementById("kgi-plan-bars");
+    barsContainer.innerHTML = "";
+    months6.forEach((m, i) => {
+      const col = document.createElement("div"); col.className = "bar-col";
+      const wrap = document.createElement("div"); wrap.className = "bar-wrap";
+      const planBar = document.createElement("div"); planBar.className = "bar";
+      planBar.style.background = "#d8d8d3";
+      planBar.style.height = Math.max(2, (planVals[i] / maxVal) * 100) + "%";
+      wrap.appendChild(planBar);
+      const actBar = document.createElement("div"); actBar.className = "bar";
+      actBar.style.background = "#2b6cb0";
+      actBar.style.height = actualVals[i] ? Math.max(2, (actualVals[i] / maxVal) * 100) + "%" : "0%";
+      wrap.appendChild(actBar);
+      col.appendChild(wrap);
+      const lbl = document.createElement("span"); lbl.className = "bar-label"; lbl.textContent = m + "月";
+      col.appendChild(lbl);
+      barsContainer.appendChild(col);
+    });
+
+    // 立替金（エフエー）
+    const advInfo = data.advance.monthly[String(month)];
+    document.getElementById("advance-desc").textContent = data.advance.note;
+    const advCards = [];
+    if (advInfo) {
+      advCards.push(["今月末 残高見込み", "¥" + (advInfo.balance / 1000000).toFixed(1) + "M", fmtYen(advInfo.balance)]);
+      advCards.push(["今月の発生額（計画）", "+" + fmtYen(advInfo.delta), ""]);
+    } else {
+      advCards.push(["今月末 残高見込み", "対象期間外", ""]);
+    }
+    document.getElementById("advance-cards").innerHTML = advCards.map(cardTemplate).join("");
+
+    const advDeltas = months6.map(m => data.advance.monthly[String(m)].delta);
+    const advMax = Math.max(...advDeltas, 1);
+    const advContainer = document.getElementById("advance-bars");
+    advContainer.innerHTML = "";
+    months6.forEach((m, i) => {
+      const col = document.createElement("div"); col.className = "bar-col";
+      const wrap = document.createElement("div"); wrap.className = "bar-wrap";
+      const bar = document.createElement("div"); bar.className = "bar";
+      bar.style.background = (m === month) ? "#2b6cb0" : "#d8d8d3";
+      bar.style.height = Math.max(2, (advDeltas[i] / advMax) * 100) + "%";
+      wrap.appendChild(bar);
+      col.appendChild(wrap);
+      const lbl = document.createElement("span"); lbl.className = "bar-label"; lbl.textContent = m + "月";
+      col.appendChild(lbl);
+      advContainer.appendChild(col);
+    });
+  })();
 
   // Funnel
   const f = data.ga4.events;
