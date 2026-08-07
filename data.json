@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-08-07T07:00:00+09:00",
+  "generated_at": "2026-08-08T07:39:26+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 182,
-    "screenPageViews": 854,
-    "sessions": 234,
+    "activeUsers": 180,
+    "screenPageViews": 851,
+    "sessions": 232,
     "events": {
-      "view_item": 245,
-      "form_start": 77,
+      "view_item": 234,
+      "form_start": 79,
       "add_to_cart": 6,
       "begin_checkout": 3,
       "purchase": 1
     },
     "cvr_pct": 0.43,
     "channels": {
-      "Organic Social": 98,
-      "Direct": 76,
+      "Organic Social": 106,
+      "Direct": 73,
       "Organic Search": 39,
-      "Unassigned": 22,
-      "Cross-network": 6,
-      "Organic Shopping": 2
+      "Unassigned": 20,
+      "Cross-network": 1,
+      "Organic Shopping": 1
     }
   },
   "shopify": {
     "current_month_label": "2026年8月",
     "previous_month_label": "2026年7月",
     "current_month": {
-      "gross_sales": 22000,
+      "gross_sales": 20000,
       "orders": 1,
-      "aov": 22000,
+      "aov": 20000,
       "daily_sales": [
         {
           "day": 1,
@@ -40,7 +40,7 @@
           "day": 2,
           "date": "2026-08-02",
           "orders": 1,
-          "gross_sales": 22000
+          "gross_sales": 20000
         },
         {
           "day": 3,
@@ -71,13 +71,19 @@
           "date": "2026-08-07",
           "orders": 0,
           "gross_sales": 0
+        },
+        {
+          "day": 8,
+          "date": "2026-08-08",
+          "orders": 0,
+          "gross_sales": 0
         }
       ]
     },
     "previous_month": {
-      "gross_sales": 94600,
+      "gross_sales": 86000,
       "orders": 3,
-      "aov": 31533,
+      "aov": 28667,
       "daily_sales": [
         {
           "day": 1,
@@ -131,7 +137,7 @@
           "day": 9,
           "date": "2026-07-09",
           "orders": 1,
-          "gross_sales": 14300
+          "gross_sales": 13000
         },
         {
           "day": 10,
@@ -173,7 +179,7 @@
           "day": 16,
           "date": "2026-07-16",
           "orders": 1,
-          "gross_sales": 23100
+          "gross_sales": 21000
         },
         {
           "day": 17,
@@ -185,7 +191,7 @@
           "day": 18,
           "date": "2026-07-18",
           "orders": 1,
-          "gross_sales": 57200
+          "gross_sales": 52000
         },
         {
           "day": 19,
@@ -274,21 +280,21 @@
     "top_products": [
       {
         "title": "CitsonGolf/レディースノースリ",
-        "gross_sales": 22000,
+        "gross_sales": 20000,
         "orders": 1
       }
     ],
-    "note": "admin.shopify.com Admin API (staff session) 経由で取得。先月同日比は当月と同じ日数分（1〜7日）の先月実績と比較。"
+    "note": "admin.shopify.com staffセッションが未ログイン状態だったため、Cowork接続済みのShopify MCPコネクタ（run-analytics-query/list-orders）にフォールバックして取得。"
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2110,
+    "followers_count": 2113,
     "media_count": 77,
     "recent_media": [
       {
         "date": "2026-08-06",
         "type": "CAROUSEL_ALBUM",
-        "likes": 4,
+        "likes": 6,
         "comments": 0,
         "caption": "Refined Details. ー 洗練を決定づける、静か"
       },
@@ -391,7 +397,8 @@
         "net": 2,
         "active_total": 201
       }
-    ]
+    ],
+    "note": "取得失敗（要再ログイン）: 2026-08-08"
   },
   "store": {
     "current_month_label": "2026年8月",
@@ -409,8 +416,8 @@
     "grand_total_current_month": 223303,
     "grand_total_previous_month": 749380,
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ",
-    "last_updated": "2026-08-05",
-    "note": "実店舗（レジ）売上の月次集計。店長が売上表に日次入力→経理がとりまとめてマスターシートに反映（日次連携は未整備のため月次のみ）。8月の店舗売上¥0は入力漏れではなく実績（本人確認済み・2026-08-05）。8月は南青山POP UP STOREの売上¥203,940が別枠で発生（8/1販売会分、入金計¥197,822）。EC欄は経理集計値のため、上記Shopifyライブ集計とは定義・タイミングが異なり一致しない場合があります。"
+    "last_updated": "2026-08-08",
+    "note": "8月店舗合計は0円（8/1 POP UP STOREイベント分はイベント合計に別計上。経理確認済みで集計漏れではない）"
   },
   "kgi": {
     "monthly_plan": {
