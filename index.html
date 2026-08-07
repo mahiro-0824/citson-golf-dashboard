@@ -58,13 +58,13 @@
   </section>
 
   <section>
-    <h2>EC売上推移（Shopify・直近30日） <span class="badge snapshot" id="shopify-badge">スナップショット</span></h2>
+    <h2>EC売上推移（今月 vs 先月・Shopify） <span class="badge snapshot" id="shopify-badge">スナップショット</span></h2>
     <p class="desc" id="shopify-desc"></p>
     <div class="chart-box"><canvas id="salesChart"></canvas></div>
   </section>
 
   <section>
-    <h2>売れ筋商品トップ5（Shopify・直近30日）</h2>
+    <h2>売れ筋商品トップ5（Shopify・今月）</h2>
     <div id="productTable"></div>
   </section>
 
@@ -99,17 +99,29 @@ async function load() {
 
   // KPI cards
   const cards = document.getElementById("kpi-cards");
+  const sp = data.shopify.prev_same_period;
+  function pctSub(cur, prevSame, periodLabel) {
+    if (prevSame > 0) {
+      const pct = ((cur - prevSame) / prevSame * 100);
+      return (pct >= 0 ? "+" : "") + pct.toFixed(1) + "%（" + periodLabel + "）";
+    }
+    if (cur > 0) return periodLabel + "は実績なし";
+    return periodLabel + " データなし";
+  }
+  const salesSub = pctSub(data.shopify.current_month.gross_sales, sp.gross_sales, "先月同日(1〜7日)比");
+  const ordersSub = pctSub(data.shopify.current_month.orders, sp.orders, "先月同日比");
   const kpis = [
     ["直近7日 UU（ユーザー数）", data.ga4.activeUsers.toLocaleString("ja-JP")],
     ["直近7日 表示回数", data.ga4.screenPageViews.toLocaleString("ja-JP")],
     ["直近7日 セッション数", data.ga4.sessions.toLocaleString("ja-JP")],
     ["EC CVR（購入率）", data.ga4.cvr_pct.toFixed(2) + "%"],
-    ["直近30日 EC総売上", fmtYen(data.shopify.gross_sales)],
-    ["直近30日 注文数", data.shopify.orders.toLocaleString("ja-JP")],
+    ["今月 EC総売上", fmtYen(data.shopify.current_month.gross_sales), salesSub],
+    ["今月 注文数", data.shopify.current_month.orders.toLocaleString("ja-JP") + "件", ordersSub],
+    ["先月 EC総売上", fmtYen(data.shopify.previous_month.gross_sales)],
     ["LINE有効友だち数", data.line.active_friends.toLocaleString("ja-JP")]
   ];
-  cards.innerHTML = kpis.map(([label, value]) =>
-    `<div class="card"><div class="label">${label}</div><div class="value">${value}</div></div>`
+  cards.innerHTML = kpis.map(([label, value, sub]) =>
+    `<div class="card"><div class="label">${label}</div><div class="value">${value}</div>${sub ? `<div class="sub">${sub}</div>` : ""}</div>`
   ).join("");
 
   // Funnel
@@ -134,26 +146,46 @@ async function load() {
     style: { table: { width: "100%" } }
   }).render(document.getElementById("channelTable"));
 
-  // Shopify sales chart
-  document.getElementById("shopify-desc").textContent = data.shopify.note || "";
+  // Shopify sales chart（今月 vs 先月・日別）
+  document.getElementById("shopify-desc").textContent =
+    "今月（" + data.shopify.current_month_label + "）と先月（" + data.shopify.previous_month_label + "）の日別売上を同じ日付軸で比較。" + (data.shopify.note || "");
+  const daysAxis = Array.from({ length: 31 }, (_, i) => i + 1);
+  const curMap = {}; data.shopify.current_month.daily_sales.forEach(r => { curMap[r.day] = r.gross_sales; });
+  const prevMap = {}; data.shopify.previous_month.daily_sales.forEach(r => { prevMap[r.day] = r.gross_sales; });
+  const curSeries = daysAxis.map(d => d in curMap ? curMap[d] : null);
+  const prevSeries = daysAxis.map(d => d in prevMap ? prevMap[d] : null);
   new Chart(document.getElementById("salesChart"), {
     type: "line",
     data: {
-      labels: data.shopify.daily_sales.map(r => r.date.slice(5)),
-      datasets: [{
-        label: "総売上",
-        data: data.shopify.daily_sales.map(r => r.gross_sales),
-        borderColor: "#2b6cb0",
-        backgroundColor: "rgba(43,108,176,0.1)",
-        fill: true,
-        tension: 0.25,
-        pointRadius: 2
-      }]
+      labels: daysAxis.map(d => d + "日"),
+      datasets: [
+        {
+          label: "今月（" + data.shopify.current_month_label + "）",
+          data: curSeries,
+          borderColor: "#2b6cb0",
+          backgroundColor: "rgba(43,108,176,0.12)",
+          fill: true,
+          tension: 0.25,
+          pointRadius: 2,
+          spanGaps: false
+        },
+        {
+          label: "先月（" + data.shopify.previous_month_label + "）",
+          data: prevSeries,
+          borderColor: "#aaaaaa",
+          backgroundColor: "rgba(170,170,170,0.06)",
+          borderDash: [5, 4],
+          fill: true,
+          tension: 0.25,
+          pointRadius: 2,
+          spanGaps: false
+        }
+      ]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
+      plugins: { legend: { display: true, position: "top" } },
       scales: { y: { ticks: { callback: v => "¥" + v.toLocaleString("ja-JP") } } }
     }
   });
