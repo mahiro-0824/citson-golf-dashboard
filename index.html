@@ -47,6 +47,14 @@
   <div class="cards" id="kpi-cards"></div>
 
   <section>
+    <h2>売上サマリー（店舗＋EC＋イベント＝全体・今月 vs 先月） <span class="badge snapshot" id="sales-summary-badge">スナップショット</span></h2>
+    <p class="desc" id="sales-summary-desc"></p>
+    <div class="cards" id="sales-summary-cards"></div>
+    <div class="chart-box" style="height:260px;"><canvas id="salesSummaryChart"></canvas></div>
+    <div id="salesSummaryTable" style="margin-top:12px;"></div>
+  </section>
+
+  <section>
     <h2>EC購入ファネル（GA4・直近7日） <span class="badge live" id="funnel-badge">Live</span></h2>
     <p class="desc">閲覧 → 商品詳細 → カート追加 → 会計開始 → 購入。マスターシート「KPIスナップ」と同じ定義。</p>
     <div class="funnel" id="funnel"></div>
@@ -66,13 +74,6 @@
   <section>
     <h2>売れ筋商品トップ5（Shopify・今月）</h2>
     <div id="productTable"></div>
-  </section>
-
-  <section>
-    <h2>店舗・全社売上（今月 vs 先月・月次） <span class="badge snapshot" id="store-badge">スナップショット</span></h2>
-    <p class="desc" id="store-desc"></p>
-    <div class="chart-box" style="height:220px;"><canvas id="storeChart"></canvas></div>
-    <div id="storeTable" style="margin-top:12px;"></div>
   </section>
 
   <section>
@@ -105,8 +106,6 @@ async function load() {
     "データ取得: " + new Date(data.generated_at).toLocaleString("ja-JP") + "（" + data.period_label + "）";
 
   // KPI cards
-  const cards = document.getElementById("kpi-cards");
-  const sp = data.shopify.prev_same_period;
   function pctSub(cur, prevSame, periodLabel) {
     if (prevSame > 0) {
       const pct = ((cur - prevSame) / prevSame * 100);
@@ -115,24 +114,65 @@ async function load() {
     if (cur > 0) return periodLabel + "は実績なし";
     return periodLabel + " データなし";
   }
-  const salesSub = pctSub(data.shopify.current_month.gross_sales, sp.gross_sales, "先月同日(1〜7日)比");
-  const ordersSub = pctSub(data.shopify.current_month.orders, sp.orders, "先月同日比");
-  const storeSub = pctSub(data.store.current_month.gross_sales, data.store.previous_month.gross_sales, "前月比");
+  const cardTemplate = ([label, value, sub]) =>
+    `<div class="card"><div class="label">${label}</div><div class="value">${value}</div>${sub ? `<div class="sub">${sub}</div>` : ""}</div>`;
+
+  const cards = document.getElementById("kpi-cards");
   const kpis = [
     ["直近7日 UU（ユーザー数）", data.ga4.activeUsers.toLocaleString("ja-JP")],
     ["直近7日 表示回数", data.ga4.screenPageViews.toLocaleString("ja-JP")],
     ["直近7日 セッション数", data.ga4.sessions.toLocaleString("ja-JP")],
     ["EC CVR（購入率）", data.ga4.cvr_pct.toFixed(2) + "%"],
-    ["今月 EC総売上", fmtYen(data.shopify.current_month.gross_sales), salesSub],
-    ["今月 注文数", data.shopify.current_month.orders.toLocaleString("ja-JP") + "件", ordersSub],
-    ["先月 EC総売上", fmtYen(data.shopify.previous_month.gross_sales)],
-    ["今月 店舗売上（実店舗）", fmtYen(data.store.current_month.gross_sales), storeSub],
-    ["先月 店舗売上", fmtYen(data.store.previous_month.gross_sales)],
     ["LINE有効友だち数", data.line.active_friends.toLocaleString("ja-JP")]
   ];
-  cards.innerHTML = kpis.map(([label, value, sub]) =>
-    `<div class="card"><div class="label">${label}</div><div class="value">${value}</div>${sub ? `<div class="sub">${sub}</div>` : ""}</div>`
-  ).join("");
+  cards.innerHTML = kpis.map(cardTemplate).join("");
+
+  // 売上サマリー（店舗＋EC＋イベント＝全体、今月 vs 先月）
+  const st = data.store;
+  document.getElementById("sales-summary-desc").textContent =
+    st.current_month_label + "（進行中）と" + st.previous_month_label + "（確定月）の比較。店舗・EC（経理集計）・イベントを合算したものが「全体合計」です。" + (st.note || "");
+  const summaryCards = [
+    ["店舗（実店舗）", fmtYen(st.current_month.gross_sales), pctSub(st.current_month.gross_sales, st.previous_month.gross_sales, "前月比")],
+    ["EC（経理集計）", fmtYen(st.ec_master_current_month), pctSub(st.ec_master_current_month, st.ec_master_previous_month, "前月比")],
+    ["イベント（POP UP等）", fmtYen(st.event_current_month), pctSub(st.event_current_month, st.event_previous_month, "前月比")],
+    ["全体合計（店舗+EC+イベント）", fmtYen(st.grand_total_current_month), pctSub(st.grand_total_current_month, st.grand_total_previous_month, "前月比")]
+  ];
+  document.getElementById("sales-summary-cards").innerHTML = summaryCards.map(cardTemplate).join("");
+  new Chart(document.getElementById("salesSummaryChart"), {
+    type: "bar",
+    data: {
+      labels: ["店舗", "EC", "イベント", "全体合計"],
+      datasets: [
+        {
+          label: st.previous_month_label,
+          data: [st.previous_month.gross_sales, st.ec_master_previous_month, st.event_previous_month, st.grand_total_previous_month],
+          backgroundColor: "#c9ccd1"
+        },
+        {
+          label: st.current_month_label,
+          data: [st.current_month.gross_sales, st.ec_master_current_month, st.event_current_month, st.grand_total_current_month],
+          backgroundColor: "#2b6cb0"
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: true, position: "top" } },
+      scales: { y: { ticks: { callback: v => "¥" + v.toLocaleString("ja-JP") } } }
+    }
+  });
+  new gridjs.Grid({
+    columns: ["区分", st.previous_month_label, st.current_month_label],
+    data: [
+      ["店舗（実店舗）", fmtYen(st.previous_month.gross_sales), fmtYen(st.current_month.gross_sales)],
+      ["EC（経理集計）", fmtYen(st.ec_master_previous_month), fmtYen(st.ec_master_current_month)],
+      ["イベント（POP UP等）", fmtYen(st.event_previous_month), fmtYen(st.event_current_month)],
+      ["全体合計", fmtYen(st.grand_total_previous_month), fmtYen(st.grand_total_current_month)]
+    ],
+    sort: false,
+    style: { table: { width: "100%" } }
+  }).render(document.getElementById("salesSummaryTable"));
 
   // Funnel
   const f = data.ga4.events;
@@ -158,7 +198,7 @@ async function load() {
 
   // Shopify sales chart（今月 vs 先月・日別）
   document.getElementById("shopify-desc").textContent =
-    "今月（" + data.shopify.current_month_label + "）と先月（" + data.shopify.previous_month_label + "）の日別売上を同じ日付軸で比較。" + (data.shopify.note || "");
+    "今月（" + data.shopify.current_month_label + "）と先月（" + data.shopify.previous_month_label + "）の日別売上を同じ日付軸で比較（Shopifyライブ集計）。上部の売上サマリーのEC値は経理集計のため、こちらとは定義・タイミングが異なり一致しない場合があります。" + (data.shopify.note || "");
   const daysAxis = Array.from({ length: 31 }, (_, i) => i + 1);
   const curMap = {}; data.shopify.current_month.daily_sales.forEach(r => { curMap[r.day] = r.gross_sales; });
   const prevMap = {}; data.shopify.previous_month.daily_sales.forEach(r => { prevMap[r.day] = r.gross_sales; });
@@ -207,39 +247,6 @@ async function load() {
     sort: true,
     style: { table: { width: "100%" } }
   }).render(document.getElementById("productTable"));
-
-  // Store (実店舗) chart + breakdown table
-  const st = data.store;
-  document.getElementById("store-desc").textContent =
-    st.source + "（" + st.last_updated + "時点）。店長・経理が月次で手動更新のため日次データはありません。" + (st.note || "");
-  new Chart(document.getElementById("storeChart"), {
-    type: "bar",
-    data: {
-      labels: [st.previous_month_label, st.current_month_label],
-      datasets: [{
-        label: "店舗売上（実店舗）",
-        data: [st.previous_month.gross_sales, st.current_month.gross_sales],
-        backgroundColor: ["#c9ccd1", "#2b6cb0"]
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: { y: { ticks: { callback: v => "¥" + v.toLocaleString("ja-JP") } } }
-    }
-  });
-  new gridjs.Grid({
-    columns: ["区分", st.previous_month_label, st.current_month_label],
-    data: [
-      ["店舗（実店舗）", fmtYen(st.previous_month.gross_sales), fmtYen(st.current_month.gross_sales)],
-      ["EC（経理集計）", fmtYen(st.ec_master_previous_month), fmtYen(st.ec_master_current_month)],
-      ["イベント（POP UP等）", fmtYen(st.event_previous_month), fmtYen(st.event_current_month)],
-      ["合計（全社）", fmtYen(st.grand_total_previous_month), fmtYen(st.grand_total_current_month)]
-    ],
-    sort: false,
-    style: { table: { width: "100%" } }
-  }).render(document.getElementById("storeTable"));
 
   // Instagram cards
   const avgLikes = data.instagram.recent_media.length
