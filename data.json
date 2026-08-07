@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-08-07T07:00:00+09:00",
-  "period_label": "直近7日間（GA4/Instagram） / 直近30日間（Shopify）",
+  "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify） / 直近14日間（LINE）",
   "ga4": {
     "activeUsers": 182,
     "screenPageViews": 854,
