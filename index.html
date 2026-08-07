@@ -69,6 +69,13 @@
   </section>
 
   <section>
+    <h2>店舗・全社売上（今月 vs 先月・月次） <span class="badge snapshot" id="store-badge">スナップショット</span></h2>
+    <p class="desc" id="store-desc"></p>
+    <div class="chart-box" style="height:220px;"><canvas id="storeChart"></canvas></div>
+    <div id="storeTable" style="margin-top:12px;"></div>
+  </section>
+
+  <section>
     <h2>Instagram（citsongolf.official）</h2>
     <div class="cards" id="ig-cards"></div>
     <div id="igTable"></div>
@@ -110,6 +117,7 @@ async function load() {
   }
   const salesSub = pctSub(data.shopify.current_month.gross_sales, sp.gross_sales, "先月同日(1〜7日)比");
   const ordersSub = pctSub(data.shopify.current_month.orders, sp.orders, "先月同日比");
+  const storeSub = pctSub(data.store.current_month.gross_sales, data.store.previous_month.gross_sales, "前月比");
   const kpis = [
     ["直近7日 UU（ユーザー数）", data.ga4.activeUsers.toLocaleString("ja-JP")],
     ["直近7日 表示回数", data.ga4.screenPageViews.toLocaleString("ja-JP")],
@@ -118,6 +126,8 @@ async function load() {
     ["今月 EC総売上", fmtYen(data.shopify.current_month.gross_sales), salesSub],
     ["今月 注文数", data.shopify.current_month.orders.toLocaleString("ja-JP") + "件", ordersSub],
     ["先月 EC総売上", fmtYen(data.shopify.previous_month.gross_sales)],
+    ["今月 店舗売上（実店舗）", fmtYen(data.store.current_month.gross_sales), storeSub],
+    ["先月 店舗売上", fmtYen(data.store.previous_month.gross_sales)],
     ["LINE有効友だち数", data.line.active_friends.toLocaleString("ja-JP")]
   ];
   cards.innerHTML = kpis.map(([label, value, sub]) =>
@@ -197,6 +207,39 @@ async function load() {
     sort: true,
     style: { table: { width: "100%" } }
   }).render(document.getElementById("productTable"));
+
+  // Store (実店舗) chart + breakdown table
+  const st = data.store;
+  document.getElementById("store-desc").textContent =
+    st.source + "（" + st.last_updated + "時点）。店長・経理が月次で手動更新のため日次データはありません。" + (st.note || "");
+  new Chart(document.getElementById("storeChart"), {
+    type: "bar",
+    data: {
+      labels: [st.previous_month_label, st.current_month_label],
+      datasets: [{
+        label: "店舗売上（実店舗）",
+        data: [st.previous_month.gross_sales, st.current_month.gross_sales],
+        backgroundColor: ["#c9ccd1", "#2b6cb0"]
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { ticks: { callback: v => "¥" + v.toLocaleString("ja-JP") } } }
+    }
+  });
+  new gridjs.Grid({
+    columns: ["区分", st.previous_month_label, st.current_month_label],
+    data: [
+      ["店舗（実店舗）", fmtYen(st.previous_month.gross_sales), fmtYen(st.current_month.gross_sales)],
+      ["EC（経理集計）", fmtYen(st.ec_master_previous_month), fmtYen(st.ec_master_current_month)],
+      ["イベント（POP UP等）", fmtYen(st.event_previous_month), fmtYen(st.event_current_month)],
+      ["合計（全社）", fmtYen(st.grand_total_previous_month), fmtYen(st.grand_total_current_month)]
+    ],
+    sort: false,
+    style: { table: { width: "100%" } }
+  }).render(document.getElementById("storeTable"));
 
   // Instagram cards
   const avgLikes = data.instagram.recent_media.length
