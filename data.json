@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T07:39:26+09:00",
+  "generated_at": "2026-08-08T08:00:16+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
     "activeUsers": 180,
@@ -26,9 +26,9 @@
     "current_month_label": "2026年8月",
     "previous_month_label": "2026年7月",
     "current_month": {
-      "gross_sales": 20000,
+      "gross_sales": 22000,
       "orders": 1,
-      "aov": 20000,
+      "aov": 22000,
       "daily_sales": [
         {
           "day": 1,
@@ -40,7 +40,7 @@
           "day": 2,
           "date": "2026-08-02",
           "orders": 1,
-          "gross_sales": 20000
+          "gross_sales": 22000
         },
         {
           "day": 3,
@@ -81,9 +81,9 @@
       ]
     },
     "previous_month": {
-      "gross_sales": 86000,
+      "gross_sales": 94600,
       "orders": 3,
-      "aov": 28667,
+      "aov": 31533,
       "daily_sales": [
         {
           "day": 1,
@@ -137,7 +137,7 @@
           "day": 9,
           "date": "2026-07-09",
           "orders": 1,
-          "gross_sales": 13000
+          "gross_sales": 14300
         },
         {
           "day": 10,
@@ -179,7 +179,7 @@
           "day": 16,
           "date": "2026-07-16",
           "orders": 1,
-          "gross_sales": 21000
+          "gross_sales": 23100
         },
         {
           "day": 17,
@@ -191,7 +191,7 @@
           "day": 18,
           "date": "2026-07-18",
           "orders": 1,
-          "gross_sales": 52000
+          "gross_sales": 57200
         },
         {
           "day": 19,
@@ -280,11 +280,11 @@
     "top_products": [
       {
         "title": "CitsonGolf/レディースノースリ",
-        "gross_sales": 20000,
+        "gross_sales": 22000,
         "orders": 1
       }
     ],
-    "note": "admin.shopify.com staffセッションが未ログイン状態だったため、Cowork接続済みのShopify MCPコネクタ（run-analytics-query/list-orders）にフォールバックして取得。"
+    "note": "admin.shopify.com Admin API (staff session) 経由で取得（ozcommahiroブラウザ）。gross_salesはtotal_line_items_priceの合計（税・送料・値引き抜き）。"
   },
   "instagram": {
     "username": "citsongolf.official",
@@ -330,10 +330,38 @@
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-08-07",
-    "active_friends": 201,
-    "total_added": 220,
+    "as_of": "2026-08-08",
+    "active_friends": 204,
+    "total_added": 223,
     "daily": [
+      {
+        "date": "2026-07-26",
+        "added": 4,
+        "blocked": 0,
+        "net": 4,
+        "active_total": 166
+      },
+      {
+        "date": "2026-07-27",
+        "added": 4,
+        "blocked": 1,
+        "net": 3,
+        "active_total": 169
+      },
+      {
+        "date": "2026-07-28",
+        "added": 0,
+        "blocked": 1,
+        "net": -1,
+        "active_total": 168
+      },
+      {
+        "date": "2026-07-29",
+        "added": 1,
+        "blocked": 0,
+        "net": 1,
+        "active_total": 169
+      },
       {
         "date": "2026-07-30",
         "added": 4,
@@ -378,27 +406,33 @@
       },
       {
         "date": "2026-08-05",
-        "added": 2,
+        "added": 5,
         "blocked": 0,
-        "net": 2,
-        "active_total": 195
-      },
-      {
-        "date": "2026-08-06",
-        "added": 0,
-        "blocked": 0,
-        "net": 0,
+        "net": 5,
         "active_total": 198
       },
       {
-        "date": "2026-08-07",
-        "added": 2,
+        "date": "2026-08-06",
+        "added": 1,
         "blocked": 0,
-        "net": 2,
-        "active_total": 201
+        "net": 1,
+        "active_total": 199
+      },
+      {
+        "date": "2026-08-07",
+        "added": 5,
+        "blocked": 0,
+        "net": 5,
+        "active_total": 204
+      },
+      {
+        "date": "2026-08-08",
+        "added": 0,
+        "blocked": 0,
+        "net": 0,
+        "active_total": 204
       }
-    ],
-    "note": "取得失敗（要再ログイン）: 2026-08-08"
+    ]
   },
   "store": {
     "current_month_label": "2026年8月",
