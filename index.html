@@ -221,7 +221,7 @@ async function load() {
 
   // LINE
   document.getElementById("line-desc").textContent =
-    `${data.line.source}（${data.line.as_of}時点）。 ${data.line.note}`;
+    `${data.line.source}（${data.line.as_of}時点）。 ${data.line.note || ""}`;
   document.getElementById("line-cards").innerHTML = [
     ["有効友だち数", data.line.active_friends.toLocaleString("ja-JP")],
     ["友だち追加総数", data.line.total_added.toLocaleString("ja-JP")]
