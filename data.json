@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-08T08:00:16+09:00",
+  "generated_at": "2026-08-08T09:44:25+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 180,
-    "screenPageViews": 851,
-    "sessions": 232,
+    "activeUsers": 184,
+    "screenPageViews": 866,
+    "sessions": 236,
     "events": {
-      "view_item": 234,
+      "view_item": 241,
       "form_start": 79,
       "add_to_cart": 6,
       "begin_checkout": 3,
       "purchase": 1
     },
-    "cvr_pct": 0.43,
+    "cvr_pct": 0.42,
     "channels": {
-      "Organic Social": 106,
-      "Direct": 73,
+      "Organic Social": 109,
+      "Direct": 74,
       "Organic Search": 39,
       "Unassigned": 20,
       "Cross-network": 1,
@@ -284,7 +284,74 @@
         "orders": 1
       }
     ],
-    "note": "admin.shopify.com Admin API (staff session) 経由で取得（ozcommahiroブラウザ）。gross_salesはtotal_line_items_priceの合計（税・送料・値引き抜き）。"
+    "note": "admin.shopify.com Admin API (staff session, ozcommahiroブラウザ) 経由で取得。gross_salesはline_items(price×quantity)の合計。"
+  },
+  "store": {
+    "current_month_label": "2026年8月",
+    "previous_month_label": "2026年7月",
+    "current_month": {
+      "gross_sales": 0
+    },
+    "previous_month": {
+      "gross_sales": 663380
+    },
+    "event_current_month": 203940,
+    "event_previous_month": 0,
+    "ec_master_current_month": 19363,
+    "ec_master_previous_month": 86000,
+    "grand_total_current_month": 223303,
+    "grand_total_previous_month": 749380,
+    "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ",
+    "last_updated": "2026-08-08",
+    "note": "8月店舗合計は0円（8/1 POP UP STOREイベント分はイベント合計に別計上。経理確認済みで集計漏れではない）"
+  },
+  "kgi": {
+    "monthly_plan": {
+      "7": 400000,
+      "8": 350000,
+      "9": 450000,
+      "10": 550000,
+      "11": 650000,
+      "12": 800000
+    },
+    "q_targets": {
+      "q3": 1200000,
+      "q4": 2000000
+    },
+    "source": "CitsonGolf_2026下半期事業計画書（作成日2026-07-23）「KGI」「PL_月次」タブ",
+    "note": "計画値は事業計画書に基づく固定値です。事業計画の見直し時のみ更新します。実績（進捗バー・グラフ）は当月・前月分のみ反映します（それ以前は事業計画書側でご確認ください）。"
+  },
+  "advance": {
+    "monthly": {
+      "7": {
+        "balance": 30042567,
+        "delta": 1804556
+      },
+      "8": {
+        "balance": 31897123,
+        "delta": 1854556
+      },
+      "9": {
+        "balance": 33651679,
+        "delta": 1754556
+      },
+      "10": {
+        "balance": 35056235,
+        "delta": 1404556
+      },
+      "11": {
+        "balance": 36360791,
+        "delta": 1304556
+      },
+      "12": {
+        "balance": 37515347,
+        "delta": 1154556
+      }
+    },
+    "opening_balance": 28238011,
+    "opening_balance_date": "2026-06-30",
+    "source": "CitsonGolf_2026下半期事業計画書「PL_月次」「立替金台帳サマリー」タブ（計画ベースの試算）",
+    "note": "株式会社エフエーがトゥーハウンズに対して立て替えている残高の見込み・試算値です。実際の総勘定元帳ベースの確定額とは異なる場合があります（総勘定元帳上の確定残高は決算時点のみ: 2026年3月末¥28,238,011）。"
   },
   "instagram": {
     "username": "citsongolf.official",
@@ -310,14 +377,14 @@
         "type": "IMAGE",
         "likes": 7,
         "comments": 0,
-        "caption": "Seamless Mind. ー 境界線を越える、洗練の形"
+        "caption": "Seamless Mind. ー 境界線を越える、洗練の形\n"
       },
       {
         "date": "2026-07-29",
         "type": "IMAGE",
         "likes": 9,
         "comments": 1,
-        "caption": "Quiet Focus. ー 静寂と躍動のコントラスト"
+        "caption": "Quiet Focus. ー 静寂と躍動のコントラスト\n\nゴ"
       },
       {
         "date": "2026-07-26",
@@ -433,72 +500,5 @@
         "active_total": 204
       }
     ]
-  },
-  "store": {
-    "current_month_label": "2026年8月",
-    "previous_month_label": "2026年7月",
-    "current_month": {
-      "gross_sales": 0
-    },
-    "previous_month": {
-      "gross_sales": 663380
-    },
-    "event_current_month": 203940,
-    "event_previous_month": 0,
-    "ec_master_current_month": 19363,
-    "ec_master_previous_month": 86000,
-    "grand_total_current_month": 223303,
-    "grand_total_previous_month": 749380,
-    "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ",
-    "last_updated": "2026-08-08",
-    "note": "8月店舗合計は0円（8/1 POP UP STOREイベント分はイベント合計に別計上。経理確認済みで集計漏れではない）"
-  },
-  "kgi": {
-    "monthly_plan": {
-      "7": 400000,
-      "8": 350000,
-      "9": 450000,
-      "10": 550000,
-      "11": 650000,
-      "12": 800000
-    },
-    "q_targets": {
-      "q3": 1200000,
-      "q4": 2000000
-    },
-    "source": "CitsonGolf_2026下半期事業計画書（作成日2026-07-23）「KGI」「PL_月次」タブ",
-    "note": "計画値は事業計画書に基づく固定値です。事業計画の見直し時のみ更新します。実績（進捗バー・グラフ）は当月・前月分のみ反映します（それ以前は事業計画書側でご確認ください）。"
-  },
-  "advance": {
-    "monthly": {
-      "7": {
-        "balance": 30042567,
-        "delta": 1804556
-      },
-      "8": {
-        "balance": 31897123,
-        "delta": 1854556
-      },
-      "9": {
-        "balance": 33651679,
-        "delta": 1754556
-      },
-      "10": {
-        "balance": 35056235,
-        "delta": 1404556
-      },
-      "11": {
-        "balance": 36360791,
-        "delta": 1304556
-      },
-      "12": {
-        "balance": 37515347,
-        "delta": 1154556
-      }
-    },
-    "opening_balance": 28238011,
-    "opening_balance_date": "2026-06-30",
-    "source": "CitsonGolf_2026下半期事業計画書「PL_月次」「立替金台帳サマリー」タブ（計画ベースの試算）",
-    "note": "株式会社エフエーがトゥーハウンズに対して立て替えている残高の見込み・試算値です。実際の総勘定元帳ベースの確定額とは異なる場合があります（総勘定元帳上の確定残高は決算時点のみ: 2026年3月末¥28,238,011）。"
   }
 }
