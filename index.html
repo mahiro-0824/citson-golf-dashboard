@@ -67,6 +67,12 @@
   </section>
 
   <section>
+<h2>紹介者別売上（鹿島様・七戸様） <span class="badge snapshot" id="referral-badge">スナップショット</span></h2>
+<p class="desc" id="referral-desc"></p>
+<div class="cards" id="referral-cards"></div>
+<div class="chart-box" style="height:260px;"><canvas id="referralChart"></canvas></div>
+</section>
+<section>
     <h2>四半期KGI進捗（店舗＋EC＋イベント合算） <span class="badge snapshot" id="kgi-badge-live">計画ベース</span></h2>
     <p class="desc" id="kgi-desc"></p>
     <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
@@ -210,6 +216,43 @@ async function load() {
     sort: false,
     style: { table: { width: "100%" } }
   }).render(document.getElementById("salesSummaryTable"));
+
+// 紹介者別売上（鹿島様・七戸様）
+(function renderReferrals() {
+  const rf = data.referrals;
+  const descEl = document.getElementById("referral-desc");
+  const cardsEl = document.getElementById("referral-cards");
+  if (!rf || !rf.monthly || !rf.monthly.length) {
+    if (descEl) descEl.textContent = "紹介者データがまだありません。";
+    return;
+  }
+  const m = rf.monthly;
+  const latest = m[m.length - 1];
+  const prevM = m.length > 1 ? m[m.length - 2] : null;
+  descEl.textContent = (rf.source || "") + "（" + (rf.last_updated || "") + "時点）。 " + (rf.note || "");
+  const refCards = [
+    ["鹿島様紹介（" + latest.label + "）", fmtYen(latest.kashima), prevM ? pctSub(latest.kashima, prevM.kashima, "前月比") : ""],
+    ["七戸様紹介（" + latest.label + "）", fmtYen(latest.shichinohe), prevM ? pctSub(latest.shichinohe, prevM.shichinohe, "前月比") : ""],
+    ["紹介合計（" + latest.label + "）", fmtYen(latest.kashima + latest.shichinohe), ""]
+  ];
+  cardsEl.innerHTML = refCards.map(cardTemplate).join("");
+  new Chart(document.getElementById("referralChart"), {
+    type: "bar",
+    data: {
+      labels: m.map(r => r.label),
+      datasets: [
+        { label: "鹿島様紹介", data: m.map(r => r.kashima), backgroundColor: "#2b6cb0" },
+        { label: "七戸様紹介", data: m.map(r => r.shichinohe), backgroundColor: "#e07a3f" }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: true, position: "top" } },
+      scales: { y: { ticks: { callback: v => "¥" + v.toLocaleString("ja-JP") } } }
+    }
+  });
+})();
 
   // 四半期KGI進捗 + 立替金（エフエー）
   (function renderKgiAndAdvance() {
