@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T01:12:00+09:00",
+  "generated_at": "2026-08-12T05:32:15+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
     "activeUsers": 154,
@@ -25,9 +25,9 @@
     "current_month_label": "2026年8月",
     "previous_month_label": "2026年7月",
     "current_month": {
-      "gross_sales": 22000,
-      "orders": 1,
-      "aov": 22000,
+      "gross_sales": 73700,
+      "orders": 2,
+      "aov": 36850,
       "daily_sales": [
         {
           "day": 1,
@@ -92,8 +92,8 @@
         {
           "day": 11,
           "date": "2026-08-11",
-          "orders": 0,
-          "gross_sales": 0
+          "orders": 1,
+          "gross_sales": 51700
         }
       ]
     },
@@ -296,12 +296,22 @@
     },
     "top_products": [
       {
+        "title": "CitsonGolf/ワイドハーフパンツ",
+        "gross_sales": 26400,
+        "orders": 1
+      },
+      {
+        "title": "CitsonGolf/ノースリPO",
+        "gross_sales": 25300,
+        "orders": 1
+      },
+      {
         "title": "CitsonGolf/レディースノースリ",
         "gross_sales": 22000,
         "orders": 1
       }
     ],
-    "note": ""
+    "note": "8/11の新規注文（Yahoo検索経由・¥51,700）を反映"
   },
   "store": {
     "current_month_label": "2026年8月",
