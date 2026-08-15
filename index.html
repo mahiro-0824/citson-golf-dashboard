@@ -173,10 +173,10 @@ async function load() {
   // 売上サマリー（店舗＋EC＋イベント＝全体、今月 vs 先月）
   const st = data.store;
   document.getElementById("sales-summary-desc").textContent =
-    st.current_month_label + "（進行中）と" + st.previous_month_label + "（確定月）の比較。店舗・EC（経理集計）・イベントを合算したものが「全体合計」です。" + (st.note || "");
+    st.current_month_label + "（進行中）と" + st.previous_month_label + "（確定月）の比較。店舗・EC（Shopify）・イベントを合算したものが「全体合計」です。" + (st.note || "");
   const summaryCards = [
     ["店舗（実店舗）", fmtYen(st.current_month.gross_sales), pctSub(st.current_month.gross_sales, st.previous_month.gross_sales, "前月比")],
-    ["EC（経理集計）", fmtYen(st.ec_master_current_month), pctSub(st.ec_master_current_month, st.ec_master_previous_month, "前月比")],
+    ["EC（Shopify）", fmtYen(st.ec_current_month), pctSub(st.ec_current_month, st.ec_previous_month, "前月比")],
     ["イベント（POP UP等）", fmtYen(st.event_current_month), pctSub(st.event_current_month, st.event_previous_month, "前月比")],
     ["全体合計（店舗+EC+イベント）", fmtYen(st.grand_total_current_month), pctSub(st.grand_total_current_month, st.grand_total_previous_month, "前月比")]
   ];
@@ -188,12 +188,12 @@ async function load() {
       datasets: [
         {
           label: st.previous_month_label,
-          data: [st.previous_month.gross_sales, st.ec_master_previous_month, st.event_previous_month, st.grand_total_previous_month],
+          data: [st.previous_month.gross_sales, st.ec_previous_month, st.event_previous_month, st.grand_total_previous_month],
           backgroundColor: "#c9ccd1"
         },
         {
           label: st.current_month_label,
-          data: [st.current_month.gross_sales, st.ec_master_current_month, st.event_current_month, st.grand_total_current_month],
+          data: [st.current_month.gross_sales, st.ec_current_month, st.event_current_month, st.grand_total_current_month],
           backgroundColor: "#2b6cb0"
         }
       ]
@@ -209,7 +209,7 @@ async function load() {
     columns: ["区分", st.previous_month_label, st.current_month_label],
     data: [
       ["店舗（実店舗）", fmtYen(st.previous_month.gross_sales), fmtYen(st.current_month.gross_sales)],
-      ["EC（経理集計）", fmtYen(st.ec_master_previous_month), fmtYen(st.ec_master_current_month)],
+      ["EC（Shopify）", fmtYen(st.ec_previous_month), fmtYen(st.ec_current_month)],
       ["イベント（POP UP等）", fmtYen(st.event_previous_month), fmtYen(st.event_current_month)],
       ["全体合計", fmtYen(st.grand_total_previous_month), fmtYen(st.grand_total_current_month)]
     ],
@@ -377,7 +377,7 @@ async function load() {
 
   // Shopify sales chart（今月 vs 先月・日別）
   document.getElementById("shopify-desc").textContent =
-    "今月（" + data.shopify.current_month_label + "）と先月（" + data.shopify.previous_month_label + "）の日別売上を同じ日付軸で比較（Shopifyライブ集計）。上部の売上サマリーのEC値は経理集計のため、こちらとは定義・タイミングが異なり一致しない場合があります。" + (data.shopify.note || "");
+    "今月（" + data.shopify.current_month_label + "）と先月（" + data.shopify.previous_month_label + "）の日別売上を同じ日付軸で比較（Shopifyライブ集計）。上部の売上サマリーのEC値もこちらと同じShopifyライブ集計を使用しています。" + (data.shopify.note || "");
   const daysAxis = Array.from({ length: 31 }, (_, i) => i + 1);
   const curMap = {}; data.shopify.current_month.daily_sales.forEach(r => { curMap[r.day] = r.gross_sales; });
   const prevMap = {}; data.shopify.previous_month.daily_sales.forEach(r => { prevMap[r.day] = r.gross_sales; });
