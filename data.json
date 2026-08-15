@@ -1,346 +1,353 @@
 {
-  "generated_at": "2026-08-14T07:15:00+09:00",
+  "generated_at": "2026-08-15T07:00:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 151,
-    "screenPageViews": 1017,
-    "sessions": 192,
+    "activeUsers": 149,
+    "screenPageViews": 1060,
+    "sessions": 202,
     "events": {
-      "view_item": 309,
-      "form_start": 115,
+      "view_item": 339,
+      "form_start": 124,
       "add_to_cart": 16,
       "begin_checkout": 7,
       "purchase": 2
     },
-    "cvr_pct": 1.04,
+    "cvr_pct": 0.99,
     "channels": {
-      "Cross-network": 6,
-      "Direct": 56,
-      "Organic Search": 25,
-      "Organic Shopping": 1,
-      "Organic Social": 90,
-      "Unassigned": 22
+      "Organic Social": 91,
+      "Direct": 57,
+      "Unassigned": 35,
+      "Organic Search": 29,
+      "Organic Shopping": 6,
+      "Cross-network": 4,
+      "Organic Video": 2
     }
   },
   "shopify": {
     "current_month_label": "2026年8月",
     "previous_month_label": "2026年7月",
     "current_month": {
-      "gross_sales": 118800,
+      "gross_sales": 108000,
       "orders": 3,
-      "aov": 39600,
+      "aov": 36000,
       "daily_sales": [
         {
           "day": 1,
-          "date": "1",
+          "date": "2026-08-01",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 2,
-          "date": "2",
+          "date": "2026-08-02",
           "orders": 1,
-          "gross_sales": 22000
+          "gross_sales": 20000
         },
         {
           "day": 3,
-          "date": "3",
+          "date": "2026-08-03",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 4,
-          "date": "4",
+          "date": "2026-08-04",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 5,
-          "date": "5",
+          "date": "2026-08-05",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 6,
-          "date": "6",
+          "date": "2026-08-06",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 7,
-          "date": "7",
+          "date": "2026-08-07",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 8,
-          "date": "8",
+          "date": "2026-08-08",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 9,
-          "date": "9",
+          "date": "2026-08-09",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 10,
-          "date": "10",
+          "date": "2026-08-10",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 11,
-          "date": "11",
+          "date": "2026-08-11",
           "orders": 1,
-          "gross_sales": 51700
+          "gross_sales": 47000
         },
         {
           "day": 12,
-          "date": "12",
+          "date": "2026-08-12",
           "orders": 1,
-          "gross_sales": 45100
+          "gross_sales": 41000
         },
         {
           "day": 13,
-          "date": "13",
+          "date": "2026-08-13",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 14,
-          "date": "14",
+          "date": "2026-08-14",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 15,
+          "date": "2026-08-15",
           "orders": 0,
           "gross_sales": 0
         }
       ]
     },
     "previous_month": {
-      "gross_sales": 94600,
+      "gross_sales": 86000,
       "orders": 3,
-      "aov": 31533,
+      "aov": 28667,
       "daily_sales": [
         {
           "day": 1,
-          "date": "1",
+          "date": "2026-07-01",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 2,
-          "date": "2",
+          "date": "2026-07-02",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 3,
-          "date": "3",
+          "date": "2026-07-03",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 4,
-          "date": "4",
+          "date": "2026-07-04",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 5,
-          "date": "5",
+          "date": "2026-07-05",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 6,
-          "date": "6",
+          "date": "2026-07-06",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 7,
-          "date": "7",
+          "date": "2026-07-07",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 8,
-          "date": "8",
+          "date": "2026-07-08",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 9,
-          "date": "9",
+          "date": "2026-07-09",
           "orders": 1,
-          "gross_sales": 14300
+          "gross_sales": 13000
         },
         {
           "day": 10,
-          "date": "10",
+          "date": "2026-07-10",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 11,
-          "date": "11",
+          "date": "2026-07-11",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 12,
-          "date": "12",
+          "date": "2026-07-12",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 13,
-          "date": "13",
+          "date": "2026-07-13",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 14,
-          "date": "14",
+          "date": "2026-07-14",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 15,
-          "date": "15",
+          "date": "2026-07-15",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 16,
-          "date": "16",
+          "date": "2026-07-16",
           "orders": 1,
-          "gross_sales": 23100
+          "gross_sales": 21000
         },
         {
           "day": 17,
-          "date": "17",
+          "date": "2026-07-17",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 18,
-          "date": "18",
+          "date": "2026-07-18",
           "orders": 1,
-          "gross_sales": 57200
+          "gross_sales": 52000
         },
         {
           "day": 19,
-          "date": "19",
+          "date": "2026-07-19",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 20,
-          "date": "20",
+          "date": "2026-07-20",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 21,
-          "date": "21",
+          "date": "2026-07-21",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 22,
-          "date": "22",
+          "date": "2026-07-22",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 23,
-          "date": "23",
+          "date": "2026-07-23",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 24,
-          "date": "24",
+          "date": "2026-07-24",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 25,
-          "date": "25",
+          "date": "2026-07-25",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 26,
-          "date": "26",
+          "date": "2026-07-26",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 27,
-          "date": "27",
+          "date": "2026-07-27",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 28,
-          "date": "28",
+          "date": "2026-07-28",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 29,
-          "date": "29",
+          "date": "2026-07-29",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 30,
-          "date": "30",
+          "date": "2026-07-30",
           "orders": 0,
           "gross_sales": 0
         },
         {
           "day": 31,
-          "date": "31",
+          "date": "2026-07-31",
           "orders": 0,
           "gross_sales": 0
         }
       ]
     },
     "prev_same_period": {
-      "gross_sales": 14300,
+      "gross_sales": 13000,
       "orders": 1
     },
     "top_products": [
       {
         "title": "CitsonGolf/ワイドハーフパンツ",
-        "gross_sales": 26400,
+        "gross_sales": 24000,
         "orders": 1
       },
       {
         "title": "CitsonGolf/ノースリPO",
-        "gross_sales": 25300,
+        "gross_sales": 23000,
         "orders": 1
       },
       {
         "title": "CitsonGolf/レディースノースリ",
-        "gross_sales": 22000,
+        "gross_sales": 20000,
         "orders": 1
       },
       {
         "title": "IZREEL/TRハーフパンツ",
-        "gross_sales": 18700,
+        "gross_sales": 17000,
         "orders": 1
       },
       {
         "title": "IZREEL/プレーンメッシュ",
-        "gross_sales": 17600,
+        "gross_sales": 16000,
         "orders": 1
       }
     ],
-    "note": "Shopify Admin API（ブラウザセッション経由）で取得。ECのみ（store source_name=web）。"
+    "note": "Shopify staffセッション切れのためAdmin API直接取得は失敗、Cowork接続済みShopify MCPコネクタ（run-analytics-query／ShopifyQL）にフォールバック。gross_salesはShopifyQLのgross_sales（total_line_items_priceベースと概ね同義）を使用。"
   },
   "store": {
     "current_month_label": "2026年8月",
@@ -358,8 +365,8 @@
     "grand_total_current_month": 234823,
     "grand_total_previous_month": 749380,
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ",
-    "last_updated": "2026-08-14",
-    "note": "8月分は経理反映済み（POP UP STOREイベント売上¥203,940含む、入金計¥197,822）。"
+    "last_updated": "2026-08-15",
+    "note": "8月分は経理反映済み（POP UP STOREイベント売上¥203,940含む、入金計¥197,822）。前回実行時と数値変化なし。"
   },
   "kgi": {
     "monthly_plan": {
@@ -411,7 +418,7 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2130,
+    "followers_count": 2133,
     "media_count": 77,
     "recent_media": [
       {
@@ -556,7 +563,7 @@
         "active_total": 215
       }
     ],
-    "note": "取得失敗（要再ログイン）: 2026-08-14"
+    "note": "取得失敗（要再ログイン）: 2026-08-15"
   },
   "referrals": {
     "monthly": [
@@ -580,7 +587,7 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-08-14",
-    "note": "全月分（月次売上サマリの全行）を反映。"
+    "last_updated": "2026-08-15",
+    "note": "全月分（月次売上サマリの全行）を反映。前回実行時と数値変化なし。"
   }
 }
