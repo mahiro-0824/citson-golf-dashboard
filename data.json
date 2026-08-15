@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T07:00:00+09:00",
+  "generated_at": "2026-08-15T08:30:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
     "activeUsers": 149,
@@ -362,11 +362,13 @@
     "event_previous_month": 0,
     "ec_master_current_month": 19363,
     "ec_master_previous_month": 86000,
-    "grand_total_current_month": 234823,
+    "grand_total_current_month": 323460,
     "grand_total_previous_month": 749380,
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ",
     "last_updated": "2026-08-15",
-    "note": "8月分は経理反映済み（POP UP STOREイベント売上¥203,940含む、入金計¥197,822）。前回実行時と数値変化なし。"
+    "note": "EC値はShopifyライブ集計（経理集計の反映待ちを廃止、2026-08-15変更）。8月分は店舗・イベントは経理反映済み（POP UP STOREイベント売上¥203,940含む、入金計¥197,822）。ec_master_*は参考値（経理集計、Citson_マスター記載値）として残置。",
+    "ec_current_month": 108000,
+    "ec_previous_month": 86000
   },
   "kgi": {
     "monthly_plan": {
