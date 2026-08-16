@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-08-15T08:30:00+09:00",
+  "generated_at": "2026-08-16T13:44:57.487+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 149,
-    "screenPageViews": 1060,
-    "sessions": 202,
+    "activeUsers": 129,
+    "screenPageViews": 1034,
+    "sessions": 185,
     "events": {
-      "view_item": 339,
-      "form_start": 124,
+      "view_item": 362,
+      "form_start": 123,
       "add_to_cart": 16,
       "begin_checkout": 7,
       "purchase": 2
     },
-    "cvr_pct": 0.99,
+    "cvr_pct": 1.08,
     "channels": {
-      "Organic Social": 91,
-      "Direct": 57,
-      "Unassigned": 35,
-      "Organic Search": 29,
-      "Organic Shopping": 6,
-      "Cross-network": 4,
-      "Organic Video": 2
+      "Organic Social": 84,
+      "Direct": 44,
+      "Organic Search": 36,
+      "Unassigned": 20,
+      "Organic Shopping": 5,
+      "Organic Video": 2,
+      "Referral": 1
     }
   },
   "shopify": {
     "current_month_label": "2026年8月",
     "previous_month_label": "2026年7月",
     "current_month": {
-      "gross_sales": 108000,
+      "gross_sales": 118800,
       "orders": 3,
-      "aov": 36000,
+      "aov": 39600,
       "daily_sales": [
         {
           "day": 1,
@@ -41,7 +41,7 @@
           "day": 2,
           "date": "2026-08-02",
           "orders": 1,
-          "gross_sales": 20000
+          "gross_sales": 22000
         },
         {
           "day": 3,
@@ -95,13 +95,13 @@
           "day": 11,
           "date": "2026-08-11",
           "orders": 1,
-          "gross_sales": 47000
+          "gross_sales": 51700
         },
         {
           "day": 12,
           "date": "2026-08-12",
           "orders": 1,
-          "gross_sales": 41000
+          "gross_sales": 45100
         },
         {
           "day": 13,
@@ -120,13 +120,19 @@
           "date": "2026-08-15",
           "orders": 0,
           "gross_sales": 0
+        },
+        {
+          "day": 16,
+          "date": "2026-08-16",
+          "orders": 0,
+          "gross_sales": 0
         }
       ]
     },
     "previous_month": {
-      "gross_sales": 86000,
+      "gross_sales": 94600,
       "orders": 3,
-      "aov": 28667,
+      "aov": 31533,
       "daily_sales": [
         {
           "day": 1,
@@ -180,7 +186,7 @@
           "day": 9,
           "date": "2026-07-09",
           "orders": 1,
-          "gross_sales": 13000
+          "gross_sales": 14300
         },
         {
           "day": 10,
@@ -222,7 +228,7 @@
           "day": 16,
           "date": "2026-07-16",
           "orders": 1,
-          "gross_sales": 21000
+          "gross_sales": 23100
         },
         {
           "day": 17,
@@ -234,7 +240,7 @@
           "day": 18,
           "date": "2026-07-18",
           "orders": 1,
-          "gross_sales": 52000
+          "gross_sales": 57200
         },
         {
           "day": 19,
@@ -317,37 +323,37 @@
       ]
     },
     "prev_same_period": {
-      "gross_sales": 13000,
-      "orders": 1
+      "gross_sales": 37400,
+      "orders": 2
     },
     "top_products": [
       {
         "title": "CitsonGolf/ワイドハーフパンツ",
-        "gross_sales": 24000,
+        "gross_sales": 26400,
         "orders": 1
       },
       {
         "title": "CitsonGolf/ノースリPO",
-        "gross_sales": 23000,
+        "gross_sales": 25300,
         "orders": 1
       },
       {
         "title": "CitsonGolf/レディースノースリ",
-        "gross_sales": 20000,
+        "gross_sales": 22000,
         "orders": 1
       },
       {
         "title": "IZREEL/TRハーフパンツ",
-        "gross_sales": 17000,
+        "gross_sales": 18700,
         "orders": 1
       },
       {
         "title": "IZREEL/プレーンメッシュ",
-        "gross_sales": 16000,
+        "gross_sales": 17600,
         "orders": 1
       }
     ],
-    "note": "Shopify staffセッション切れのためAdmin API直接取得は失敗、Cowork接続済みShopify MCPコネクタ（run-analytics-query／ShopifyQL）にフォールバック。gross_salesはShopifyQLのgross_sales（total_line_items_priceベースと概ね同義）を使用。"
+    "note": "Shopify Admin API（staffセッションCookie経由）で取得成功"
   },
   "store": {
     "current_month_label": "2026年8月",
@@ -360,15 +366,40 @@
     },
     "event_current_month": 203940,
     "event_previous_month": 0,
-    "ec_master_current_month": 19363,
+    "ec_current_month": 118800,
+    "ec_previous_month": 94600,
+    "ec_master_current_month": 107363,
     "ec_master_previous_month": 86000,
-    "grand_total_current_month": 323460,
-    "grand_total_previous_month": 749380,
-    "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ",
-    "last_updated": "2026-08-15",
-    "note": "EC値はShopifyライブ集計（経理集計の反映待ちを廃止、2026-08-15変更）。8月分は店舗・イベントは経理反映済み（POP UP STOREイベント売上¥203,940含む、入金計¥197,822）。ec_master_*は参考値（経理集計、Citson_マスター記載値）として残置。",
-    "ec_current_month": 108000,
-    "ec_previous_month": 86000
+    "grand_total_current_month": 334260,
+    "grand_total_previous_month": 757980,
+    "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
+    "last_updated": "2026-08-16",
+    "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。8月分店舗・イベントはCitson_マスターに反映済み（イベント=8/1 POP UP STOREカード売上計、入金計¥197,822）。"
+  },
+  "referrals": {
+    "monthly": [
+      {
+        "month": "2026-06",
+        "label": "2026年6月",
+        "kashima": 0,
+        "shichinohe": 0
+      },
+      {
+        "month": "2026-07",
+        "label": "2026年7月",
+        "kashima": 177300,
+        "shichinohe": 45300
+      },
+      {
+        "month": "2026-08",
+        "label": "2026年8月",
+        "kashima": 0,
+        "shichinohe": 0
+      }
+    ],
+    "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
+    "last_updated": "2026-08-16",
+    "note": "全月分（月次売上サマリの全行）を反映。前回実行時と数値変化なし。"
   },
   "kgi": {
     "monthly_plan": {
@@ -420,7 +451,7 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2133,
+    "followers_count": 2139,
     "media_count": 77,
     "recent_media": [
       {
@@ -454,7 +485,7 @@
       {
         "date": "2026-07-26",
         "type": "CAROUSEL_ALBUM",
-        "likes": 10,
+        "likes": 11,
         "comments": 0,
         "caption": "Pure White Monolith. ー 無垢な白が描く"
       }
@@ -565,31 +596,6 @@
         "active_total": 215
       }
     ],
-    "note": "取得失敗（要再ログイン）: 2026-08-15"
-  },
-  "referrals": {
-    "monthly": [
-      {
-        "month": "2026-06",
-        "label": "2026年6月",
-        "kashima": 0,
-        "shichinohe": 0
-      },
-      {
-        "month": "2026-07",
-        "label": "2026年7月",
-        "kashima": 177300,
-        "shichinohe": 45300
-      },
-      {
-        "month": "2026-08",
-        "label": "2026年8月",
-        "kashima": 0,
-        "shichinohe": 0
-      }
-    ],
-    "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-08-15",
-    "note": "全月分（月次売上サマリの全行）を反映。前回実行時と数値変化なし。"
+    "note": "取得失敗（要再ログイン）: 2026-08-16"
   }
 }
