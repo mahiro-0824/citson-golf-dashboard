@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-16T13:44:57.487+09:00",
+  "generated_at": "2026-08-17T07:00:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 129,
-    "screenPageViews": 1034,
-    "sessions": 185,
+    "activeUsers": 117,
+    "screenPageViews": 987,
+    "sessions": 166,
     "events": {
-      "view_item": 362,
+      "view_item": 351,
       "form_start": 123,
+      "purchase": 2,
       "add_to_cart": 16,
-      "begin_checkout": 7,
-      "purchase": 2
+      "begin_checkout": 7
     },
-    "cvr_pct": 1.08,
+    "cvr_pct": 1.2,
     "channels": {
-      "Organic Social": 84,
-      "Direct": 44,
-      "Organic Search": 36,
-      "Unassigned": 20,
+      "Organic Social": 74,
+      "Direct": 37,
+      "Organic Search": 34,
+      "Unassigned": 24,
       "Organic Shopping": 5,
       "Organic Video": 2,
       "Referral": 1
@@ -124,6 +124,12 @@
         {
           "day": 16,
           "date": "2026-08-16",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 17,
+          "date": "2026-08-17",
           "orders": 0,
           "gross_sales": 0
         }
@@ -353,7 +359,7 @@
         "orders": 1
       }
     ],
-    "note": "Shopify Admin API（staffセッションCookie経由）で取得成功"
+    "note": "Shopify Admin API（セッションCookie方式）で取得"
   },
   "store": {
     "current_month_label": "2026年8月",
@@ -374,7 +380,7 @@
     "grand_total_previous_month": 757980,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
     "last_updated": "2026-08-16",
-    "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。8月分店舗・イベントはCitson_マスターに反映済み（イベント=8/1 POP UP STOREカード売上計、入金計¥197,822）。"
+    "note": "Google Driveコネクタが503で応答なしのため店舗・イベント・ec_master値は前回実行時点の値を維持。ECはShopifyライブ集計で更新（経理反映状況によらず毎回更新）。"
   },
   "referrals": {
     "monthly": [
@@ -596,6 +602,6 @@
         "active_total": 215
       }
     ],
-    "note": "取得失敗（要再ログイン）: 2026-08-16"
+    "note": "取得失敗（要再ログイン）: 2026-08-17。LINEログイン画面が表示されたため今回は更新せず前回値を維持。"
   }
 }
