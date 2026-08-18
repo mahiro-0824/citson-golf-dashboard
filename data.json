@@ -1,26 +1,27 @@
 {
-  "generated_at": "2026-08-18T07:05:00+09:00",
+  "generated_at": "2026-08-19T07:05:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 120,
-    "screenPageViews": 969,
-    "sessions": 170,
+    "activeUsers": 116,
+    "screenPageViews": 849,
+    "sessions": 164,
     "events": {
-      "view_item": 352,
-      "form_start": 120,
-      "add_to_cart": 15,
-      "begin_checkout": 5,
-      "purchase": 2
+      "view_item": 314,
+      "form_start": 82,
+      "add_to_cart": 0,
+      "begin_checkout": 3,
+      "purchase": 1
     },
-    "cvr_pct": 1.18,
+    "cvr_pct": 0.61,
     "channels": {
-      "Organic Social": 71,
-      "Direct": 45,
-      "Organic Search": 34,
-      "Unassigned": 30,
+      "Organic Social": 66,
+      "Direct": 43,
+      "Organic Search": 28,
+      "Unassigned": 28,
       "Organic Shopping": 5,
       "Organic Video": 2,
-      "Referral": 2
+      "Referral": 2,
+      "Cross-network": 1
     }
   },
   "shopify": {
@@ -136,6 +137,12 @@
         {
           "day": 18,
           "date": "2026-08-18",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 19,
+          "date": "2026-08-19",
           "orders": 0,
           "gross_sales": 0
         }
@@ -385,7 +392,7 @@
     "grand_total_current_month": 359260,
     "grand_total_previous_month": 757980,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-08-18",
+    "last_updated": "2026-08-19",
     "note": "Citson_マスター取得成功、当月分（8月行）反映済み。ECはCitson_マスターの経理反映状況によらずShopifyライブ集計を使用。"
   },
   "referrals": {
@@ -410,8 +417,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-08-18",
-    "note": "全月分（月次売上サマリの全行）を反映。前回実行時から数値変化なし。"
+    "last_updated": "2026-08-19",
+    "note": "全月分をupsertで更新。"
   },
   "kgi": {
     "monthly_plan": {
@@ -463,39 +470,39 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2140,
+    "followers_count": 2138,
     "media_count": 77,
     "recent_media": [
       {
-        "date": "2026-08-06T09:00:02+0000",
+        "date": "2026-08-06",
         "type": "CAROUSEL_ALBUM",
         "likes": 7,
         "comments": 0,
         "caption": "Refined Details. ー 洗練を決定づける、静か"
       },
       {
-        "date": "2026-08-02T09:00:05+0000",
+        "date": "2026-08-02",
         "type": "IMAGE",
         "likes": 5,
         "comments": 0,
         "caption": "The Essential Frame. ー 洗練を決定づけ"
       },
       {
-        "date": "2026-07-30T09:10:07+0000",
+        "date": "2026-07-30",
         "type": "IMAGE",
         "likes": 7,
         "comments": 0,
-        "caption": "Seamless Mind. ー 境界線を越える、洗練の形\n"
+        "caption": "Seamless Mind. ー 境界線を越える、洗練の形 "
       },
       {
-        "date": "2026-07-29T09:00:05+0000",
+        "date": "2026-07-29",
         "type": "IMAGE",
         "likes": 9,
         "comments": 1,
-        "caption": "Quiet Focus. ー 静寂と躍動のコントラスト\n\nゴ"
+        "caption": "Quiet Focus. ー 静寂と躍動のコントラスト ゴル"
       },
       {
-        "date": "2026-07-26T09:08:17+0000",
+        "date": "2026-07-26",
         "type": "CAROUSEL_ALBUM",
         "likes": 11,
         "comments": 0,
@@ -505,7 +512,7 @@
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-08-12",
+    "as_of": "2026-08-19",
     "active_friends": 215,
     "total_added": 237,
     "daily": [
@@ -608,6 +615,6 @@
         "active_total": 215
       }
     ],
-    "note": "取得失敗（要再ログイン）: 2026-08-18。既存値を維持。"
+    "note": "取得失敗（要再ログイン）: 2026-08-19。既存値を維持。"
   }
 }
