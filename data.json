@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-08-19T07:05:00+09:00",
+  "generated_at": "2026-08-20T07:05:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 116,
-    "screenPageViews": 849,
-    "sessions": 164,
+    "activeUsers": 118,
+    "screenPageViews": 885,
+    "sessions": 171,
     "events": {
-      "view_item": 314,
-      "form_start": 82,
-      "add_to_cart": 0,
-      "begin_checkout": 3,
-      "purchase": 1
+      "view_item": 331,
+      "form_start": 98,
+      "add_to_cart": 2,
+      "begin_checkout": 2,
+      "purchase": 0
     },
-    "cvr_pct": 0.61,
+    "cvr_pct": 0,
     "channels": {
-      "Organic Social": 66,
-      "Direct": 43,
-      "Organic Search": 28,
-      "Unassigned": 28,
+      "Organic Social": 62,
+      "Direct": 47,
+      "Unassigned": 32,
+      "Organic Search": 30,
+      "Cross-network": 6,
       "Organic Shopping": 5,
-      "Organic Video": 2,
-      "Referral": 2,
-      "Cross-network": 1
+      "Referral": 3,
+      "Organic Video": 2
     }
   },
   "shopify": {
@@ -143,6 +143,12 @@
         {
           "day": 19,
           "date": "2026-08-19",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 20,
+          "date": "2026-08-20",
           "orders": 0,
           "gross_sales": 0
         }
@@ -372,7 +378,7 @@
         "orders": 1
       }
     ],
-    "note": "Shopify Admin API直接取得（staffセッションCookie経由）"
+    "note": "Shopify Admin API（専用ブラウザのstaffセッション）より取得。ECのみ（source_name=web）。"
   },
   "store": {
     "current_month_label": "2026年8月",
@@ -392,8 +398,8 @@
     "grand_total_current_month": 359260,
     "grand_total_previous_month": 757980,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-08-19",
-    "note": "Citson_マスター取得成功、当月分（8月行）反映済み。ECはCitson_マスターの経理反映状況によらずShopifyライブ集計を使用。"
+    "last_updated": "2026-08-20",
+    "note": "Citson_マスター「月次売上サマリ」より8月行取得済み（店舗36,520／イベント203,940）。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
   },
   "referrals": {
     "monthly": [
@@ -417,8 +423,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-08-19",
-    "note": "全月分をupsertで更新。"
+    "last_updated": "2026-08-20",
+    "note": "2026-08時点で8月分の紹介売上は0円。"
   },
   "kgi": {
     "monthly_plan": {
@@ -470,9 +476,16 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2138,
-    "media_count": 77,
+    "followers_count": 2137,
+    "media_count": 78,
     "recent_media": [
+      {
+        "date": "2026-08-19",
+        "type": "VIDEO",
+        "likes": 8,
+        "comments": 0,
+        "caption": "Elevate Your Style. ー 洗練を決定づける"
+      },
       {
         "date": "2026-08-06",
         "type": "CAROUSEL_ALBUM",
@@ -500,78 +513,15 @@
         "likes": 9,
         "comments": 1,
         "caption": "Quiet Focus. ー 静寂と躍動のコントラスト ゴル"
-      },
-      {
-        "date": "2026-07-26",
-        "type": "CAROUSEL_ALBUM",
-        "likes": 11,
-        "comments": 0,
-        "caption": "Pure White Monolith. ー 無垢な白が描く"
       }
     ]
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-08-19",
-    "active_friends": 215,
-    "total_added": 237,
+    "as_of": "2026-08-20",
+    "active_friends": 230,
+    "total_added": 255,
     "daily": [
-      {
-        "date": "2026-07-30",
-        "added": 4,
-        "blocked": 0,
-        "net": 4,
-        "active_total": 173
-      },
-      {
-        "date": "2026-07-31",
-        "added": 5,
-        "blocked": 3,
-        "net": 2,
-        "active_total": 175
-      },
-      {
-        "date": "2026-08-01",
-        "added": 6,
-        "blocked": 2,
-        "net": 4,
-        "active_total": 179
-      },
-      {
-        "date": "2026-08-02",
-        "added": 6,
-        "blocked": 0,
-        "net": 6,
-        "active_total": 185
-      },
-      {
-        "date": "2026-08-03",
-        "added": 9,
-        "blocked": 3,
-        "net": 6,
-        "active_total": 191
-      },
-      {
-        "date": "2026-08-04",
-        "added": 3,
-        "blocked": 1,
-        "net": 2,
-        "active_total": 193
-      },
-      {
-        "date": "2026-08-05",
-        "added": 5,
-        "blocked": 0,
-        "net": 5,
-        "active_total": 198
-      },
-      {
-        "date": "2026-08-06",
-        "added": 1,
-        "blocked": 0,
-        "net": 1,
-        "active_total": 199
-      },
       {
         "date": "2026-08-07",
         "added": 5,
@@ -609,12 +559,68 @@
       },
       {
         "date": "2026-08-12",
-        "added": 1,
+        "added": 3,
         "blocked": 0,
+        "net": 3,
+        "active_total": 217
+      },
+      {
+        "date": "2026-08-13",
+        "added": 2,
+        "blocked": 1,
         "net": 1,
-        "active_total": 215
+        "active_total": 218
+      },
+      {
+        "date": "2026-08-14",
+        "added": 2,
+        "blocked": 0,
+        "net": 2,
+        "active_total": 220
+      },
+      {
+        "date": "2026-08-15",
+        "added": 2,
+        "blocked": 0,
+        "net": 2,
+        "active_total": 222
+      },
+      {
+        "date": "2026-08-16",
+        "added": 2,
+        "blocked": 0,
+        "net": 2,
+        "active_total": 224
+      },
+      {
+        "date": "2026-08-17",
+        "added": 2,
+        "blocked": 1,
+        "net": 1,
+        "active_total": 225
+      },
+      {
+        "date": "2026-08-18",
+        "added": 2,
+        "blocked": 0,
+        "net": 2,
+        "active_total": 227
+      },
+      {
+        "date": "2026-08-19",
+        "added": 4,
+        "blocked": 1,
+        "net": 3,
+        "active_total": 230
+      },
+      {
+        "date": "2026-08-20",
+        "added": 0,
+        "blocked": 0,
+        "net": 0,
+        "active_total": 230
       }
     ],
-    "note": "取得失敗（要再ログイン）: 2026-08-19。既存値を維持。"
+    "note": "友だち数推移詳細ページより直近14日分を取得。"
   }
 }
