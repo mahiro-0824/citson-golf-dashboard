@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-08-22T07:00:00+09:00",
+  "generated_at": "2026-08-23T07:00:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 141,
-    "screenPageViews": 926,
-    "sessions": 187,
+    "activeUsers": 181,
+    "screenPageViews": 1092,
+    "sessions": 241,
     "events": {
-      "view_item": 344,
-      "form_start": 111,
-      "add_to_cart": 6,
-      "begin_checkout": 5,
+      "view_item": 356,
+      "form_start": 107,
+      "add_to_cart": 9,
+      "begin_checkout": 10,
       "purchase": 1
     },
-    "cvr_pct": 0.53,
+    "cvr_pct": 0.41,
     "channels": {
-      "Organic Social": 81,
-      "Direct": 66,
-      "Unassigned": 29,
-      "Organic Search": 24,
-      "Referral": 5,
+      "Direct": 103,
+      "Organic Social": 86,
+      "Unassigned": 67,
+      "Organic Search": 27,
+      "Referral": 6,
       "Organic Shopping": 2
     }
   },
@@ -159,6 +159,12 @@
         {
           "day": 22,
           "date": "2026-08-22",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 23,
+          "date": "2026-08-23",
           "orders": 0,
           "gross_sales": 0
         }
@@ -388,7 +394,7 @@
         "orders": 1
       }
     ],
-    "note": "Shopify Admin API（管理画面セッション）で取得。EC（オンラインストア）注文のみ。"
+    "note": "Shopify Admin API（staffセッション）で取得。ECオンラインストア注文のみ（source_name=web）。"
   },
   "store": {
     "current_month_label": "2026年8月",
@@ -403,12 +409,12 @@
     "event_previous_month": 0,
     "ec_current_month": 130900,
     "ec_previous_month": 94600,
-    "ec_master_current_month": 107363,
+    "ec_master_current_month": 118363,
     "ec_master_previous_month": 86000,
     "grand_total_current_month": 438360,
     "grand_total_previous_month": 757980,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-23",
     "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。8月のイベント合計203,940は8/1 POP UP STORE分。"
   },
   "referrals": {
@@ -433,8 +439,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-08-22",
-    "note": "2026年8月は現時点で両紹介とも0円。"
+    "last_updated": "2026-08-23",
+    "note": "8月分は現時点で未計上（0円）。"
   },
   "kgi": {
     "monthly_plan": {
@@ -486,13 +492,20 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2144,
-    "media_count": 80,
+    "followers_count": 2143,
+    "media_count": 81,
     "recent_media": [
+      {
+        "date": "2026-08-22",
+        "type": "VIDEO",
+        "likes": 4,
+        "comments": 0,
+        "caption": "Pure Silhouette. ー 研ぎ澄まされた、引き算"
+      },
       {
         "date": "2026-08-21",
         "type": "CAROUSEL_ALBUM",
-        "likes": 5,
+        "likes": 6,
         "comments": 0,
         "caption": "Art of Details. ー 洗練を宿す、静かなるディ"
       },
@@ -516,29 +529,15 @@
         "likes": 7,
         "comments": 0,
         "caption": "Refined Details. ー 洗練を決定づける、静か"
-      },
-      {
-        "date": "2026-08-02",
-        "type": "IMAGE",
-        "likes": 5,
-        "comments": 0,
-        "caption": "The Essential Frame. ー 洗練を決定づけ"
       }
     ]
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-08-22",
-    "active_friends": 233,
-    "total_added": 258,
+    "as_of": "2026-08-23",
+    "active_friends": 232,
+    "total_added": 259,
     "daily": [
-      {
-        "date": "2026-08-09",
-        "added": 3,
-        "blocked": 1,
-        "net": 2,
-        "active_total": 210
-      },
       {
         "date": "2026-08-10",
         "added": 4,
@@ -625,12 +624,19 @@
       },
       {
         "date": "2026-08-22",
+        "added": 1,
+        "blocked": 2,
+        "net": -1,
+        "active_total": 232
+      },
+      {
+        "date": "2026-08-23",
         "added": 0,
         "blocked": 0,
         "net": 0,
-        "active_total": 233
+        "active_total": 232
       }
     ],
-    "note": "友だち数推移詳細ページより取得（直近14日）"
+    "note": "friend-history詳細ページより直近14日分を取得。"
   }
 }
