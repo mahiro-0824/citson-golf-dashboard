@@ -1,25 +1,24 @@
 {
-  "generated_at": "2026-08-28T07:00:00+09:00",
+  "generated_at": "2026-08-29T07:00:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 239,
-    "screenPageViews": 1519,
-    "sessions": 330,
+    "activeUsers": 258,
+    "screenPageViews": 1686,
+    "sessions": 358,
     "events": {
-      "view_item": 439,
-      "form_start": 192,
-      "add_to_cart": 27,
+      "view_item": 483,
+      "form_start": 211,
+      "add_to_cart": 29,
       "begin_checkout": 19,
-      "purchase": 3
+      "purchase": 2
     },
-    "cvr_pct": 0.91,
+    "cvr_pct": 0.56,
     "channels": {
-      "Direct": 154,
-      "Organic Social": 95,
-      "Organic Search": 54,
-      "Unassigned": 32,
-      "Referral": 14,
-      "Organic Shopping": 2
+      "Direct": 165,
+      "Organic Social": 102,
+      "Organic Search": 56,
+      "Unassigned": 44,
+      "Referral": 18
     }
   },
   "shopify": {
@@ -195,6 +194,12 @@
         {
           "day": 28,
           "date": "2026-08-28",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 29,
+          "date": "2026-08-29",
           "orders": 0,
           "gross_sales": 0
         }
@@ -424,7 +429,7 @@
         "orders": 1
       }
     ],
-    "note": "Shopify Admin API（staffセッションCookie方式）で取得。ECのみ（source_name=web）"
+    "note": "Shopify Admin API（staffセッション）で取得。EC（オンラインストア）注文のみ。"
   },
   "store": {
     "current_month_label": "2026年8月",
@@ -444,8 +449,8 @@
     "grand_total_current_month": 577160,
     "grand_total_previous_month": 757980,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-08-28",
-    "note": "当月行反映済み（8月: 店舗165,320／イベント203,940）。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
+    "last_updated": "2026-08-29",
+    "note": "当月分（2026年8月）反映済み。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
   },
   "referrals": {
     "monthly": [
@@ -469,8 +474,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-08-28",
-    "note": "全月分をupsert。8月は現時点で紹介売上0。"
+    "last_updated": "2026-08-29",
+    "note": "2026年6〜8月分を反映。8月は現時点で紹介売上0。"
   },
   "kgi": {
     "monthly_plan": {
@@ -522,13 +527,13 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2164,
+    "followers_count": 2169,
     "media_count": 85,
     "recent_media": [
       {
         "date": "2026-08-27",
         "type": "VIDEO",
-        "likes": 3,
+        "likes": 4,
         "comments": 0,
         "caption": "The Essential Frame. ー 洗練を決定づけ"
       },
@@ -556,7 +561,7 @@
       {
         "date": "2026-08-22",
         "type": "VIDEO",
-        "likes": 5,
+        "likes": 6,
         "comments": 0,
         "caption": "Pure Silhouette. ー 研ぎ澄まされた、引き算"
       }
@@ -564,17 +569,10 @@
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-08-28",
-    "active_friends": 245,
-    "total_added": 274,
+    "as_of": "2026-08-29",
+    "active_friends": 250,
+    "total_added": 279,
     "daily": [
-      {
-        "date": "2026-08-15",
-        "added": 2,
-        "blocked": 0,
-        "net": 2,
-        "active_total": 222
-      },
       {
         "date": "2026-08-16",
         "added": 2,
@@ -661,12 +659,19 @@
       },
       {
         "date": "2026-08-28",
+        "added": 5,
+        "blocked": 0,
+        "net": 5,
+        "active_total": 250
+      },
+      {
+        "date": "2026-08-29",
         "added": 0,
         "blocked": 0,
         "net": 0,
-        "active_total": 245
+        "active_total": 250
       }
     ],
-    "note": "friend-history（友だち数推移詳細）より直近14日分を取得。"
+    "note": "friend-history詳細ページから直近14日分を取得。"
   }
 }
