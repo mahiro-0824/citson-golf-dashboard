@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-08-29T07:00:00+09:00",
+  "generated_at": "2026-08-30T07:00:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 258,
-    "screenPageViews": 1686,
-    "sessions": 358,
+    "activeUsers": 231,
+    "screenPageViews": 1377,
+    "sessions": 309,
     "events": {
-      "view_item": 483,
-      "form_start": 211,
-      "add_to_cart": 29,
-      "begin_checkout": 19,
+      "view_item": 378,
+      "form_start": 167,
+      "add_to_cart": 20,
+      "begin_checkout": 13,
       "purchase": 2
     },
-    "cvr_pct": 0.56,
+    "cvr_pct": 0.65,
     "channels": {
-      "Direct": 165,
-      "Organic Social": 102,
-      "Organic Search": 56,
-      "Unassigned": 44,
-      "Referral": 18
+      "Direct": 128,
+      "Organic Social": 104,
+      "Organic Search": 51,
+      "Unassigned": 24,
+      "Referral": 19
     }
   },
   "shopify": {
@@ -200,6 +200,12 @@
         {
           "day": 29,
           "date": "2026-08-29",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 30,
+          "date": "2026-08-30",
           "orders": 0,
           "gross_sales": 0
         }
@@ -429,13 +435,13 @@
         "orders": 1
       }
     ],
-    "note": "Shopify Admin API（staffセッション）で取得。EC（オンラインストア）注文のみ。"
+    "note": "Shopify Admin API（staffセッションCookie）で取得。ECオンラインストア注文のみ。"
   },
   "store": {
     "current_month_label": "2026年8月",
     "previous_month_label": "2026年7月",
     "current_month": {
-      "gross_sales": 165320
+      "gross_sales": 281120
     },
     "previous_month": {
       "gross_sales": 663380
@@ -444,13 +450,13 @@
     "event_previous_month": 0,
     "ec_current_month": 207900,
     "ec_previous_month": 94600,
-    "ec_master_current_month": 145963,
+    "ec_master_current_month": 160363,
     "ec_master_previous_month": 86000,
-    "grand_total_current_month": 577160,
+    "grand_total_current_month": 692960,
     "grand_total_previous_month": 757980,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-08-29",
-    "note": "当月分（2026年8月）反映済み。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
+    "last_updated": "2026-08-30",
+    "note": "当月行反映済み。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
   },
   "referrals": {
     "monthly": [
@@ -474,8 +480,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-08-29",
-    "note": "2026年6〜8月分を反映。8月は現時点で紹介売上0。"
+    "last_updated": "2026-08-30",
+    "note": "2026年8月分は現時点で0円。"
   },
   "kgi": {
     "monthly_plan": {
@@ -527,9 +533,16 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2169,
-    "media_count": 85,
+    "followers_count": 2174,
+    "media_count": 86,
     "recent_media": [
+      {
+        "date": "2026-08-29",
+        "type": "CAROUSEL_ALBUM",
+        "likes": 2,
+        "comments": 0,
+        "caption": "Quiet Focus. ー 静寂を纏う、新しいスタンダード"
+      },
       {
         "date": "2026-08-27",
         "type": "VIDEO",
@@ -542,14 +555,14 @@
         "type": "CAROUSEL_ALBUM",
         "likes": 7,
         "comments": 0,
-        "caption": "Silent Precision. ー 削ぎ落とされた本質 "
+        "caption": "Silent Precision. ー 削ぎ落とされた本質\n"
       },
       {
         "date": "2026-08-24",
         "type": "CAROUSEL_ALBUM",
         "likes": 9,
         "comments": 0,
-        "caption": "Silent Precision. ー 削ぎ落とされた本質 "
+        "caption": "Silent Precision. ー 削ぎ落とされた本質\n"
       },
       {
         "date": "2026-08-23",
@@ -557,29 +570,15 @@
         "likes": 8,
         "comments": 0,
         "caption": "Minimal Elegance. ー 引き算から生まれる、"
-      },
-      {
-        "date": "2026-08-22",
-        "type": "VIDEO",
-        "likes": 6,
-        "comments": 0,
-        "caption": "Pure Silhouette. ー 研ぎ澄まされた、引き算"
       }
     ]
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-08-29",
-    "active_friends": 250,
-    "total_added": 279,
+    "as_of": "2026-08-30",
+    "active_friends": 252,
+    "total_added": 281,
     "daily": [
-      {
-        "date": "2026-08-16",
-        "added": 2,
-        "blocked": 0,
-        "net": 2,
-        "active_total": 224
-      },
       {
         "date": "2026-08-17",
         "added": 2,
@@ -666,12 +665,19 @@
       },
       {
         "date": "2026-08-29",
+        "added": 2,
+        "blocked": 0,
+        "net": 2,
+        "active_total": 252
+      },
+      {
+        "date": "2026-08-30",
         "added": 0,
         "blocked": 0,
         "net": 0,
-        "active_total": 250
+        "active_total": 252
       }
     ],
-    "note": "friend-history詳細ページから直近14日分を取得。"
+    "note": "友だち数推移詳細ページより直近14日分を取得"
   }
 }
