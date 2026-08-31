@@ -1,31 +1,44 @@
 {
-  "generated_at": "2026-08-31T07:00:00+09:00",
+  "generated_at": "2026-09-01T07:10:51.060+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 257,
-    "screenPageViews": 1502,
-    "sessions": 332,
+    "activeUsers": 244,
+    "screenPageViews": 1377,
+    "sessions": 317,
     "events": {
-      "view_item": 431,
-      "form_start": 180,
+      "view_item": 409,
+      "form_start": 153,
       "add_to_cart": 20,
       "begin_checkout": 8,
       "purchase": 1
     },
-    "cvr_pct": 0.3,
+    "cvr_pct": 0.32,
     "channels": {
-      "Direct": 140,
-      "Organic Social": 115,
-      "Unassigned": 59,
-      "Organic Search": 43,
-      "Referral": 24,
-      "Organic Shopping": 1
+      "Direct": 135,
+      "Organic Social": 110,
+      "Organic Search": 38,
+      "Unassigned": 29,
+      "Referral": 21,
+      "Organic Shopping": 4
     }
   },
   "shopify": {
-    "current_month_label": "2026年8月",
-    "previous_month_label": "2026年7月",
+    "current_month_label": "2026年9月",
+    "previous_month_label": "2026年8月",
     "current_month": {
+      "gross_sales": 0,
+      "orders": 0,
+      "aov": 0,
+      "daily_sales": [
+        {
+          "day": 1,
+          "date": "2026-09-01",
+          "orders": 0,
+          "gross_sales": 0
+        }
+      ]
+    },
+    "previous_month": {
       "gross_sales": 207900,
       "orders": 6,
       "aov": 34650,
@@ -218,252 +231,33 @@
         }
       ]
     },
-    "previous_month": {
-      "gross_sales": 94600,
-      "orders": 3,
-      "aov": 31533,
-      "daily_sales": [
-        {
-          "day": 1,
-          "date": "2026-07-01",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 2,
-          "date": "2026-07-02",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 3,
-          "date": "2026-07-03",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 4,
-          "date": "2026-07-04",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 5,
-          "date": "2026-07-05",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 6,
-          "date": "2026-07-06",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 7,
-          "date": "2026-07-07",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 8,
-          "date": "2026-07-08",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 9,
-          "date": "2026-07-09",
-          "orders": 1,
-          "gross_sales": 14300
-        },
-        {
-          "day": 10,
-          "date": "2026-07-10",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 11,
-          "date": "2026-07-11",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 12,
-          "date": "2026-07-12",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 13,
-          "date": "2026-07-13",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 14,
-          "date": "2026-07-14",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 15,
-          "date": "2026-07-15",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 16,
-          "date": "2026-07-16",
-          "orders": 1,
-          "gross_sales": 23100
-        },
-        {
-          "day": 17,
-          "date": "2026-07-17",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 18,
-          "date": "2026-07-18",
-          "orders": 1,
-          "gross_sales": 57200
-        },
-        {
-          "day": 19,
-          "date": "2026-07-19",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 20,
-          "date": "2026-07-20",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 21,
-          "date": "2026-07-21",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 22,
-          "date": "2026-07-22",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 23,
-          "date": "2026-07-23",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 24,
-          "date": "2026-07-24",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 25,
-          "date": "2026-07-25",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 26,
-          "date": "2026-07-26",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 27,
-          "date": "2026-07-27",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 28,
-          "date": "2026-07-28",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 29,
-          "date": "2026-07-29",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 30,
-          "date": "2026-07-30",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 31,
-          "date": "2026-07-31",
-          "orders": 0,
-          "gross_sales": 0
-        }
-      ]
-    },
     "prev_same_period": {
-      "gross_sales": 94600,
-      "orders": 3
+      "gross_sales": 0,
+      "orders": 0
     },
-    "top_products": [
-      {
-        "title": "CitsonGolf/ワイドハーフパンツ",
-        "gross_sales": 79200,
-        "orders": 3
-      },
-      {
-        "title": "CitsonGolf/ノースリPO",
-        "gross_sales": 25300,
-        "orders": 1
-      },
-      {
-        "title": "CitsonGolf/ドルマンモック",
-        "gross_sales": 24200,
-        "orders": 1
-      },
-      {
-        "title": "CitsonGolf/レディースノースリ",
-        "gross_sales": 22000,
-        "orders": 1
-      },
-      {
-        "title": "IZREEL/TRハーフパンツ",
-        "gross_sales": 18700,
-        "orders": 1
-      }
-    ],
-    "note": "Shopify Admin API（staffセッション）で取得。ECサイト（オンラインストア）注文のみ。店舗売上は含まない。"
+    "top_products": [],
+    "note": "Shopify Admin API直接取得（ECのみ・source_name=web）。2026年9月は月初のため経過1日・注文0件（売れ筋トップ5も0件）。"
   },
   "store": {
-    "current_month_label": "2026年8月",
-    "previous_month_label": "2026年7月",
+    "current_month_label": "2026年9月",
+    "previous_month_label": "2026年8月",
     "current_month": {
-      "gross_sales": 281120
+      "gross_sales": 0
     },
     "previous_month": {
-      "gross_sales": 663380
+      "gross_sales": 359320
     },
-    "event_current_month": 203940,
-    "event_previous_month": 0,
-    "ec_current_month": 207900,
-    "ec_previous_month": 94600,
-    "ec_master_current_month": 160363,
-    "ec_master_previous_month": 86000,
-    "grand_total_current_month": 692960,
-    "grand_total_previous_month": 757980,
+    "event_current_month": 0,
+    "event_previous_month": 203940,
+    "ec_current_month": 0,
+    "ec_previous_month": 207900,
+    "ec_master_current_month": 0,
+    "ec_master_previous_month": 160363,
+    "grand_total_current_month": 0,
+    "grand_total_previous_month": 771160,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-08-31",
-    "note": "2026年8月行は反映済み（店舗281,120／イベント203,940）。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
+    "last_updated": "2026-09-01",
+    "note": "月替わり。2026年9月行はマスターシートに未追加（経理待ち）のため店舗・イベントは0。2026年8月は確定値に更新（店舗359,320／イベント203,940、前回取得時281,120から修正反映）。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
   },
   "referrals": {
     "monthly": [
@@ -482,13 +276,13 @@
       {
         "month": "2026-08",
         "label": "2026年8月",
-        "kashima": 0,
+        "kashima": 41000,
         "shichinohe": 0
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-08-31",
-    "note": "2026年8月分は鹿島様・七戸様とも0円（シート上の記載どおり）。"
+    "last_updated": "2026-09-01",
+    "note": "2026年9月行は未追加のため未反映。2026年6〜8月分を反映済み。"
   },
   "kgi": {
     "monthly_plan": {
@@ -540,20 +334,27 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2176,
-    "media_count": 86,
+    "followers_count": 2178,
+    "media_count": 87,
     "recent_media": [
+      {
+        "date": "2026-08-31",
+        "type": "CAROUSEL_ALBUM",
+        "likes": 4,
+        "comments": 0,
+        "caption": "Urban Utility. ー 機能と洗練が交差するフォル"
+      },
       {
         "date": "2026-08-29",
         "type": "CAROUSEL_ALBUM",
-        "likes": 6,
+        "likes": 7,
         "comments": 0,
         "caption": "Quiet Focus. ー 静寂を纏う、新しいスタンダード"
       },
       {
         "date": "2026-08-27",
         "type": "VIDEO",
-        "likes": 4,
+        "likes": 5,
         "comments": 0,
         "caption": "The Essential Frame. ー 洗練を決定づけ"
       },
@@ -562,37 +363,23 @@
         "type": "CAROUSEL_ALBUM",
         "likes": 7,
         "comments": 0,
-        "caption": "Silent Precision. ー 削ぎ落とされた本質\n"
+        "caption": "Silent Precision. ー 削ぎ落とされた本質 "
       },
       {
         "date": "2026-08-24",
         "type": "CAROUSEL_ALBUM",
         "likes": 10,
         "comments": 0,
-        "caption": "Silent Precision. ー 削ぎ落とされた本質\n"
-      },
-      {
-        "date": "2026-08-23",
-        "type": "IMAGE",
-        "likes": 10,
-        "comments": 0,
-        "caption": "Minimal Elegance. ー 引き算から生まれる、"
+        "caption": "Silent Precision. ー 削ぎ落とされた本質 "
       }
     ]
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-08-31",
-    "active_friends": 253,
-    "total_added": 284,
+    "as_of": "2026-09-01",
+    "active_friends": 254,
+    "total_added": 285,
     "daily": [
-      {
-        "date": "2026-08-18",
-        "added": 2,
-        "blocked": 0,
-        "net": 2,
-        "active_total": 227
-      },
       {
         "date": "2026-08-19",
         "added": 4,
@@ -679,10 +466,17 @@
       },
       {
         "date": "2026-08-31",
+        "added": 1,
+        "blocked": 0,
+        "net": 1,
+        "active_total": 254
+      },
+      {
+        "date": "2026-09-01",
         "added": 0,
         "blocked": 0,
         "net": 0,
-        "active_total": 253
+        "active_total": 254
       }
     ],
     "note": "友だち数推移詳細ページより取得（直近14日）。"
