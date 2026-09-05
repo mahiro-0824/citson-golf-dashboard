@@ -267,7 +267,7 @@
     "current_month_label": "2026年9月",
     "previous_month_label": "2026年8月",
     "current_month": {
-      "gross_sales": 0
+      "gross_sales": 133000
     },
     "previous_month": {
       "gross_sales": 455520
@@ -278,11 +278,11 @@
     "ec_previous_month": 207900,
     "ec_master_current_month": 0,
     "ec_master_previous_month": 160363,
-    "grand_total_current_month": 0,
+    "grand_total_current_month": 133000,
     "grand_total_previous_month": 867360,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
     "last_updated": "2026-09-05",
-    "note": "2026年9月行はマスターシートに未追加（経理待ち）のため店舗・イベントは0。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
+    "note": "2026年9月行をCitson_マスター「月次売上サマリ」に追加済み（IMPORTRANGE連携・2026-09-05）。店舗は売上統計表9月分の 店舗!D2 を参照。ECはマスターの反映状況によらず常にShopifyライブ集計を使用。"
   },
   "referrals": {
     "monthly": [
@@ -323,7 +323,12 @@
       "q4": 2000000
     },
     "source": "CitsonGolf_2026下半期事業計画書（作成日2026-07-23）「KGI」「PL_月次」タブ",
-    "note": "計画値は事業計画書に基づく固定値です。事業計画の見直し時のみ更新します。実績（進捗バー・グラフ）は当月・前月分のみ反映します（それ以前は事業計画書側でご確認ください）。"
+    "note": "計画値は事業計画書に基づく固定値です。事業計画の見直し時のみ更新します。実績は kgi.monthly_actuals（確定月）と当月・前月のライブ値を合算して四半期進捗を算出します。",
+    "monthly_actuals": {
+      "7": 749380,
+      "8": 867360,
+      "9": 133000
+    }
   },
   "advance": {
     "monthly": {
