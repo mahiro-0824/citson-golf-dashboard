@@ -267,9 +267,17 @@ async function load() {
 
     const salesThisTotal = st.grand_total_current_month;
     const salesPrevTotal = st.grand_total_previous_month;
+    // 確定済み月の実績（当月・前月以外はここから取る。data.json 側に kgi.monthly_actuals があればそちらを優先）
+    const CLOSED_MONTH_ACTUALS = { "7": 749380, "8": 867360 };
+    const closedActuals = Object.assign({}, CLOSED_MONTH_ACTUALS, (data.kgi.monthly_actuals || {}));
+    const monthlyActual = (m) => {
+      if (m === month) return (salesThisTotal === null || salesThisTotal === undefined) ? null : salesThisTotal;
+      if (m === prevMonth) return (salesPrevTotal === null || salesPrevTotal === undefined) ? null : salesPrevTotal;
+      const v = closedActuals[String(m)];
+      return (v === undefined || v === null) ? null : v;
+    };
     let actualSoFar = 0;
-    if (qMonths.includes(month)) actualSoFar += (salesThisTotal || 0);
-    if (qMonths.includes(prevMonth) && month !== prevMonth) actualSoFar += (salesPrevTotal || 0);
+    qMonths.forEach(m => { actualSoFar += (monthlyActual(m) || 0); });
 
     const kgiRatio = target ? Math.min(1, actualSoFar / target) : 0;
     document.getElementById("kgi-desc").textContent = data.kgi.note;
@@ -290,7 +298,7 @@ async function load() {
       paceBadge.textContent = onPace ? "オンペース" : "ビハインド";
       paceBadge.className = "kgi-badge " + (onPace ? "onpace" : "behind");
       document.getElementById("kgi-sub").textContent =
-        "現時点の実績合計: " + fmtYen(actualSoFar) + "（当月・前月分のみ反映） ／ 四半期の経過日数 " + elapsedDays + "/" + totalDays + "日";
+        "現時点の実績合計: " + fmtYen(actualSoFar) + "（7月以降の月次実績を合算） ／ 四半期の経過日数 " + elapsedDays + "/" + totalDays + "日";
     } else {
       paceBadge.textContent = "";
       document.getElementById("kgi-sub").textContent = "";
@@ -298,11 +306,7 @@ async function load() {
 
     const months6 = [7, 8, 9, 10, 11, 12];
     const planVals = months6.map(m => data.kgi.monthly_plan[String(m)]);
-    const actualVals = months6.map(m => {
-      if (m === month) return salesThisTotal;
-      if (m === prevMonth) return salesPrevTotal;
-      return null;
-    });
+    const actualVals = months6.map(m => monthlyActual(m));
     const maxVal = Math.max(...planVals, ...actualVals.map(v => v || 0), 1);
     const barsContainer = document.getElementById("kgi-plan-bars");
     barsContainer.innerHTML = "";
