@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-09-09T07:11:01.544+09:00",
+  "generated_at": "2026-09-09T22:11:06+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 257,
-    "screenPageViews": 1141,
-    "sessions": 304,
+    "activeUsers": 319,
+    "screenPageViews": 1462,
+    "sessions": 381,
     "events": {
-      "view_item": 301,
-      "form_start": 122,
-      "add_to_cart": 10,
+      "view_item": 356,
+      "form_start": 136,
+      "add_to_cart": 12,
       "begin_checkout": 4,
       "purchase": 0
     },
     "cvr_pct": 0,
     "channels": {
-      "Organic Social": 115,
-      "Direct": 114,
-      "Unassigned": 91,
-      "Organic Search": 38,
-      "Cross-network": 6,
-      "Organic Shopping": 3,
+      "Organic Social": 157,
+      "Direct": 141,
+      "Unassigned": 68,
+      "Organic Search": 51,
+      "Cross-network": 11,
+      "Organic Shopping": 2,
       "Referral": 2
     }
   },
@@ -82,6 +82,12 @@
         {
           "day": 9,
           "date": "2026-09-09",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 10,
+          "date": "2026-09-10",
           "orders": 0,
           "gross_sales": 0
         }
@@ -285,7 +291,7 @@
       "orders": 1
     },
     "top_products": [],
-    "note": "Shopify Admin API（ブラウザセッション）より取得。ECオンラインストア注文のみ（source_name=web）。今月は本日時点で注文0件のため売れ筋トップ5は空。"
+    "note": "Shopify Admin API（ブラウザセッション）から取得。ECオンラインストア注文のみ。9月は本日時点で注文0件。"
   },
   "store": {
     "current_month_label": "2026年9月",
@@ -305,8 +311,8 @@
     "grand_total_current_month": 133000,
     "grand_total_previous_month": 867360,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-09-09",
-    "note": "当月行（2026年9月）反映済み。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
+    "last_updated": "2026-09-10",
+    "note": "2026年9月行は反映済み（店舗133,000／イベント0）。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
   },
   "referrals": {
     "monthly": [
@@ -336,8 +342,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-09-09",
-    "note": "2026年9月時点で当月の紹介売上は未計上。"
+    "last_updated": "2026-09-10",
+    "note": "全月分をupsert。9月分は現時点で0。"
   },
   "kgi": {
     "monthly_plan": {
@@ -394,7 +400,7 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2185,
+    "followers_count": 2191,
     "media_count": 89,
     "recent_media": [
       {
@@ -436,17 +442,10 @@
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-09-09",
-    "active_friends": 291,
-    "total_added": 330,
+    "as_of": "2026-09-10",
+    "active_friends": 299,
+    "total_added": 339,
     "daily": [
-      {
-        "date": "2026-08-27",
-        "added": 3,
-        "blocked": 0,
-        "net": 3,
-        "active_total": 245
-      },
       {
         "date": "2026-08-28",
         "added": 5,
@@ -533,12 +532,19 @@
       },
       {
         "date": "2026-09-09",
-        "added": 2,
+        "added": 8,
         "blocked": 3,
-        "net": -1,
-        "active_total": 291
+        "net": 5,
+        "active_total": 297
+      },
+      {
+        "date": "2026-09-10",
+        "added": 3,
+        "blocked": 1,
+        "net": 2,
+        "active_total": 299
       }
     ],
-    "note": "友だち数推移詳細ページより取得（直近14日分）。"
+    "note": "友だち数推移詳細ページから直近14日分を取得。9/7〜9/9で急増（+42）。"
   }
 }
