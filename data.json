@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-09-11T07:00:00+09:00",
+  "generated_at": "2026-09-13T07:00:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 393,
-    "screenPageViews": 1683,
-    "sessions": 463,
+    "activeUsers": 547,
+    "screenPageViews": 2268,
+    "sessions": 638,
     "events": {
-      "view_item": 395,
-      "form_start": 152,
-      "add_to_cart": 12,
-      "begin_checkout": 4,
+      "view_item": 503,
+      "form_start": 193,
+      "add_to_cart": 9,
+      "begin_checkout": 1,
       "purchase": 0
     },
     "cvr_pct": 0,
     "channels": {
-      "Organic Social": 173,
-      "Direct": 170,
-      "Unassigned": 62,
-      "Organic Search": 51,
-      "Cross-network": 39,
-      "Organic Shopping": 2,
-      "Referral": 1
+      "Organic Social": 292,
+      "Direct": 252,
+      "Organic Search": 71,
+      "Unassigned": 43,
+      "Cross-network": 5,
+      "Referral": 2,
+      "Organic Shopping": 1
     }
   },
   "shopify": {
@@ -94,6 +94,18 @@
         {
           "day": 11,
           "date": "2026-09-11",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 12,
+          "date": "2026-09-12",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 13,
+          "date": "2026-09-13",
           "orders": 0,
           "gross_sales": 0
         }
@@ -293,11 +305,11 @@
       ]
     },
     "prev_same_period": {
-      "gross_sales": 73700,
-      "orders": 2
+      "gross_sales": 118800,
+      "orders": 3
     },
     "top_products": [],
-    "note": "Shopify Admin API（staffセッション直接取得）。ECオンラインストア注文のみ。9月は本日時点で注文0件のため売れ筋トップは該当なし。"
+    "note": "Shopify Admin API（staffセッションCookie）から取得。ECオンラインストア分のみ。2026年9月は本日時点で受注0件。"
   },
   "store": {
     "current_month_label": "2026年9月",
@@ -317,7 +329,7 @@
     "grand_total_current_month": 133000,
     "grand_total_previous_month": 867360,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-09-11",
+    "last_updated": "2026-09-13",
     "note": "当月（2026年9月）行は反映済み。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
   },
   "referrals": {
@@ -348,8 +360,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-09-11",
-    "note": "2026年9月分は現時点で紹介売上の記載なし（0扱い）。"
+    "last_updated": "2026-09-13",
+    "note": "2026年9月分は紹介売上の記載なし（0として扱う）。"
   },
   "kgi": {
     "monthly_plan": {
@@ -406,13 +418,27 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2201,
-    "media_count": 90,
+    "followers_count": 2211,
+    "media_count": 92,
     "recent_media": [
+      {
+        "date": "2026-09-12",
+        "type": "VIDEO",
+        "likes": 0,
+        "comments": 0,
+        "caption": "Seamless Monochrome. ー 境界線を溶かす"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "CAROUSEL_ALBUM",
+        "likes": 6,
+        "comments": 0,
+        "caption": "Absolute Black. ー 季節を繋ぐ、漆黒のスタン"
+      },
       {
         "date": "2026-09-10",
         "type": "IMAGE",
-        "likes": 4,
+        "likes": 6,
         "comments": 0,
         "caption": "Essential Layer. ー 秋の気配と、静かなるベ"
       },
@@ -429,20 +455,6 @@
         "likes": 9,
         "comments": 0,
         "caption": "Essential Form. ー 日常とグリーンを繋ぐ、洗"
-      },
-      {
-        "date": "2026-08-31",
-        "type": "CAROUSEL_ALBUM",
-        "likes": 8,
-        "comments": 0,
-        "caption": "Urban Utility. ー 機能と洗練が交差するフォル"
-      },
-      {
-        "date": "2026-08-29",
-        "type": "CAROUSEL_ALBUM",
-        "likes": 8,
-        "comments": 0,
-        "caption": "Quiet Focus. ー 静寂を纏う、新しいスタンダード"
       }
     ]
   },
@@ -551,6 +563,6 @@
         "active_total": 311
       }
     ],
-    "note": "friend-history 詳細ページから直近14日分を取得。"
+    "note": "friend-history 詳細ページから直近14日分を取得。 / 取得失敗（要再ログイン）: 2026-09-13"
   }
 }
