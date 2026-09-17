@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-09-17T07:00:00+09:00",
+  "generated_at": "2026-09-18T07:11:04+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 453,
-    "screenPageViews": 1752,
-    "sessions": 542,
+    "activeUsers": 436,
+    "screenPageViews": 1800,
+    "sessions": 533,
     "events": {
-      "view_item": 355,
-      "form_start": 135,
+      "view_item": 397,
+      "form_start": 169,
       "add_to_cart": 4,
       "begin_checkout": 3,
       "purchase": 0
     },
     "cvr_pct": 0,
     "channels": {
-      "Organic Social": 260,
-      "Direct": 205,
-      "Organic Search": 62,
-      "Unassigned": 45,
+      "Organic Social": 244,
+      "Direct": 201,
+      "Organic Search": 61,
+      "Unassigned": 53,
+      "Cross-network": 6,
+      "Referral": 3,
       "AI Assistant": 2,
-      "Organic Shopping": 2,
-      "Referral": 2,
-      "Cross-network": 1
+      "Organic Shopping": 2
     }
   },
   "shopify": {
@@ -131,6 +131,12 @@
         {
           "day": 17,
           "date": "2026-09-17",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 18,
+          "date": "2026-09-18",
           "orders": 0,
           "gross_sales": 0
         }
@@ -334,13 +340,13 @@
       "orders": 3
     },
     "top_products": [],
-    "note": "Shopify Admin API（staffセッション）より取得。ECのみ（source_name=web）。2026年9月は17日時点でEC注文0件のため売れ筋は該当なし。"
+    "note": "Shopify Admin API直接取得（EC=オンラインストア分のみ）。2026年9月は9/18時点で注文0件。"
   },
   "store": {
     "current_month_label": "2026年9月",
     "previous_month_label": "2026年8月",
     "current_month": {
-      "gross_sales": 184430
+      "gross_sales": 261430
     },
     "previous_month": {
       "gross_sales": 455520
@@ -351,11 +357,11 @@
     "ec_previous_month": 207900,
     "ec_master_current_month": 0,
     "ec_master_previous_month": 160363,
-    "grand_total_current_month": 184430,
+    "grand_total_current_month": 261430,
     "grand_total_previous_month": 867360,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-09-17",
-    "note": "当月行あり（店舗¥184,430・イベント¥0）。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用（当月EC注文0件）。"
+    "last_updated": "2026-09-18",
+    "note": "2026年9月行は反映済み（店舗261,430／イベント0）。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
   },
   "referrals": {
     "monthly": [
@@ -385,8 +391,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-09-17",
-    "note": "2026年9月行は紹介者列が空欄のため0として記録。"
+    "last_updated": "2026-09-18",
+    "note": "2026年9月は紹介売上の記載なし（0として登録）。"
   },
   "kgi": {
     "monthly_plan": {
@@ -443,7 +449,7 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2220,
+    "followers_count": 2222,
     "media_count": 92,
     "recent_media": [
       {
@@ -485,17 +491,10 @@
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-09-17",
-    "active_friends": 378,
-    "total_added": 433,
+    "as_of": "2026-09-18",
+    "active_friends": 393,
+    "total_added": 447,
     "daily": [
-      {
-        "date": "2026-09-04",
-        "added": 0,
-        "blocked": 0,
-        "net": 0,
-        "active_total": 255
-      },
       {
         "date": "2026-09-05",
         "added": 0,
@@ -547,16 +546,16 @@
       },
       {
         "date": "2026-09-12",
-        "added": 13,
+        "added": 12,
         "blocked": 0,
-        "net": 13,
-        "active_total": 334
+        "net": 12,
+        "active_total": 333
       },
       {
         "date": "2026-09-13",
         "added": 18,
-        "blocked": 3,
-        "net": 15,
+        "blocked": 2,
+        "net": 16,
         "active_total": 349
       },
       {
@@ -582,12 +581,19 @@
       },
       {
         "date": "2026-09-17",
-        "added": 2,
+        "added": 13,
         "blocked": 0,
-        "net": 2,
-        "active_total": 378
+        "net": 13,
+        "active_total": 389
+      },
+      {
+        "date": "2026-09-18",
+        "added": 4,
+        "blocked": 0,
+        "net": 4,
+        "active_total": 393
       }
     ],
-    "note": "友だち数推移詳細ページより取得（直近14日）。"
+    "note": "友だち数推移詳細ページより取得（直近14日）"
   }
 }
