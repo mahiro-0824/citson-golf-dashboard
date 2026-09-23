@@ -1,0 +1,75 @@
+{
+  "_編集方法": "店長からの報告が来たら reports の末尾に1件追加する（累計値で書く）。月別の数字はダッシュボード側で前回報告との差分から自動計算。latest_items と consigned_stock は最新報告の内訳で上書きしてよい（任意）。",
+  "title": "Loop余市 委託販売",
+  "start_date": "2026-09-07",
+  "settlement_rate": 0.65,
+  "price_basis": "上代（税抜）",
+  "source": "佐藤店長のChatWork営業報告（余市委託販売数.xlsx）",
+  "last_updated": "2026-09-23",
+  "reports": [
+    {
+      "date": "2026-09-23",
+      "cumulative_units": 20,
+      "cumulative_retail": 461000,
+      "note": "9/7納品〜9/23の累計。羽織物（パーカー・ブルゾン・スカート）が好調。9/23に17点補充（ブルゾン・スカートは1点ずつ増量）"
+    }
+  ],
+  "consigned_stock": {
+    "as_of": "2026-09-23",
+    "initial_units": 122,
+    "restocked_units": 17,
+    "current_units": 119
+  },
+  "latest_items": [
+    {
+      "name": "パーカー",
+      "units": 3,
+      "retail": 96000
+    },
+    {
+      "name": "ブルゾン",
+      "units": 3,
+      "retail": 75000
+    },
+    {
+      "name": "スカート",
+      "units": 3,
+      "retail": 75000
+    },
+    {
+      "name": "シンプルモック",
+      "units": 3,
+      "retail": 63000
+    },
+    {
+      "name": "ドルマンモック",
+      "units": 2,
+      "retail": 44000
+    },
+    {
+      "name": "サルエルPT",
+      "units": 1,
+      "retail": 27000
+    },
+    {
+      "name": "クルーネックPO",
+      "units": 1,
+      "retail": 26000
+    },
+    {
+      "name": "ジョガー",
+      "units": 1,
+      "retail": 26000
+    },
+    {
+      "name": "バイザー",
+      "units": 2,
+      "retail": 16000
+    },
+    {
+      "name": "カートバッグ",
+      "units": 1,
+      "retail": 13000
+    }
+  ]
+}
