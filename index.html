@@ -72,6 +72,16 @@
 <div class="cards" id="referral-cards"></div>
 <div class="chart-box" style="height:260px;"><canvas id="referralChart"></canvas></div>
 </section>
+<section id="yoichi-section">
+<h2>余市 委託販売（Loop余市） <span class="badge snapshot">報告ベース</span></h2>
+<p class="desc" id="yoichi-desc">読み込み中…</p>
+<div class="cards" id="yoichi-cards"></div>
+<div class="chart-box" style="height:220px;"><canvas id="yoichiChart"></canvas></div>
+<p class="desc" style="margin:18px 0 6px;" id="yoichi-items-label">最新報告の売れ筋（品目別・上代）</p>
+<div id="yoichiItems"></div>
+<p class="desc" style="margin:18px 0 6px;">報告履歴</p>
+<div id="yoichiReports"></div>
+</section>
 <section>
     <h2>四半期KGI進捗（店舗＋EC＋イベント合算） <span class="badge snapshot" id="kgi-badge-live">計画ベース</span></h2>
     <p class="desc" id="kgi-desc"></p>
@@ -482,6 +492,86 @@ async function load() {
     }
   });
 }
+
+async function loadYoichi() {
+  const desc = document.getElementById("yoichi-desc");
+  let y;
+  try {
+    const res = await fetch("./yoichi.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    y = await res.json();
+  } catch (e) {
+    desc.textContent = "余市の販売データを読み込めませんでした（" + e.message + "）";
+    return;
+  }
+  const reps = (y.reports || []).slice().sort((a, b) => a.date.localeCompare(b.date));
+  if (!reps.length) { desc.textContent = "まだ報告がありません。"; return; }
+  const rate = y.settlement_rate || 0.65;
+  const last = reps[reps.length - 1];
+  const prev = reps.length > 1 ? reps[reps.length - 2] : null;
+  const days = Math.max(1, Math.round((new Date(last.date) - new Date(y.start_date)) / 86400000) + 1);
+
+  // 月別：前回報告との差分を報告日の月に計上
+  const monthly = {};
+  let pu = 0, pr = 0;
+  const rows = reps.map(r => {
+    const du = r.cumulative_units - pu, dr = r.cumulative_retail - pr;
+    const key = r.date.slice(0, 7);
+    monthly[key] = monthly[key] || { units: 0, retail: 0 };
+    monthly[key].units += du; monthly[key].retail += dr;
+    pu = r.cumulative_units; pr = r.cumulative_retail;
+    return [r.date, du + "点", fmtYen(dr), r.cumulative_units + "点", fmtYen(r.cumulative_retail), r.note || ""];
+  });
+
+  desc.textContent = y.start_date + " 納品開始／最終報告 " + last.date + "（" + (y.source || "") + "）。金額は" + (y.price_basis || "上代") +
+    "、精算見込みは上代×" + Math.round(rate * 100) + "%。店舗・EC・イベントの合計には含めていません。";
+
+  const stock = y.consigned_stock;
+  const cards = [
+    ["累計販売点数", last.cumulative_units + "点", prev ? "前回報告から +" + (last.cumulative_units - prev.cumulative_units) + "点" : days + "日間"],
+    ["累計販売額（上代・税抜）", fmtYen(last.cumulative_retail), prev ? "前回報告から +" + fmtYen(last.cumulative_retail - prev.cumulative_retail) : "1日あたり " + fmtYen(last.cumulative_retail / days)],
+    ["精算見込み（×" + Math.round(rate * 100) + "%）", fmtYen(last.cumulative_retail * rate), "Citson側の受取額の目安"],
+    ["余市の委託在庫", stock ? stock.current_units + "点" : "–", stock ? stock.as_of + "時点（補充" + stock.restocked_units + "点込み）" : ""]
+  ];
+  document.getElementById("yoichi-cards").innerHTML = cards.map(([l, v, s]) =>
+    `<div class="card"><div class="label">${l}</div><div class="value">${v}</div>${s ? `<div class="sub">${s}</div>` : ""}</div>`).join("");
+
+  const mKeys = Object.keys(monthly).sort();
+  new Chart(document.getElementById("yoichiChart"), {
+    type: "bar",
+    data: {
+      labels: mKeys.map(k => k.slice(0, 4) + "年" + Number(k.slice(5)) + "月"),
+      datasets: [
+        { label: "販売額（上代・税抜）", data: mKeys.map(k => monthly[k].retail), backgroundColor: "#2b6cb0" },
+        { label: "精算見込み（×" + Math.round(rate * 100) + "%）", data: mKeys.map(k => Math.round(monthly[k].retail * rate)), backgroundColor: "#9fbfe0" }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: true, position: "top" },
+        tooltip: { callbacks: { afterBody: (items) => { const k = mKeys[items[0].dataIndex]; return monthly[k].units + "点"; } } } },
+      scales: { y: { ticks: { callback: v => "¥" + v.toLocaleString("ja-JP") } } }
+    }
+  });
+
+  const items = y.latest_items || [];
+  if (items.length) {
+    document.getElementById("yoichi-items-label").textContent = "最新報告（" + last.date + "時点の累計）の品目別内訳・上代";
+    new gridjs.Grid({
+      columns: ["品目", "点数", "販売額（上代）"],
+      data: items.map(i => [i.name, i.units, fmtYen(i.retail)]),
+      sort: true, style: { table: { width: "100%" } }
+    }).render(document.getElementById("yoichiItems"));
+  } else {
+    document.getElementById("yoichi-items-label").style.display = "none";
+  }
+  new gridjs.Grid({
+    columns: ["報告日", "今回点数", "今回金額", "累計点数", "累計金額", "メモ"],
+    data: rows.reverse(),
+    sort: false, style: { table: { width: "100%" } }
+  }).render(document.getElementById("yoichiReports"));
+}
+loadYoichi();
 
 load().catch(err => {
   document.getElementById("updated-at").textContent = "データ取得エラー: " + err.message;
