@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-09-24T11:38:45+09:00",
+  "generated_at": "2026-09-25T07:13:51+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 370,
-    "screenPageViews": 1613,
-    "sessions": 421,
+    "activeUsers": 332,
+    "screenPageViews": 1472,
+    "sessions": 380,
     "events": {
-      "view_item": 367,
-      "form_start": 169,
-      "add_to_cart": 7,
-      "begin_checkout": 5,
+      "view_item": 350,
+      "form_start": 137,
+      "add_to_cart": 8,
+      "begin_checkout": 6,
       "purchase": 0
     },
     "cvr_pct": 0,
     "channels": {
-      "Direct": 169,
-      "Organic Social": 162,
-      "Unassigned": 44,
-      "Organic Search": 43,
-      "Cross-network": 26,
-      "Referral": 6,
+      "Organic Social": 155,
+      "Direct": 150,
+      "Unassigned": 42,
+      "Organic Search": 35,
+      "Cross-network": 18,
+      "Referral": 5,
       "Organic Shopping": 3
     }
   },
@@ -172,6 +172,12 @@
         {
           "day": 24,
           "date": "2026-09-24",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 25,
+          "date": "2026-09-25",
           "orders": 0,
           "gross_sales": 0
         }
@@ -375,7 +381,7 @@
       "orders": 5
     },
     "top_products": [],
-    "note": "Shopify Admin API（staffセッション経由）で2026-08-01〜2026-09-24の注文を取得・集計（2026-09-24実行）。今月（9月）のEC注文は0件。"
+    "note": "Shopify Admin API（staffセッション経由）で2026-08-01〜2026-09-25の注文を取得・集計（2026-09-25実行）。今月（9月）のEC注文は0件。"
   },
   "store": {
     "current_month_label": "2026年9月",
@@ -395,7 +401,7 @@
     "grand_total_current_month": 382430,
     "grand_total_previous_month": 867360,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-09-24",
+    "last_updated": "2026-09-25",
     "note": "2026年9月行は反映済み（店舗382,430／イベント0）。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
   },
   "referrals": {
@@ -426,8 +432,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-09-24",
-    "note": "全月分を月キーでupsert（2026-09-24）。9月は紹介売上未記入のため0。"
+    "last_updated": "2026-09-25",
+    "note": "月次売上サマリ全行を月キーでupsert（2026-09-25）。空欄は0扱い。"
   },
   "kgi": {
     "monthly_plan": {
@@ -484,9 +490,16 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2243,
-    "media_count": 92,
+    "followers_count": 2245,
+    "media_count": 93,
     "recent_media": [
+      {
+        "date": "2026-09-24",
+        "type": "VIDEO",
+        "likes": 7,
+        "comments": 0,
+        "caption": "Urban Sweat Skirt. ー 秋風になびく、上質"
+      },
       {
         "date": "2026-09-12",
         "type": "VIDEO",
@@ -514,13 +527,6 @@
         "likes": 5,
         "comments": 0,
         "caption": "Contrasting Textures. ー 静寂に潜む、"
-      },
-      {
-        "date": "2026-09-02",
-        "type": "CAROUSEL_ALBUM",
-        "likes": 10,
-        "comments": 0,
-        "caption": "Essential Form. ー 日常とグリーンを繋ぐ、洗"
       }
     ]
   },
@@ -629,6 +635,6 @@
         "active_total": 446
       }
     ],
-    "note": "エルメ友だち数推移詳細ページから直近14日分を取得（2026-09-24）。"
+    "note": "エルメ友だち数推移詳細ページから直近14日分を取得（2026-09-24）。 / 取得失敗（要再ログイン）: 2026-09-25"
   }
 }
