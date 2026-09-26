@@ -1,26 +1,27 @@
 {
-  "generated_at": "2026-09-26T14:14:25+09:00",
+  "generated_at": "2026-09-28T01:11:37+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 363,
-    "screenPageViews": 1480,
-    "sessions": 417,
+    "activeUsers": 377,
+    "screenPageViews": 1458,
+    "sessions": 432,
     "events": {
-      "view_item": 341,
-      "form_start": 137,
+      "view_item": 328,
+      "form_start": 121,
       "add_to_cart": 8,
-      "begin_checkout": 4,
+      "begin_checkout": 1,
       "purchase": 0
     },
     "cvr_pct": 0,
     "channels": {
-      "Direct": 177,
-      "Organic Social": 160,
-      "Unassigned": 52,
+      "Direct": 200,
+      "Organic Social": 154,
+      "Unassigned": 54,
       "Organic Search": 34,
-      "Cross-network": 15,
-      "Referral": 11,
-      "Organic Shopping": 3
+      "Cross-network": 19,
+      "Referral": 9,
+      "Organic Shopping": 1,
+      "Paid Social": 1
     }
   },
   "shopify": {
@@ -407,8 +408,8 @@
     "grand_total_current_month": 382430,
     "grand_total_previous_month": 867360,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-09-26",
-    "note": "2026年9月行は反映済み（店舗382,430／イベント0）。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。"
+    "last_updated": "2026-09-27",
+    "note": "2026年9月の鹿島様・七戸様紹介合計はマスターシート未記入のため0として扱った。"
   },
   "referrals": {
     "monthly": [
@@ -438,8 +439,8 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-09-26",
-    "note": "Citson_マスター「月次売上サマリ」全月分を月キーでupsert（2026-09-26）。9月分は空欄のため0。"
+    "last_updated": "2026-09-27",
+    "note": "2026年9月分は未記入のため0として反映。"
   },
   "kgi": {
     "monthly_plan": {
@@ -496,13 +497,20 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2249,
-    "media_count": 94,
+    "followers_count": 2252,
+    "media_count": 95,
     "recent_media": [
+      {
+        "date": "2026-09-26",
+        "type": "CAROUSEL_ALBUM",
+        "likes": 4,
+        "comments": 0,
+        "caption": "Quiet Presence. ー 控えめに、印象を残す。\n"
+      },
       {
         "date": "2026-09-25",
         "type": "CAROUSEL_ALBUM",
-        "likes": 2,
+        "likes": 4,
         "comments": 0,
         "caption": "Quiet Utility. ー 美しさの中に、機能を\n\nラ"
       },
@@ -516,39 +524,25 @@
       {
         "date": "2026-09-12",
         "type": "VIDEO",
-        "likes": 3,
+        "likes": 4,
         "comments": 0,
         "caption": "Seamless Monochrome. ー 境界線を溶かす"
       },
       {
         "date": "2026-09-11",
         "type": "CAROUSEL_ALBUM",
-        "likes": 8,
+        "likes": 9,
         "comments": 0,
         "caption": "Absolute Black. ー 季節を繋ぐ、漆黒のスタン"
-      },
-      {
-        "date": "2026-09-10",
-        "type": "IMAGE",
-        "likes": 7,
-        "comments": 0,
-        "caption": "Essential Layer. ー 秋の気配と、静かなるベ"
       }
     ]
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-09-26",
-    "active_friends": 456,
-    "total_added": 527,
+    "as_of": "2026-09-27",
+    "active_friends": 460,
+    "total_added": 531,
     "daily": [
-      {
-        "date": "2026-09-13",
-        "added": 18,
-        "blocked": 2,
-        "net": 16,
-        "active_total": 349
-      },
       {
         "date": "2026-09-14",
         "added": 8,
@@ -635,12 +629,19 @@
       },
       {
         "date": "2026-09-26",
-        "added": 5,
+        "added": 8,
         "blocked": 1,
-        "net": 4,
-        "active_total": 456
+        "net": 7,
+        "active_total": 459
+      },
+      {
+        "date": "2026-09-27",
+        "added": 1,
+        "blocked": 0,
+        "net": 1,
+        "active_total": 460
       }
     ],
-    "note": "エルメ友だち数推移詳細ページから直近14日分を取得（2026-09-26、再ログイン後に手動再取得）。"
+    "note": ""
   }
 }
