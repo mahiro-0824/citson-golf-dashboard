@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-09-28T01:11:37+09:00",
+  "generated_at": "2026-09-28T07:15:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 377,
-    "screenPageViews": 1458,
-    "sessions": 432,
+    "activeUsers": 419,
+    "screenPageViews": 1675,
+    "sessions": 492,
     "events": {
-      "view_item": 328,
-      "form_start": 121,
-      "add_to_cart": 8,
-      "begin_checkout": 1,
+      "view_item": 404,
+      "form_start": 149,
+      "add_to_cart": 10,
+      "begin_checkout": 2,
       "purchase": 0
     },
     "cvr_pct": 0,
     "channels": {
-      "Direct": 200,
-      "Organic Social": 154,
-      "Unassigned": 54,
-      "Organic Search": 34,
-      "Cross-network": 19,
+      "Cross-network": 27,
+      "Direct": 229,
+      "Organic Search": 39,
+      "Organic Shopping": 3,
+      "Organic Social": 162,
+      "Paid Social": 1,
       "Referral": 9,
-      "Organic Shopping": 1,
-      "Paid Social": 1
+      "Unassigned": 63
     }
   },
   "shopify": {
@@ -185,6 +185,18 @@
         {
           "day": 26,
           "date": "2026-09-26",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 27,
+          "date": "2026-09-27",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 28,
+          "date": "2026-09-28",
           "orders": 0,
           "gross_sales": 0
         }
@@ -384,17 +396,17 @@
       ]
     },
     "prev_same_period": {
-      "gross_sales": 181500,
-      "orders": 5
+      "gross_sales": 207900,
+      "orders": 6
     },
     "top_products": [],
-    "note": "Shopify Admin API（staffセッション経由）で取得。2026年9月はEC注文0件のため売れ筋トップ5は空。"
+    "note": "2026年9月はEC注文0件（本日時点）。8/29以降、Shopify上でのEC注文が発生していない。"
   },
   "store": {
     "current_month_label": "2026年9月",
     "previous_month_label": "2026年8月",
     "current_month": {
-      "gross_sales": 382430
+      "gross_sales": 501430
     },
     "previous_month": {
       "gross_sales": 455520
@@ -405,11 +417,11 @@
     "ec_previous_month": 207900,
     "ec_master_current_month": 0,
     "ec_master_previous_month": 160363,
-    "grand_total_current_month": 382430,
+    "grand_total_current_month": 501430,
     "grand_total_previous_month": 867360,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-09-27",
-    "note": "2026年9月の鹿島様・七戸様紹介合計はマスターシート未記入のため0として扱った。"
+    "last_updated": "2026-09-28",
+    "note": "2026年9月分（店舗・イベント）はマスターシートに反映済み。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用（本日時点0件）。"
   },
   "referrals": {
     "monthly": [
@@ -439,7 +451,7 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-09-27",
+    "last_updated": "2026-09-28",
     "note": "2026年9月分は未記入のため0として反映。"
   },
   "kgi": {
@@ -497,20 +509,27 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2252,
-    "media_count": 95,
+    "followers_count": 2254,
+    "media_count": 97,
     "recent_media": [
+      {
+        "date": "2026-09-27",
+        "type": "VIDEO",
+        "likes": 13,
+        "comments": 0,
+        "caption": "Seasonal Balance. ー 秋の変化を、心地よく"
+      },
       {
         "date": "2026-09-26",
         "type": "CAROUSEL_ALBUM",
-        "likes": 4,
+        "likes": 6,
         "comments": 0,
         "caption": "Quiet Presence. ー 控えめに、印象を残す。\n"
       },
       {
         "date": "2026-09-25",
         "type": "CAROUSEL_ALBUM",
-        "likes": 4,
+        "likes": 5,
         "comments": 0,
         "caption": "Quiet Utility. ー 美しさの中に、機能を\n\nラ"
       },
@@ -527,29 +546,15 @@
         "likes": 4,
         "comments": 0,
         "caption": "Seamless Monochrome. ー 境界線を溶かす"
-      },
-      {
-        "date": "2026-09-11",
-        "type": "CAROUSEL_ALBUM",
-        "likes": 9,
-        "comments": 0,
-        "caption": "Absolute Black. ー 季節を繋ぐ、漆黒のスタン"
       }
     ]
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-09-27",
-    "active_friends": 460,
-    "total_added": 531,
+    "as_of": "2026-09-28",
+    "active_friends": 467,
+    "total_added": 544,
     "daily": [
-      {
-        "date": "2026-09-14",
-        "added": 8,
-        "blocked": 3,
-        "net": 5,
-        "active_total": 354
-      },
       {
         "date": "2026-09-15",
         "added": 14,
@@ -636,10 +641,17 @@
       },
       {
         "date": "2026-09-27",
+        "added": 13,
+        "blocked": 5,
+        "net": 8,
+        "active_total": 467
+      },
+      {
+        "date": "2026-09-28",
         "added": 1,
-        "blocked": 0,
-        "net": 1,
-        "active_total": 460
+        "blocked": 1,
+        "net": 0,
+        "active_total": 467
       }
     ],
     "note": ""
