@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-09-28T07:15:00+09:00",
+  "generated_at": "2026-09-28T07:00:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 419,
-    "screenPageViews": 1675,
-    "sessions": 492,
+    "activeUsers": 441,
+    "screenPageViews": 1839,
+    "sessions": 533,
     "events": {
-      "view_item": 404,
-      "form_start": 149,
-      "add_to_cart": 10,
-      "begin_checkout": 2,
+      "view_item": 443,
+      "form_start": 146,
+      "add_to_cart": 18,
+      "begin_checkout": 5,
       "purchase": 0
     },
     "cvr_pct": 0,
     "channels": {
-      "Cross-network": 27,
-      "Direct": 229,
-      "Organic Search": 39,
-      "Organic Shopping": 3,
-      "Organic Social": 162,
-      "Paid Social": 1,
+      "Direct": 254,
+      "Organic Social": 184,
+      "Organic Search": 48,
+      "Unassigned": 44,
+      "Cross-network": 16,
       "Referral": 9,
-      "Unassigned": 63
+      "Organic Shopping": 8,
+      "Paid Social": 1
     }
   },
   "shopify": {
@@ -400,7 +400,7 @@
       "orders": 6
     },
     "top_products": [],
-    "note": "2026年9月はEC注文0件（本日時点）。8/29以降、Shopify上でのEC注文が発生していない。"
+    "note": "Shopify Admin API（staffセッション）で直接取得。9月は注文0件。"
   },
   "store": {
     "current_month_label": "2026年9月",
@@ -421,7 +421,7 @@
     "grand_total_previous_month": 867360,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
     "last_updated": "2026-09-28",
-    "note": "2026年9月分（店舗・イベント）はマスターシートに反映済み。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用（本日時点0件）。"
+    "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用"
   },
   "referrals": {
     "monthly": [
@@ -452,7 +452,7 @@
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
     "last_updated": "2026-09-28",
-    "note": "2026年9月分は未記入のため0として反映。"
+    "note": "Citson_マスター「月次売上サマリ」より月キーでupsert"
   },
   "kgi": {
     "monthly_plan": {
@@ -509,27 +509,34 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2254,
-    "media_count": 97,
+    "followers_count": 2258,
+    "media_count": 98,
     "recent_media": [
+      {
+        "date": "2026-09-28",
+        "type": "CAROUSEL_ALBUM",
+        "likes": 3,
+        "comments": 0,
+        "caption": "Effortless Form. ー 余白が生む、美しいシル"
+      },
       {
         "date": "2026-09-27",
         "type": "VIDEO",
-        "likes": 13,
+        "likes": 14,
         "comments": 0,
         "caption": "Seasonal Balance. ー 秋の変化を、心地よく"
       },
       {
         "date": "2026-09-26",
         "type": "CAROUSEL_ALBUM",
-        "likes": 6,
+        "likes": 7,
         "comments": 0,
         "caption": "Quiet Presence. ー 控えめに、印象を残す。\n"
       },
       {
         "date": "2026-09-25",
         "type": "CAROUSEL_ALBUM",
-        "likes": 5,
+        "likes": 6,
         "comments": 0,
         "caption": "Quiet Utility. ー 美しさの中に、機能を\n\nラ"
       },
@@ -539,121 +546,114 @@
         "likes": 9,
         "comments": 0,
         "caption": "Urban Sweat Skirt. ー 秋風になびく、上質"
-      },
-      {
-        "date": "2026-09-12",
-        "type": "VIDEO",
-        "likes": 4,
-        "comments": 0,
-        "caption": "Seamless Monochrome. ー 境界線を溶かす"
       }
     ]
   },
   "line": {
     "source": "L Message（エルメ）",
     "as_of": "2026-09-28",
-    "active_friends": 467,
-    "total_added": 544,
+    "active_friends": 1569,
+    "total_added": 1716,
     "daily": [
       {
         "date": "2026-09-15",
-        "added": 14,
-        "blocked": 2,
-        "net": 12,
-        "active_total": 366
+        "added": 0,
+        "blocked": 0,
+        "net": 0,
+        "active_total": 1571
       },
       {
         "date": "2026-09-16",
-        "added": 13,
-        "blocked": 3,
-        "net": 10,
-        "active_total": 376
+        "added": 1,
+        "blocked": 0,
+        "net": 1,
+        "active_total": 1572
       },
       {
         "date": "2026-09-17",
-        "added": 13,
+        "added": 1,
         "blocked": 0,
-        "net": 13,
-        "active_total": 389
+        "net": 1,
+        "active_total": 1573
       },
       {
         "date": "2026-09-18",
-        "added": 12,
-        "blocked": 2,
-        "net": 10,
-        "active_total": 399
+        "added": 2,
+        "blocked": 1,
+        "net": 1,
+        "active_total": 1574
       },
       {
         "date": "2026-09-19",
-        "added": 7,
-        "blocked": 1,
-        "net": 6,
-        "active_total": 405
+        "added": 3,
+        "blocked": 7,
+        "net": -4,
+        "active_total": 1570
       },
       {
         "date": "2026-09-20",
-        "added": 7,
+        "added": 1,
         "blocked": 0,
-        "net": 7,
-        "active_total": 412
+        "net": 1,
+        "active_total": 1571
       },
       {
         "date": "2026-09-21",
-        "added": 16,
-        "blocked": 4,
-        "net": 12,
-        "active_total": 424
+        "added": 1,
+        "blocked": 0,
+        "net": 1,
+        "active_total": 1572
       },
       {
         "date": "2026-09-22",
-        "added": 10,
-        "blocked": 2,
-        "net": 8,
-        "active_total": 432
+        "added": 0,
+        "blocked": 1,
+        "net": -1,
+        "active_total": 1571
       },
       {
         "date": "2026-09-23",
-        "added": 13,
+        "added": 1,
         "blocked": 0,
-        "net": 13,
-        "active_total": 445
+        "net": 1,
+        "active_total": 1572
       },
       {
         "date": "2026-09-24",
-        "added": 8,
-        "blocked": 4,
-        "net": 4,
-        "active_total": 449
+        "added": 1,
+        "blocked": 2,
+        "net": -1,
+        "active_total": 1571
       },
       {
         "date": "2026-09-25",
-        "added": 6,
-        "blocked": 3,
-        "net": 3,
-        "active_total": 452
+        "added": 2,
+        "blocked": 1,
+        "net": 1,
+        "active_total": 1572
       },
       {
         "date": "2026-09-26",
-        "added": 8,
-        "blocked": 1,
-        "net": 7,
-        "active_total": 459
+        "added": 1,
+        "blocked": 5,
+        "net": -4,
+        "active_total": 1568
       },
       {
         "date": "2026-09-27",
-        "added": 13,
-        "blocked": 5,
-        "net": 8,
-        "active_total": 467
+        "added": 0,
+        "blocked": 1,
+        "net": -1,
+        "active_total": 1567
       },
       {
         "date": "2026-09-28",
-        "added": 1,
-        "blocked": 1,
-        "net": 0,
-        "active_total": 467
+        "added": 5,
+        "blocked": 3,
+        "net": 2,
+        "active_total": 1569
       }
     ],
-    "note": ""
+    "note": "友だち数推移詳細ページより取得（未来日9/29の行は除外）"
   }
 }
