@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-09-28T07:00:00+09:00",
+  "generated_at": "2026-09-29T07:00:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 441,
-    "screenPageViews": 1839,
-    "sessions": 533,
+    "activeUsers": 467,
+    "screenPageViews": 1995,
+    "sessions": 577,
     "events": {
-      "view_item": 443,
-      "form_start": 146,
-      "add_to_cart": 18,
-      "begin_checkout": 5,
-      "purchase": 0
+      "view_item": 496,
+      "form_start": 168,
+      "add_to_cart": 22,
+      "begin_checkout": 7,
+      "purchase": 5
     },
-    "cvr_pct": 0,
+    "cvr_pct": 0.87,
     "channels": {
-      "Direct": 254,
-      "Organic Social": 184,
-      "Organic Search": 48,
-      "Unassigned": 44,
-      "Cross-network": 16,
-      "Referral": 9,
-      "Organic Shopping": 8,
+      "Direct": 260,
+      "Organic Social": 203,
+      "Unassigned": 52,
+      "Organic Search": 47,
+      "Cross-network": 33,
+      "Organic Shopping": 10,
+      "Referral": 8,
       "Paid Social": 1
     }
   },
@@ -28,9 +28,9 @@
     "current_month_label": "2026年9月",
     "previous_month_label": "2026年8月",
     "current_month": {
-      "gross_sales": 0,
-      "orders": 0,
-      "aov": 0,
+      "gross_sales": 24000,
+      "orders": 1,
+      "aov": 24000,
       "daily_sales": [
         {
           "day": 1,
@@ -199,13 +199,19 @@
           "date": "2026-09-28",
           "orders": 0,
           "gross_sales": 0
+        },
+        {
+          "day": 29,
+          "date": "2026-09-29",
+          "orders": 1,
+          "gross_sales": 24000
         }
       ]
     },
     "previous_month": {
-      "gross_sales": 207900,
+      "gross_sales": 189000,
       "orders": 6,
-      "aov": 34650,
+      "aov": 31500,
       "daily_sales": [
         {
           "day": 1,
@@ -217,7 +223,7 @@
           "day": 2,
           "date": "2026-08-02",
           "orders": 1,
-          "gross_sales": 22000
+          "gross_sales": 20000
         },
         {
           "day": 3,
@@ -271,13 +277,13 @@
           "day": 11,
           "date": "2026-08-11",
           "orders": 1,
-          "gross_sales": 51700
+          "gross_sales": 47000
         },
         {
           "day": 12,
           "date": "2026-08-12",
           "orders": 1,
-          "gross_sales": 45100
+          "gross_sales": 41000
         },
         {
           "day": 13,
@@ -331,7 +337,7 @@
           "day": 21,
           "date": "2026-08-21",
           "orders": 1,
-          "gross_sales": 12100
+          "gross_sales": 11000
         },
         {
           "day": 22,
@@ -343,7 +349,7 @@
           "day": 23,
           "date": "2026-08-23",
           "orders": 1,
-          "gross_sales": 50600
+          "gross_sales": 46000
         },
         {
           "day": 24,
@@ -367,7 +373,7 @@
           "day": 27,
           "date": "2026-08-27",
           "orders": 1,
-          "gross_sales": 26400
+          "gross_sales": 24000
         },
         {
           "day": 28,
@@ -396,11 +402,17 @@
       ]
     },
     "prev_same_period": {
-      "gross_sales": 207900,
+      "gross_sales": 189000,
       "orders": 6
     },
-    "top_products": [],
-    "note": "Shopify Admin API（staffセッション）で直接取得。9月は注文0件。"
+    "top_products": [
+      {
+        "title": "IZREEL/ノーカラーBL",
+        "gross_sales": 24000,
+        "orders": 1
+      }
+    ],
+    "note": "Shopify staffセッションでの直接取得は行わず、Shopify MCPコネクタ（ShopifyQL）で取得（2026-09-29）。9月は9/29に1件。"
   },
   "store": {
     "current_month_label": "2026年9月",
@@ -413,14 +425,14 @@
     },
     "event_current_month": 0,
     "event_previous_month": 203940,
-    "ec_current_month": 0,
-    "ec_previous_month": 207900,
+    "ec_current_month": 24000,
+    "ec_previous_month": 189000,
     "ec_master_current_month": 0,
     "ec_master_previous_month": 160363,
-    "grand_total_current_month": 501430,
-    "grand_total_previous_month": 867360,
+    "grand_total_current_month": 525430,
+    "grand_total_previous_month": 848460,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-29",
     "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用"
   },
   "referrals": {
@@ -451,7 +463,7 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-29",
     "note": "Citson_マスター「月次売上サマリ」より月キーでupsert"
   },
   "kgi": {
@@ -509,13 +521,20 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2258,
-    "media_count": 98,
+    "followers_count": 2257,
+    "media_count": 99,
     "recent_media": [
+      {
+        "date": "2026-09-29",
+        "type": "CAROUSEL_ALBUM",
+        "likes": 3,
+        "comments": 0,
+        "caption": "Defined by Form. ー シルエットで、魅せる。"
+      },
       {
         "date": "2026-09-28",
         "type": "CAROUSEL_ALBUM",
-        "likes": 3,
+        "likes": 4,
         "comments": 0,
         "caption": "Effortless Form. ー 余白が生む、美しいシル"
       },
@@ -539,13 +558,6 @@
         "likes": 6,
         "comments": 0,
         "caption": "Quiet Utility. ー 美しさの中に、機能を\n\nラ"
-      },
-      {
-        "date": "2026-09-24",
-        "type": "VIDEO",
-        "likes": 9,
-        "comments": 0,
-        "caption": "Urban Sweat Skirt. ー 秋風になびく、上質"
       }
     ]
   },
@@ -654,6 +666,6 @@
         "active_total": 1569
       }
     ],
-    "note": "友だち数推移詳細ページより取得（未来日9/29の行は除外）"
+    "note": "友だち数推移詳細ページより取得（未来日9/29の行は除外） / 2026-09-29: エルメ画面の数値（有効友だち475等）が既存値（1569）と大きく乖離したため別アカウントの可能性があり更新せず既存値を維持"
   }
 }
