@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-09-30T09:31:38+09:00",
+  "generated_at": "2026-09-30T07:11:10+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 467,
-    "screenPageViews": 1995,
-    "sessions": 577,
+    "activeUsers": 449,
+    "screenPageViews": 1908,
+    "sessions": 564,
     "events": {
-      "view_item": 496,
-      "form_start": 168,
-      "add_to_cart": 22,
-      "begin_checkout": 7,
-      "purchase": 5
+      "view_item": 467,
+      "form_start": 160,
+      "add_to_cart": 21,
+      "begin_checkout": 10,
+      "purchase": 1
     },
-    "cvr_pct": 0.87,
+    "cvr_pct": 0.18,
     "channels": {
-      "Direct": 260,
-      "Organic Social": 203,
-      "Unassigned": 52,
-      "Organic Search": 47,
-      "Cross-network": 33,
-      "Organic Shopping": 10,
+      "Direct": 259,
+      "Organic Social": 215,
+      "Organic Search": 50,
+      "Unassigned": 23,
+      "Cross-network": 14,
+      "Organic Shopping": 12,
       "Referral": 8,
       "Paid Social": 1
     }
@@ -205,6 +205,12 @@
           "date": "2026-09-29",
           "orders": 1,
           "gross_sales": 24000
+        },
+        {
+          "day": 30,
+          "date": "2026-09-30",
+          "orders": 0,
+          "gross_sales": 0
         }
       ]
     },
@@ -412,7 +418,7 @@
         "orders": 1
       }
     ],
-    "note": "Shopify staffセッションでの直接取得は行わず、Shopify MCPコネクタ（ShopifyQL）で取得（2026-09-29）。9月は9/29に1件。"
+    "note": "Shopify staffセッションでのAdmin API直接取得は行わず、Shopify MCPコネクタ（ShopifyQL）で取得（2026-09-30）"
   },
   "store": {
     "current_month_label": "2026年9月",
@@ -432,8 +438,8 @@
     "grand_total_current_month": 525430,
     "grand_total_previous_month": 848460,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-09-29",
-    "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用"
+    "last_updated": "2026-09-30",
+    "note": "ECはCitson_マスターの反映状況によらずShopifyライブ集計を使用（2026-09-30）"
   },
   "referrals": {
     "monthly": [
@@ -463,7 +469,7 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-09-29",
+    "last_updated": "2026-09-30",
     "note": "Citson_マスター「月次売上サマリ」より月キーでupsert"
   },
   "kgi": {
@@ -522,19 +528,26 @@
   "instagram": {
     "username": "citsongolf.official",
     "followers_count": 2257,
-    "media_count": 99,
+    "media_count": 100,
     "recent_media": [
+      {
+        "date": "2026-09-30",
+        "type": "CAROUSEL_ALBUM",
+        "likes": 4,
+        "comments": 0,
+        "caption": "Autumn Winter Structure. ー 重ねる"
+      },
       {
         "date": "2026-09-29",
         "type": "CAROUSEL_ALBUM",
-        "likes": 3,
+        "likes": 5,
         "comments": 0,
         "caption": "Defined by Form. ー シルエットで、魅せる。"
       },
       {
         "date": "2026-09-28",
         "type": "CAROUSEL_ALBUM",
-        "likes": 4,
+        "likes": 5,
         "comments": 0,
         "caption": "Effortless Form. ー 余白が生む、美しいシル"
       },
@@ -551,13 +564,6 @@
         "likes": 7,
         "comments": 0,
         "caption": "Quiet Presence. ー 控えめに、印象を残す。\n"
-      },
-      {
-        "date": "2026-09-25",
-        "type": "CAROUSEL_ALBUM",
-        "likes": 6,
-        "comments": 0,
-        "caption": "Quiet Utility. ー 美しさの中に、機能を\n\nラ"
       }
     ]
   },
@@ -666,6 +672,6 @@
         "active_total": 475
       }
     ],
-    "note": "友だち数推移詳細ページより取得。2026-09-30 mahiro確認: 有効友だち数475・追加総数559が正（旧値1569は誤り）"
+    "note": "LINE取得: friend-history最上段が10/1(0件)だったため9/30を最新日として採用"
   }
 }
