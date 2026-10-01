@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-30T07:11:10+09:00",
+  "generated_at": "2026-10-01T14:46:36+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 449,
-    "screenPageViews": 1908,
-    "sessions": 564,
+    "activeUsers": 450,
+    "screenPageViews": 1943,
+    "sessions": 565,
     "events": {
-      "view_item": 467,
-      "form_start": 160,
+      "view_item": 481,
+      "form_start": 166,
       "add_to_cart": 21,
       "begin_checkout": 10,
       "purchase": 1
@@ -15,19 +15,32 @@
     "cvr_pct": 0.18,
     "channels": {
       "Direct": 259,
-      "Organic Social": 215,
-      "Organic Search": 50,
-      "Unassigned": 23,
-      "Cross-network": 14,
+      "Organic Social": 224,
+      "Organic Search": 55,
       "Organic Shopping": 12,
       "Referral": 8,
+      "Unassigned": 7,
+      "Cross-network": 2,
       "Paid Social": 1
     }
   },
   "shopify": {
-    "current_month_label": "2026年9月",
-    "previous_month_label": "2026年8月",
+    "current_month_label": "2026年10月",
+    "previous_month_label": "2026年9月",
     "current_month": {
+      "gross_sales": 0,
+      "orders": 0,
+      "aov": 0,
+      "daily_sales": [
+        {
+          "day": 1,
+          "date": "2026-10-01",
+          "orders": 0,
+          "gross_sales": 0
+        }
+      ]
+    },
+    "previous_month": {
       "gross_sales": 24000,
       "orders": 1,
       "aov": 24000,
@@ -214,232 +227,33 @@
         }
       ]
     },
-    "previous_month": {
-      "gross_sales": 189000,
-      "orders": 6,
-      "aov": 31500,
-      "daily_sales": [
-        {
-          "day": 1,
-          "date": "2026-08-01",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 2,
-          "date": "2026-08-02",
-          "orders": 1,
-          "gross_sales": 20000
-        },
-        {
-          "day": 3,
-          "date": "2026-08-03",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 4,
-          "date": "2026-08-04",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 5,
-          "date": "2026-08-05",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 6,
-          "date": "2026-08-06",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 7,
-          "date": "2026-08-07",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 8,
-          "date": "2026-08-08",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 9,
-          "date": "2026-08-09",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 10,
-          "date": "2026-08-10",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 11,
-          "date": "2026-08-11",
-          "orders": 1,
-          "gross_sales": 47000
-        },
-        {
-          "day": 12,
-          "date": "2026-08-12",
-          "orders": 1,
-          "gross_sales": 41000
-        },
-        {
-          "day": 13,
-          "date": "2026-08-13",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 14,
-          "date": "2026-08-14",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 15,
-          "date": "2026-08-15",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 16,
-          "date": "2026-08-16",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 17,
-          "date": "2026-08-17",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 18,
-          "date": "2026-08-18",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 19,
-          "date": "2026-08-19",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 20,
-          "date": "2026-08-20",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 21,
-          "date": "2026-08-21",
-          "orders": 1,
-          "gross_sales": 11000
-        },
-        {
-          "day": 22,
-          "date": "2026-08-22",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 23,
-          "date": "2026-08-23",
-          "orders": 1,
-          "gross_sales": 46000
-        },
-        {
-          "day": 24,
-          "date": "2026-08-24",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 25,
-          "date": "2026-08-25",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 26,
-          "date": "2026-08-26",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 27,
-          "date": "2026-08-27",
-          "orders": 1,
-          "gross_sales": 24000
-        },
-        {
-          "day": 28,
-          "date": "2026-08-28",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 29,
-          "date": "2026-08-29",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 30,
-          "date": "2026-08-30",
-          "orders": 0,
-          "gross_sales": 0
-        },
-        {
-          "day": 31,
-          "date": "2026-08-31",
-          "orders": 0,
-          "gross_sales": 0
-        }
-      ]
-    },
     "prev_same_period": {
-      "gross_sales": 189000,
-      "orders": 6
+      "gross_sales": 0,
+      "orders": 0
     },
-    "top_products": [
-      {
-        "title": "IZREEL/ノーカラーBL",
-        "gross_sales": 24000,
-        "orders": 1
-      }
-    ],
-    "note": "Shopify staffセッションでのAdmin API直接取得は行わず、Shopify MCPコネクタ（ShopifyQL）で取得（2026-09-30）"
+    "top_products": [],
+    "note": "Shopify MCPコネクタ（ShopifyQL）で取得（2026-10-01・月替わり手動更新）"
   },
   "store": {
-    "current_month_label": "2026年9月",
-    "previous_month_label": "2026年8月",
+    "current_month_label": "2026年10月",
+    "previous_month_label": "2026年9月",
     "current_month": {
-      "gross_sales": 501430
+      "gross_sales": 0
     },
     "previous_month": {
-      "gross_sales": 455520
+      "gross_sales": 526430
     },
     "event_current_month": 0,
-    "event_previous_month": 203940,
-    "ec_current_month": 24000,
-    "ec_previous_month": 189000,
+    "event_previous_month": 0,
+    "ec_current_month": 0,
+    "ec_previous_month": 24000,
     "ec_master_current_month": 0,
-    "ec_master_previous_month": 160363,
-    "grand_total_current_month": 525430,
-    "grand_total_previous_month": 848460,
+    "ec_master_previous_month": 24000,
+    "grand_total_current_month": 0,
+    "grand_total_previous_month": 550430,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-09-30",
-    "note": "ECはCitson_マスターの反映状況によらずShopifyライブ集計を使用（2026-09-30）"
+    "last_updated": "2026-10-01",
+    "note": "10月分の売上統計表がまだ無いため、店舗の当月値は0で仮置き（作成され次第マスター経由で反映）。ECはShopifyライブ集計を使用（2026-10-01）"
   },
   "referrals": {
     "monthly": [
@@ -466,10 +280,16 @@
         "label": "2026年9月",
         "kashima": 0,
         "shichinohe": 0
+      },
+      {
+        "month": "2026-10",
+        "label": "2026年10月",
+        "kashima": 0,
+        "shichinohe": 0
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-01",
     "note": "Citson_マスター「月次売上サマリ」より月キーでupsert"
   },
   "kgi": {
@@ -569,17 +389,10 @@
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-09-30",
-    "active_friends": 475,
+    "as_of": "2026-10-01",
+    "active_friends": 474,
     "total_added": 559,
     "daily": [
-      {
-        "date": "2026-09-17",
-        "added": 13,
-        "blocked": 0,
-        "net": 13,
-        "active_total": 389
-      },
       {
         "date": "2026-09-18",
         "added": 12,
@@ -670,8 +483,15 @@
         "blocked": 2,
         "net": 1,
         "active_total": 475
+      },
+      {
+        "date": "2026-10-01",
+        "added": 0,
+        "blocked": 1,
+        "net": -1,
+        "active_total": 474
       }
     ],
-    "note": "LINE取得: friend-history最上段が10/1(0件)だったため9/30を最新日として採用"
+    "note": "friend-history詳細ページから取得（10/1は当日途中の値、2026-10-01）"
   }
 }
