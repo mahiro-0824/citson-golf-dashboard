@@ -267,7 +267,9 @@ async function load() {
   // 四半期KGI進捗 + 立替金（エフエー）
   (function renderKgiAndAdvance() {
     const now = new Date();
-    const month = now.getMonth() + 1;
+    // 「当月」はブラウザの日付ではなく data.json の当月ラベルで決める（自動更新が遅れても当月・前月の値と月がずれないように）
+    const labelMatch = String(st.current_month_label || "").match(/(\d{4})年(\d{1,2})月/);
+    const month = labelMatch ? Number(labelMatch[2]) : (now.getMonth() + 1);
     const prevMonth = month === 1 ? 12 : month - 1;
     const inQ3 = month >= 7 && month <= 9;
     const inQ4 = month >= 10 && month <= 12;
@@ -278,7 +280,7 @@ async function load() {
     const salesThisTotal = st.grand_total_current_month;
     const salesPrevTotal = st.grand_total_previous_month;
     // 確定済み月の実績（当月・前月以外はここから取る。data.json 側に kgi.monthly_actuals があればそちらを優先）
-    const CLOSED_MONTH_ACTUALS = { "7": 749380, "8": 867360 };
+    const CLOSED_MONTH_ACTUALS = { "7": 749380, "8": 867360, "9": 550430 };
     const closedActuals = Object.assign({}, CLOSED_MONTH_ACTUALS, (data.kgi.monthly_actuals || {}));
     const monthlyActual = (m) => {
       if (m === month) return (salesThisTotal === null || salesThisTotal === undefined) ? null : salesThisTotal;
