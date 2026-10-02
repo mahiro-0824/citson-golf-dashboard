@@ -1,27 +1,26 @@
 {
-  "generated_at": "2026-10-02T07:20:00+09:00",
+  "generated_at": "2026-10-03T07:15:00+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 396,
-    "screenPageViews": 1706,
-    "sessions": 501,
+    "activeUsers": 345,
+    "screenPageViews": 1535,
+    "sessions": 447,
     "events": {
-      "view_item": 412,
-      "form_start": 153,
-      "add_to_cart": 20,
+      "view_item": 371,
+      "form_start": 139,
+      "add_to_cart": 15,
       "begin_checkout": 9,
       "purchase": 1
     },
-    "cvr_pct": 0.2,
+    "cvr_pct": 0.22,
     "channels": {
-      "Direct": 238,
-      "Organic Social": 192,
-      "Organic Search": 44,
-      "Unassigned": 16,
-      "Organic Shopping": 13,
-      "Cross-network": 4,
-      "Referral": 3,
-      "Paid Social": 1
+      "Direct": 208,
+      "Organic Social": 178,
+      "Organic Search": 41,
+      "Organic Shopping": 12,
+      "Unassigned": 10,
+      "Cross-network": 3,
+      "Referral": 1
     }
   },
   "shopify": {
@@ -41,6 +40,12 @@
         {
           "day": 2,
           "date": "2026-10-02",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 3,
+          "date": "2026-10-03",
           "orders": 0,
           "gross_sales": 0
         }
@@ -238,7 +243,7 @@
       "orders": 0
     },
     "top_products": [],
-    "note": "Shopify staffセッション方式は使わず、Shopify MCPコネクタ（ShopifyQL）で取得。2026-10-02実行（今月は10/1〜10/2の注文なし）"
+    "note": "Shopify MCPコネクタ（ShopifyQL）で取得（2026-10-03 JST）。今月はまだ注文0件。"
   },
   "store": {
     "current_month_label": "2026年10月",
@@ -258,8 +263,8 @@
     "grand_total_current_month": 0,
     "grand_total_previous_month": 550430,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-10-02",
-    "note": "当月分未反映（経理待ち）: 2026-10-02。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用"
+    "last_updated": "2026-10-03",
+    "note": "当月分未反映（経理待ち）: 2026-10-03。ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用"
   },
   "referrals": {
     "monthly": [
@@ -353,13 +358,13 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2257,
+    "followers_count": 2255,
     "media_count": 100,
     "recent_media": [
       {
         "date": "2026-09-30",
         "type": "CAROUSEL_ALBUM",
-        "likes": 4,
+        "likes": 7,
         "comments": 0,
         "caption": "Autumn Winter Structure. ー 重ねる"
       },
@@ -380,7 +385,7 @@
       {
         "date": "2026-09-27",
         "type": "VIDEO",
-        "likes": 15,
+        "likes": 16,
         "comments": 0,
         "caption": "Seasonal Balance. ー 秋の変化を、心地よく"
       },
@@ -395,17 +400,10 @@
   },
   "line": {
     "source": "L Message（エルメ）",
-    "as_of": "2026-10-02",
-    "active_friends": 474,
+    "as_of": "2026-10-03",
+    "active_friends": 472,
     "total_added": 559,
     "daily": [
-      {
-        "date": "2026-09-19",
-        "added": 7,
-        "blocked": 1,
-        "net": 6,
-        "active_total": 405
-      },
       {
         "date": "2026-09-20",
         "added": 7,
@@ -493,9 +491,16 @@
       {
         "date": "2026-10-02",
         "added": 0,
+        "blocked": 2,
+        "net": -2,
+        "active_total": 472
+      },
+      {
+        "date": "2026-10-03",
+        "added": 0,
         "blocked": 0,
         "net": 0,
-        "active_total": 474
+        "active_total": 472
       }
     ],
     "note": "直近14日分をエルメ友だち数推移から取得"
