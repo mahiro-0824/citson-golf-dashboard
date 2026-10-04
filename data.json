@@ -54,6 +54,12 @@
           "date": "2026-10-04",
           "orders": 0,
           "gross_sales": 0
+        },
+        {
+          "day": 5,
+          "date": "2026-10-05",
+          "orders": 0,
+          "gross_sales": 0
         }
       ]
     },
