@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-10-06T07:11:07+09:00",
+  "generated_at": "2026-10-07T07:04:13+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 76,
-    "screenPageViews": 476,
-    "sessions": 111,
+    "activeUsers": 59,
+    "screenPageViews": 365,
+    "sessions": 87,
     "events": {
-      "view_item": 147,
-      "form_start": 64,
-      "add_to_cart": 8,
-      "begin_checkout": 5,
+      "view_item": 123,
+      "form_start": 60,
+      "add_to_cart": 4,
+      "begin_checkout": 3,
       "purchase": 0
     },
     "cvr_pct": 0.0,
     "channels": {
-      "Direct": 47,
-      "Organic Social": 30,
-      "Unassigned": 19,
-      "Organic Search": 15,
-      "Cross-network": 9,
-      "Organic Shopping": 4
+      "Direct": 39,
+      "Organic Social": 28,
+      "Unassigned": 12,
+      "Organic Search": 9,
+      "Cross-network": 3,
+      "Organic Shopping": 3
     },
-    "note": "GA4 Data API（Composio google_analytics）で直近7日間を取得: 2026-10-06"
+    "note": "GA4 Data API（Composio google_analytics）で直近7日間を取得: 2026-10-07"
   },
   "shopify": {
     "current_month_label": "2026年10月",
@@ -64,6 +64,12 @@
         {
           "day": 6,
           "date": "2026-10-06",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 7,
+          "date": "2026-10-07",
           "orders": 0,
           "gross_sales": 0
         }
@@ -281,8 +287,8 @@
     "grand_total_current_month": 44000,
     "grand_total_previous_month": 550430,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-10-06",
-    "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。10月分は店舗44,000円まで反映済み（2026-10-06時点）"
+    "last_updated": "2026-10-07",
+    "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。10月分は店舗44,000円まで反映済み（2026-10-07時点）"
   },
   "referrals": {
     "monthly": [
@@ -318,7 +324,7 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-10-06",
+    "last_updated": "2026-10-07",
     "note": "Citson_マスター「月次売上サマリ」より月キーでupsert"
   },
   "kgi": {
@@ -415,7 +421,7 @@
         "caption": "Quiet Presence. ー 控えめに、印象を残す。\n"
       }
     ],
-    "note": "Instagram未接続のため既存値維持: 2026-10-06"
+    "note": "Instagram未接続のため既存値維持: 2026-10-07"
   },
   "line": {
     "source": "L Message（エルメ）",
@@ -522,6 +528,6 @@
         "active_total": 472
       }
     ],
-    "note": "直近14日分をエルメ友だち数推移から取得 / 取得失敗（LINE契約画面にリダイレクト・Citson Golfは決済エラー延滞中）: 2026-10-04 | 取得失敗（要再ログイン/LINE連携切れ）: 2026-10-05 | クラウド移行（2026-10）によりエルメの自動取得は停止中。as_of の日付時点の値: 2026-10-06"
+    "note": "直近14日分をエルメ友だち数推移から取得 / 取得失敗（LINE契約画面にリダイレクト・Citson Golfは決済エラー延滞中）: 2026-10-04 | 取得失敗（要再ログイン/LINE連携切れ）: 2026-10-05 | クラウド移行（2026-10）によりエルメの自動取得は停止中。as_of の日付時点の値: 2026-10-07"
   }
 }
