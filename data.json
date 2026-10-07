@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-10-07T07:04:13+09:00",
+  "generated_at": "2026-10-08T00:24:58+09:00",
   "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
   "ga4": {
-    "activeUsers": 59,
-    "screenPageViews": 365,
-    "sessions": 87,
+    "activeUsers": 67,
+    "screenPageViews": 423,
+    "sessions": 99,
     "events": {
-      "view_item": 123,
-      "form_start": 60,
+      "view_item": 145,
+      "form_start": 64,
       "add_to_cart": 4,
       "begin_checkout": 3,
       "purchase": 0
     },
     "cvr_pct": 0.0,
     "channels": {
-      "Direct": 39,
-      "Organic Social": 28,
-      "Unassigned": 12,
-      "Organic Search": 9,
-      "Cross-network": 3,
+      "Direct": 45,
+      "Organic Social": 33,
+      "Organic Search": 12,
+      "Unassigned": 10,
+      "Cross-network": 4,
       "Organic Shopping": 3
     },
-    "note": "GA4 Data API（Composio google_analytics）で直近7日間を取得: 2026-10-07"
+    "note": "GA4 Data API（Composio google_analytics）で直近7日間を取得: 2026-10-08"
   },
   "shopify": {
     "current_month_label": "2026年10月",
@@ -70,6 +70,12 @@
         {
           "day": 7,
           "date": "2026-10-07",
+          "orders": 0,
+          "gross_sales": 0
+        },
+        {
+          "day": 8,
+          "date": "2026-10-08",
           "orders": 0,
           "gross_sales": 0
         }
@@ -287,8 +293,8 @@
     "grand_total_current_month": 44000,
     "grand_total_previous_month": 550430,
     "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-    "last_updated": "2026-10-07",
-    "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。10月分は店舗44,000円まで反映済み（2026-10-07時点）"
+    "last_updated": "2026-10-08",
+    "note": "ECはCitson_マスターの反映状況によらず常にShopifyライブ集計を使用。10月分は店舗44,000円まで反映済み（2026-10-08時点）"
   },
   "referrals": {
     "monthly": [
@@ -324,7 +330,7 @@
       }
     ],
     "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-    "last_updated": "2026-10-07",
+    "last_updated": "2026-10-08",
     "note": "Citson_マスター「月次売上サマリ」より月キーでupsert"
   },
   "kgi": {
@@ -382,8 +388,8 @@
   },
   "instagram": {
     "username": "citsongolf.official",
-    "followers_count": 2253,
-    "media_count": 100,
+    "followers_count": 2255,
+    "media_count": 101,
     "recent_media": [
       {
         "date": "2026-09-30",
@@ -395,7 +401,7 @@
       {
         "date": "2026-09-29",
         "type": "CAROUSEL_ALBUM",
-        "likes": 5,
+        "likes": 7,
         "comments": 0,
         "caption": "Defined by Form. ー シルエットで、魅せる。"
       },
@@ -409,7 +415,7 @@
       {
         "date": "2026-09-27",
         "type": "VIDEO",
-        "likes": 16,
+        "likes": 18,
         "comments": 0,
         "caption": "Seasonal Balance. ー 秋の変化を、心地よく"
       },
@@ -421,7 +427,7 @@
         "caption": "Quiet Presence. ー 控えめに、印象を残す。\n"
       }
     ],
-    "note": "Instagram未接続のため既存値維持: 2026-10-07"
+    "note": "Instagram Graph API（Composio instagram / citsongolf.official）で取得: 2026-10-08"
   },
   "line": {
     "source": "L Message（エルメ）",
