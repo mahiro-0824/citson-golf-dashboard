@@ -5,31 +5,37 @@
   "settlement_rate": 0.65,
   "price_basis": "上代（税抜）",
   "source": "佐藤店長のChatWork営業報告（余市委託販売数.xlsx）",
-  "last_updated": "2026-09-23",
+  "last_updated": "2026-10-27",
   "reports": [
     {
       "date": "2026-09-23",
       "cumulative_units": 20,
       "cumulative_retail": 461000,
       "note": "9/7納品〜9/23の累計。羽織物（パーカー・ブルゾン・スカート）が好調。9/23に17点補充（ブルゾン・スカートは1点ずつ増量）"
+    },
+    {
+      "date": "2026-09-30",
+      "cumulative_units": 27,
+      "cumulative_retail": 621000,
+      "note": "9月分（9/7〜9/30）。メグカンパニーの9月分支払案内書（9/30発行）より：27点・上代621,000円（税抜）→精算403,650円＋消費税40,365円＝支払額444,015円、10/31払い。単価は上代×65%で記載。要確認：シンプルモックが9/23時点の店長集計3点に対し支払案内書は2点"
     }
   ],
   "consigned_stock": {
-    "as_of": "2026-09-23",
+    "as_of": "2026-09-30",
     "initial_units": 122,
     "restocked_units": 17,
-    "current_units": 119
+    "current_units": 112
   },
   "latest_items": [
     {
       "name": "パーカー",
-      "units": 3,
-      "retail": 96000
+      "units": 6,
+      "retail": 192000
     },
     {
       "name": "ブルゾン",
-      "units": 3,
-      "retail": 75000
+      "units": 4,
+      "retail": 100000
     },
     {
       "name": "スカート",
@@ -37,14 +43,19 @@
       "retail": 75000
     },
     {
-      "name": "シンプルモック",
-      "units": 3,
-      "retail": 63000
-    },
-    {
       "name": "ドルマンモック",
       "units": 2,
       "retail": 44000
+    },
+    {
+      "name": "シンプルモック",
+      "units": 2,
+      "retail": 42000
+    },
+    {
+      "name": "エコダウン",
+      "units": 1,
+      "retail": 36000
     },
     {
       "name": "サルエルPT",
@@ -67,9 +78,19 @@
       "retail": 16000
     },
     {
+      "name": "ネックウォーマー",
+      "units": 2,
+      "retail": 16000
+    },
+    {
       "name": "カートバッグ",
       "units": 1,
       "retail": 13000
+    },
+    {
+      "name": "カーブCAP",
+      "units": 1,
+      "retail": 8000
     }
   ]
 }
