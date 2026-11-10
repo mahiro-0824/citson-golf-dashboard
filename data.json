@@ -1,27 +1,27 @@
 {
- "generated_at": "2026-11-10T07:11:46+09:00",
+ "generated_at": "2026-11-11T07:17:21+09:00",
  "period_label": "直近7日間（GA4/Instagram） / 今月・先月比較（Shopify・店舗） / 直近14日間（LINE）",
  "ga4": {
-  "activeUsers": 56,
-  "screenPageViews": 277,
-  "sessions": 98,
+  "activeUsers": 61,
+  "screenPageViews": 286,
+  "sessions": 107,
   "events": {
-   "view_item": 73,
-   "form_start": 18,
-   "add_to_cart": 0,
-   "begin_checkout": 0,
+   "view_item": 70,
+   "form_start": 19,
+   "add_to_cart": 2,
+   "begin_checkout": 2,
    "purchase": 0
   },
   "cvr_pct": 0.0,
   "channels": {
-   "Direct": 55,
-   "Organic Search": 21,
+   "Direct": 59,
+   "Organic Search": 27,
    "Organic Social": 15,
-   "Cross-network": 4,
-   "Unassigned": 3,
+   "Cross-network": 3,
+   "Unassigned": 2,
    "AI Assistant": 1
   },
-  "note": "GA4 Data API（Composio google_analytics）で直近7日間を取得: 2026-11-10"
+  "note": "GA4 Data API（Composio google_analytics）で直近7日間を取得: 2026-11-11"
  },
  "shopify": {
   "current_month_label": "2026年11月",
@@ -88,6 +88,12 @@
     {
      "day": 10,
      "date": "2026-11-10",
+     "orders": 0,
+     "gross_sales": 0
+    },
+    {
+     "day": 11,
+     "date": "2026-11-11",
      "orders": 0,
      "gross_sales": 0
     }
@@ -291,7 +297,7 @@
    "orders": 0
   },
   "top_products": [],
-  "note": "Shopify MCP（ShopifyQL）で集計。gross_salesは値引き・返品・送料・税を含まない商品売上。今月は11/10時点で注文なし: 2026-11-10"
+  "note": "Shopify MCP（ShopifyQL）で集計。gross_salesは値引き・返品・送料・税を含まない商品売上。今月は11/11時点で注文なし: 2026-11-11"
  },
  "store": {
   "current_month_label": "2026年11月",
@@ -311,8 +317,8 @@
   "grand_total_current_month": 0,
   "grand_total_previous_month": 439590,
   "source": "店舗・イベント: Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ／EC: Shopifyライブ集計",
-  "last_updated": "2026-11-10",
-  "note": "当月分未反映（経理待ち）: 2026-11-10。EC は Shopify ライブ集計値。10月分は店舗306,000円・イベント97,590円で反映。"
+  "last_updated": "2026-11-11",
+  "note": "当月分未反映（経理待ち）: 2026-11-11。EC は Shopify ライブ集計値。10月分は店舗306,000円・イベント97,590円で反映。"
  },
  "referrals": {
   "monthly": [
@@ -348,7 +354,7 @@
    }
   ],
   "source": "Citson_マスター（Googleスプレッドシート）「月次売上サマリ」タブ（鹿島様紹介合計・七戸様紹介合計列）",
-  "last_updated": "2026-11-10",
+  "last_updated": "2026-11-11",
   "note": "Citson_マスター「月次売上サマリ」より月キーでupsert"
  },
  "kgi": {
@@ -408,7 +414,7 @@
  "instagram": {
   "username": "citsongolf.official",
   "followers_count": 2239,
-  "media_count": 114,
+  "media_count": 115,
   "recent_media": [
    {
     "date": "2026-11-09",
@@ -420,7 +426,7 @@
    {
     "date": "2026-11-07",
     "type": "CAROUSEL_ALBUM",
-    "likes": 11,
+    "likes": 13,
     "comments": 0,
     "caption": "型崩れしにくい、上品な佇まい。  しっかりとしたハリ感のある"
    },
@@ -446,7 +452,7 @@
     "caption": "首まわりを、しっかり包む。  Citson GolfとIZR"
    }
   ],
-  "note": "Instagram Graph API（Composio instagram / citsongolf.official）で取得: 2026-11-10"
+  "note": "Instagram Graph API（Composio instagram / citsongolf.official）で取得: 2026-11-11"
  },
  "line": {
   "source": "L Message（エルメ）",
